@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diagnóstico digital — Contador CDMX</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+  :root{
+    --primary:#0F172A; --accent:#0369A1; --accent-dark:#075985; --bg:#F8FAFC; --fg:#020617;
+    --muted:#64748B; --border:#E2E8F0; --surface:#FFFFFF; --bad:#DC2626; --bad-bg:#FEF2F2;
+    --good:#047857; --good-bg:#ECFDF5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+  body{font-family:'IBM Plex Sans',-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6;font-size:16px}
+  .wrap{max-width:880px;margin:0 auto;padding:0 24px}
+  header{background:linear-gradient(160deg,var(--primary),#1E293B 75%,#0C4A6E 140%);color:#fff;padding:64px 0 120px}
+  .kicker{display:inline-flex;align-items:center;gap:7px;background:#FFFFFF14;border:1px solid #FFFFFF2E;color:#BAE6FD;font-size:13px;font-weight:500;padding:6px 14px;border-radius:99px;margin-bottom:20px}
+  .kicker svg{width:14px;height:14px}
+  header h1{font-size:clamp(28px,4.6vw,42px);font-weight:700;letter-spacing:-.02em}
+  header p{color:#CBD5E1;max-width:600px;margin-top:12px}
+  .resumen{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:-58px;position:relative;box-shadow:0 18px 44px #0F172A1A}
+  .resumen div{background:var(--surface);padding:22px 18px;text-align:center}
+  .resumen b{display:block;font-size:24px;font-weight:700;color:var(--primary)}
+  .resumen span{font-size:13px;color:var(--muted)}
+  section{padding:56px 0 72px}
+  .fuga{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:26px;box-shadow:0 4px 16px #0F172A08}
+  .fuga .top{padding:22px 26px;display:flex;gap:14px;align-items:center;border-bottom:1px solid var(--border)}
+  .fuga .n{flex:0 0 40px;height:40px;border-radius:10px;background:var(--bad-bg);color:var(--bad);display:flex;align-items:center;justify-content:center}
+  .fuga .n svg{width:20px;height:20px}
+  .fuga h3{font-size:17.5px;font-weight:600;color:var(--primary)}
+  .cols{display:grid;grid-template-columns:1fr 1fr}
+  @media (max-width:620px){.cols{grid-template-columns:1fr}}
+  .col{padding:22px 26px}
+  .col .lbl{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;padding:3px 10px;border-radius:99px}
+  .col .lbl svg{width:12px;height:12px}
+  .col.hoy{background:var(--bad-bg)}
+  .col.hoy .lbl{color:var(--bad);background:#FECACA66}
+  .col.con{background:var(--good-bg)}
+  .col.con .lbl{color:var(--good);background:#A7F3D066}
+  .col p{color:#374151;font-size:15px}
+  .impacto{display:flex;gap:10px;align-items:flex-start;padding:16px 26px;background:#FFFBEB;border-top:1px solid #FDE68A;font-size:14px;color:#78350F}
+  .impacto svg{flex:0 0 16px;width:16px;height:16px;margin-top:2px;color:#B45309}
+  .cierre{background:var(--primary);border-radius:18px;padding:46px 36px;text-align:center;color:#fff;margin-top:40px}
+  .cierre strong{font-size:clamp(19px,2.8vw,24px);font-weight:700;letter-spacing:-.01em}
+  .cierre p{color:#94A3B8;margin:10px auto 26px;max-width:460px}
+  .btn{display:inline-flex;align-items:center;gap:9px;background:var(--accent);color:#fff;font-weight:600;font-size:15px;text-decoration:none;padding:15px 30px;border-radius:10px;transition:all .2s;cursor:pointer;min-height:48px;box-shadow:0 10px 28px #0369A14D}
+  .btn:hover{background:var(--accent-dark);transform:translateY(-1px)}
+  .btn svg{width:17px;height:17px}
+  footer{text-align:center;color:var(--muted);font-size:13px;padding:0 24px 44px}
+  a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <span class="kicker">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        Diagnóstico digital · Despacho contable · Av. Paseo de la Reforma 296, Cuauhtémoc, CDMX
+      </span>
+      <h1>Contador CDMX</h1>
+      <p>Al revisar su presencia digital encontramos fugas concretas que hoy le cuestan clientes. Se las presentamos a continuación, con su solución.</p>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="resumen">
+      <div><b>3</b><span>fugas detectadas</span></div>
+      <div><b>Días</b><span>tiempo de resolución</span></div>
+      <div><b>0</b><span>cambios en su operación diaria</span></div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+
+      <div class="fuga">
+        <div class="top">
+          <div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4M12 17h.01"/></svg></div>
+          <h3>Videoconferencia sin sistema de agenda</h3>
+        </div>
+        <div class="cols">
+          <div class="col hoy"><span class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Hoy</span><p>Ofrecen videollamada, pero sin una forma de reservarla: el cliente escribe y espera a que se coordine el horario manualmente.</p></div>
+          <div class="col con"><span class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Con la mejora</span><p>Agenda en línea 24/7 — el cliente elige su horario y recibe la liga de la videollamada de forma automática.</p></div>
+        </div>
+        <div class="impacto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Cada solicitud fuera de horario que no se responde a tiempo es una consulta que se enfría o se va con otro despacho.</div>
+      </div>
+
+      <div class="fuga">
+        <div class="top">
+          <div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4M12 17h.01"/></svg></div>
+          <h3>Sin CRM ni seguimiento</h3>
+        </div>
+        <div class="cols">
+          <div class="col hoy"><span class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Hoy</span><p>Los contactos y su seguimiento viven en el correo; es fácil que un prospecto interesado se quede sin respuesta.</p></div>
+          <div class="col con"><span class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Con la mejora</span><p>Un CRM sencillo que registra cada contacto, recuerda dar seguimiento y no deja caer ninguna oportunidad.</p></div>
+        </div>
+        <div class="impacto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Un solo cliente recurrente perdido por falta de seguimiento cuesta mucho más que automatizarlo.</div>
+      </div>
+
+      <div class="fuga">
+        <div class="top">
+          <div class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4M12 17h.01"/></svg></div>
+          <h3>Redes sociales sin enlaces reales</h3>
+        </div>
+        <div class="cols">
+          <div class="col hoy"><span class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>Hoy</span><p>En el pie de su sitio hay íconos de redes que no llevan a ningún lado; quien quiere validarlos no encuentra nada.</p></div>
+          <div class="col con"><span class="lbl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Con la mejora</span><p>Enlaces correctos y perfiles activos que refuerzan su credibilidad antes de que los contacten.</p></div>
+        </div>
+        <div class="impacto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>La confianza se pierde en segundos: un enlace roto resta profesionalismo justo cuando los están evaluando.</div>
+      </div>
+
+      <div class="cierre">
+        <strong>Estas fugas se resuelven en cuestión de días, no de meses.</strong>
+        <p>Si lo desea, con gusto le explicamos cómo lo resolveríamos para Contador CDMX.</p>
+        <a class="btn" href="https://tracking-prospectos.estrateg-ia-hyper.workers.dev/c?id=contadores-cdmx-10-diag&u=https://contador-cdmx.com">
+          Me interesa resolverlo
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>Diagnóstico preparado para Contador CDMX con base en información pública de su presencia digital.</footer>
+
+  <img src="https://tracking-prospectos.estrateg-ia-hyper.workers.dev/p?id=contadores-cdmx-10-diag" width="1" height="1" alt="" style="display:block">
+</body>
+</html>

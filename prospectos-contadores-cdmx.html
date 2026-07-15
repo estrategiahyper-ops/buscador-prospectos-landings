@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prospectos Contadores CDMX — Automatización + Web</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --surface2: #222636;
+      --accent: #00d4aa;
+      --accent2: #6c63ff;
+      --text: #e8eaf0;
+      --muted: #8b909e;
+      --border: #2d3147;
+      --red: #ff5c5c;
+      --yellow: #ffc947;
+      --green: #00d4aa;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; line-height: 1.6; }
+
+    header {
+      background: linear-gradient(135deg, #141c24 0%, #0f1117 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 48px 32px;
+    }
+    .header-meta { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    h1 { font-size: 32px; font-weight: 700; }
+    h1 span { color: var(--accent); }
+    .header-sub { color: var(--muted); margin-top: 6px; font-size: 14px; }
+    .stats-bar { display: flex; gap: 32px; margin-top: 28px; flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat-value { font-size: 28px; font-weight: 700; color: var(--accent); }
+    .stat-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; }
+    .services-bar { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
+    .service-tag { background: rgba(0,212,170,.12); color: var(--accent); border: 1px solid rgba(0,212,170,.25); border-radius: 20px; padding: 4px 14px; font-size: 13px; font-weight: 500; }
+
+    main { max-width: 1300px; margin: 0 auto; padding: 40px 24px; }
+    section { margin-bottom: 56px; }
+    h2 { font-size: 20px; font-weight: 600; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+    h2 .tag { font-size: 11px; font-weight: 500; background: var(--accent); color: #0f1117; border-radius: 4px; padding: 2px 8px; margin-left: 10px; vertical-align: middle; }
+
+    /* TABLA */
+    .table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; background: var(--surface); }
+    thead { background: var(--surface2); }
+    th { padding: 12px 16px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); font-weight: 600; }
+    td { padding: 13px 16px; border-top: 1px solid var(--border); vertical-align: middle; }
+    tr:hover td { background: var(--surface2); }
+    .score-cell { font-size: 20px; font-weight: 700; }
+    .s9, .s10 { color: var(--red); }
+    .s7, .s8 { color: var(--yellow); }
+    .s5, .s6 { color: var(--green); }
+    .ok { color: var(--green); }
+    .no { color: var(--red); }
+    .mid { color: var(--yellow); }
+    a.web { color: var(--accent2); text-decoration: none; font-size: 13px; }
+    a.web:hover { text-decoration: underline; }
+    .badge-sinweb { background: rgba(255,92,92,.15); color: #ff8080; border-radius: 4px; padding: 2px 8px; font-size: 11px; font-weight: 600; }
+    .badge-ok { background: rgba(0,212,170,.12); color: var(--accent); border-radius: 4px; padding: 2px 8px; font-size: 11px; font-weight: 600; }
+
+    /* FICHAS */
+    .fichas { display: grid; grid-template-columns: repeat(auto-fill, minmax(560px, 1fr)); gap: 24px; }
+    .ficha { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+    .ficha-header { padding: 20px 24px 14px; background: var(--surface2); display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+    .ficha-title { font-size: 17px; font-weight: 700; }
+    .ficha-sub { font-size: 12px; color: var(--muted); margin-top: 3px; }
+    .score-big { font-size: 36px; font-weight: 800; line-height: 1; }
+    .ficha-body { padding: 20px 24px; }
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .pill { font-size: 11px; padding: 4px 10px; border-radius: 20px; font-weight: 500; }
+    .pill-red { background: rgba(255,92,92,.15); color: #ff8080; }
+    .pill-green { background: rgba(0,212,170,.12); color: #00d4aa; }
+    .pill-yellow { background: rgba(255,201,71,.12); color: #ffc947; }
+    .diagnosis { font-size: 13.5px; color: var(--muted); margin-bottom: 16px; }
+    .diagnosis strong { color: var(--text); }
+    .contact-block { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
+    .contact-block-title { font-size: 11px; text-transform: uppercase; letter-spacing: .6px; color: var(--accent); font-weight: 600; margin-bottom: 10px; }
+    .contact-info { font-size: 13px; color: var(--muted); margin-bottom: 12px; }
+    .contact-info span { color: var(--text); }
+    .msg-box { background: var(--surface2); border-radius: 8px; padding: 14px 16px; font-size: 13px; line-height: 1.75; color: #c5c9d8; border-left: 3px solid var(--accent); margin-top: 8px; }
+    .msg-label { font-size: 11px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); margin-bottom: 6px; }
+    .two-msgs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px; }
+
+    /* OPORTUNIDADES */
+    .opp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+    .opp-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .opp-icon { font-size: 26px; margin-bottom: 10px; }
+    .opp-title { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+    .opp-desc { font-size: 13px; color: var(--muted); }
+
+    /* SIN WEB */
+    .sinweb-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+    .sinweb-card { background: var(--surface); border: 1px solid rgba(255,92,92,.25); border-radius: 12px; padding: 18px 20px; }
+    .sinweb-label { font-size: 11px; color: var(--red); text-transform: uppercase; letter-spacing: .5px; font-weight: 600; margin-bottom: 8px; }
+    .sinweb-name { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .sinweb-phone { font-size: 13px; color: var(--muted); }
+    .sinweb-phone span { color: var(--text); }
+
+    footer { text-align: center; padding: 32px; color: var(--muted); font-size: 12px; border-top: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-meta">Informe generado — 28 de junio 2026 · CDMX</div>
+  <h1>Contadores CDMX — <span>Automatización + Página Web</span></h1>
+  <p class="header-sub">Despachos Contables · Ciudad de México · Análisis de presencia digital y oportunidad de ventas</p>
+  <div class="services-bar">
+    <span class="service-tag">🤖 Automatización de negocio</span>
+    <span class="service-tag">🌐 Diseño y desarrollo web</span>
+  </div>
+  <div class="stats-bar">
+    <div class="stat"><div class="stat-value">13</div><div class="stat-label">Empresas analizadas</div></div>
+    <div class="stat"><div class="stat-value">3</div><div class="stat-label">Sin sitio web</div></div>
+    <div class="stat"><div class="stat-value">11</div><div class="stat-label">Sin CRM ni automatización</div></div>
+    <div class="stat"><div class="stat-value">8</div><div class="stat-label">Sin agenda en línea real</div></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- TABLA GENERAL -->
+  <section>
+    <h2>Todos los prospectos <span class="tag">13 empresas</span></h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Empresa</th>
+            <th>Web</th>
+            <th>HTTPS</th>
+            <th>WhatsApp</th>
+            <th>Agenda</th>
+            <th>CRM/Auto</th>
+            <th>Redes</th>
+            <th>Contacto</th>
+            <th>Oportunidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><strong>Romero Silva y Asociados</strong></td>
+            <td><a class="web" href="https://www.romerosilvayasociadossc.com" target="_blank">romerosilvayasociadossc.com</a></td>
+            <td><span class="mid">~</span></td>
+            <td><span class="ok">✓</span></td>
+            <td><span class="no">✗</span></td>
+            <td><span class="no">✗</span></td>
+            <td>Facebook</td>
+            <td>55-5207-8714</td>
+            <td class="score-cell s9">9/10</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><strong>Contadores Mismo Lenguaje</strong></td>
+            <td><span class="badge-sinweb">SIN SITIO WEB</span></td>
+            <td><span class="no">—</span></td>
+            <td><span class="mid">?</span></td>
+            <td><span class="no">✗</span></td>
+            <td><span class="no">✗</span></td>
+            <td>—</td>
+            <td>55 7703 2718</td>
+            <td class="score-cell s9">9/10</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><strong>ACCUANTIA</strong></td>
+            <td><span class="badge-sinweb">SIN SITIO WEB</span></td>
+            <td><span class="no">—</span></td>
+            <td><span class="mid">?</span></td>
+            <td><span class="no">✗</span></td>
+            <td><span class="no">✗</span></td>
+            <td>—</td>
+            <td>55 5454 1358</td>
+            <td class="score-cell s9">9/10</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><strong>PAAE (Prof. Asociados)</strong></td>
+            <td><span class="badge-sinweb">SIN SITIO WEB</span></td>
+            <td><span class="no">—</span></td>
+            <td><span class="mid">?</span></td>
+            <td><span class="no">✗</span></td>
+            <td><span class="no">✗</span></td>
+            <td>—</td>
+            <td>55 5525 8641</td>
+            <td class="score-cell s8">8/10</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><strong>ALU Sol SC</strong></td>
+            <td><a class="web" href="https://alusolsc.com" target="_blank">alusolsc.com</a></td>
+            <td><span class="ok">✓</span></td>
+            <td><span class="ok">✓</span></td>
+            <td><span class="mid">~</span></td>
+            <td><span class="no">✗</span></td>
+            <td>Sin redes</td>
+            <td>+52 55 3724 5817</td>
+            <td class="score-cell s7">7/10</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td><strong>Contador CDMX</strong></td>
+            <td><a class="web" href="https://contador-cdmx.com" target="_blank">contador-cdmx.com</a></td>
+            <td><span class="ok">✓</span></td>
+            <td><span class="ok">✓</span></td>
+            <td><span class="mid">~</span></td>
+            <td><span class="no">✗</span></td>
+            <td>Sin enlaces</td>
+            <td>558 950 7198</td>
+            <td class="score-cell s7">7/10</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td><strong>Contadores en CDMX</strong></td>
+            <td><a class="web" href="https://contadoresencdmx.com" target="_blank">contadoresencdmx.com</a></td>
+            <td><span class="ok">✓</span></td>
+            <td><span class="ok">✓</span></td>
+            <td><span class="mid">~</span></td>
+            <td><span class="no">✗</span></td>
+            <td>Facebook</td>
+            <td>800 022 9902</td>
+            <td class="score-cell s6">6/10</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td><strong>RCA Despacho</strong></td>
+            <td><a class="web" href="https://cdmx.rcadespacho.com" target="_blank">cdmx.rcadespacho.com</a></td>
+            <td><span class="ok">✓</span></td>
+            <td><span class="ok">✓</span></td>
+            <td><span class="mid">~</span></td>
+            <td><span class="no">✗</span></td>
+            <td>FB · TW · IG · LI</td>
+            <td>800-001-0001</td>
+            <td class="score-cell s6">6/10</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td><strong>Gardnes Consultoría</strong></td>
+            <td><a class="web" href="https://gardnes.mx" target="_blank">gardnes.mx</a></td>
+            <td><span class="ok">✓</span></td>
+            <td><span class="ok">✓</span></td>
+            <td><span class="mid">~</span></td>
+            <td><span class="no">✗</span></td>
+            <td>FB · LinkedIn</td>
+            <td>800 022 9902</td>
+            <td class="score-cell s5">5/10</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td><strong>Despacho Contable MX</strong></td>
+            <td><a class="web" href="https://despachocontable.mx" target="_blank">despachocontable.mx</a></td>
+            <td><span class="mid">~</span></td>
+            <td><span class="ok">✓</span></td>
+            <td><span class="mid">~</span></td>
+            <td><span class="mid">~</span></td>
+            <td>FB · TW · YT</td>
+            <td>+52 55 7175 5133</td>
+            <td class="score-cell s5">5/10</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td><strong>SC Contadores Fiscalistas</strong></td>
+            <td><a class="web" href="https://scfiscalistas.mx" target="_blank">scfiscalistas.mx</a></td>
+            <td><span class="mid">~</span></td>
+            <td><span class="ok">✓</span></td>
+            <td><span class="mid">~</span></td>
+            <td><span class="no">✗</span></td>
+            <td>—</td>
+            <td>informacion@scfiscalistas.mx</td>
+            <td class="score-cell s5">5/10</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td><strong>Despacho Contable México</strong></td>
+            <td><a class="web" href="https://despachocontablemexico.com.mx" target="_blank">despachocontablemexico.com.mx</a></td>
+            <td><span class="mid">~</span></td>
+            <td><span class="no">✗</span></td>
+            <td><span class="mid">~</span></td>
+            <td><span class="mid">~</span></td>
+            <td>FB · LinkedIn</td>
+            <td>(55) 50 15 06 57</td>
+            <td class="score-cell s5">5/10</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td><strong>Sixcal y Asociados</strong></td>
+            <td><span class="badge-sinweb">SIN SITIO WEB</span></td>
+            <td><span class="no">—</span></td>
+            <td><span class="mid">?</span></td>
+            <td><span class="no">✗</span></td>
+            <td><span class="no">✗</span></td>
+            <td>—</td>
+            <td>56 2456 1936</td>
+            <td class="score-cell s8">8/10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SIN SITIO WEB -->
+  <section>
+    <h2>Sin sitio web — Oportunidad directa de venta <span class="tag">4 empresas</span></h2>
+    <div class="sinweb-grid">
+      <div class="sinweb-card">
+        <div class="sinweb-label">⚠️ Sin presencia digital</div>
+        <div class="sinweb-name">Contadores Mismo Lenguaje</div>
+        <div class="sinweb-phone">📞 <span>55 7703 2718</span></div>
+      </div>
+      <div class="sinweb-card">
+        <div class="sinweb-label">⚠️ Sin presencia digital</div>
+        <div class="sinweb-name">ACCUANTIA</div>
+        <div class="sinweb-phone">📞 <span>55 5454 1358</span></div>
+      </div>
+      <div class="sinweb-card">
+        <div class="sinweb-label">⚠️ Sin presencia digital</div>
+        <div class="sinweb-name">Prof. Asociados en Asesorías Especiales SC (PAAE)</div>
+        <div class="sinweb-phone">📞 <span>55 5525 8641</span></div>
+      </div>
+      <div class="sinweb-card">
+        <div class="sinweb-label">⚠️ Sin presencia digital</div>
+        <div class="sinweb-name">Sixcal y Asociados SAS de CV</div>
+        <div class="sinweb-phone">📞 <span>56 2456 1936</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANÁLISIS DETALLADO TOP 5 -->
+  <section>
+    <h2>Análisis detallado — Top 5 oportunidades <span class="tag">Con mensajes de contacto</span></h2>
+    <div class="fichas">
+
+      <!-- 1. ROMERO SILVA -->
+      <div class="ficha">
+        <div class="ficha-header">
+          <div>
+            <div class="ficha-title">Romero Silva y Asociados SC</div>
+            <div class="ficha-sub">Contadores · +25 años · Cuauhtémoc, CDMX</div>
+          </div>
+          <div class="score-big s9">9</div>
+        </div>
+        <div class="ficha-body">
+          <div class="pills">
+            <span class="pill pill-red">Web con placeholders sin completar</span>
+            <span class="pill pill-red">Sin CRM</span>
+            <span class="pill pill-red">Sin agenda en línea</span>
+            <span class="pill pill-green">WhatsApp activo</span>
+            <span class="pill pill-yellow">Solo Facebook</span>
+          </div>
+          <p class="diagnosis">
+            <strong>Diagnóstico:</strong> Su sitio web tiene textos de plantilla sin editar ("Título de diapositiva", "Escriba el subtítulo aquí") visibles al público. Esto indica que alguien les hizo un sitio básico y nunca lo terminaron. Con 25 años de trayectoria, su imagen digital no refleja su experiencia. Sin CRM, sin agenda, toda la operación es manual. Propuesta obvia: rehacerles el sitio y automatizar su captación.
+          </p>
+          <div class="contact-block">
+            <div class="contact-block-title">Datos de contacto</div>
+            <div class="contact-info">📞 <span>55-5207-8714</span> · <span>55-5207-3004</span> · <span>55-3036-1220</span><br>✉️ <span>contacto@rsamex.com.mx</span></div>
+            <div class="msg-label">Mensaje sugerido (email)</div>
+            <div class="msg-box">
+              Estimado equipo de Romero Silva y Asociados, les escribo porque revisé su sitio web y me di cuenta de que tiene algunos textos de plantilla sin editar que pueden estar afectando la imagen del despacho ante clientes potenciales. Con 25 años de experiencia, merecen una presencia digital que los represente bien. Ayudamos a despachos contables en CDMX a renovar su sitio web y automatizar la captación de nuevos clientes para que lleguen solos, sin que ningún contador tenga que estar contestando WhatsApps todo el día. ¿Tienen 15 minutos para que les muestre qué podemos hacer?
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. CONTADORES MISMO LENGUAJE -->
+      <div class="ficha">
+        <div class="ficha-header">
+          <div>
+            <div class="ficha-title">Contadores Mismo Lenguaje</div>
+            <div class="ficha-sub">Contadores · CDMX · Sin presencia digital</div>
+          </div>
+          <div class="score-big s9">9</div>
+        </div>
+        <div class="ficha-body">
+          <div class="pills">
+            <span class="pill pill-red">Sin sitio web</span>
+            <span class="pill pill-red">Sin redes sociales visibles</span>
+            <span class="pill pill-red">Sin agenda en línea</span>
+            <span class="pill pill-red">Sin CRM</span>
+          </div>
+          <p class="diagnosis">
+            <strong>Diagnóstico:</strong> No tienen presencia digital de ningún tipo. En 2026, un despacho contable sin sitio web pierde clientes que buscan en Google antes de llamar. Es probable que toda su cartera venga de referidos. El pitch aquí es claro: página web profesional + sistema de automatización para captar nuevos clientes fuera de su red de conocidos.
+          </p>
+          <div class="contact-block">
+            <div class="contact-block-title">Datos de contacto</div>
+            <div class="contact-info">📞 <span>55 7703 2718</span></div>
+            <div class="msg-label">Mensaje sugerido (llamada / WhatsApp)</div>
+            <div class="msg-box">
+              Buen día, ¿con Contadores Mismo Lenguaje? Les llamo porque me dedico a ayudar a despachos contables a conseguir clientes nuevos a través de internet. Hoy en día, cuando una empresa busca un contador en CDMX, lo primero que hace es buscar en Google, y si no aparece un sitio web, simplemente llaman al siguiente. ¿Actualmente consiguen clientes principalmente por referidos? Los ayudamos a crear una página web profesional y un sistema automatizado para que los prospectos lleguen solos. ¿Les interesa que les cuente más?
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. ACCUANTIA -->
+      <div class="ficha">
+        <div class="ficha-header">
+          <div>
+            <div class="ficha-title">ACCUANTIA</div>
+            <div class="ficha-sub">Contadores · CDMX · Sin presencia digital</div>
+          </div>
+          <div class="score-big s9">9</div>
+        </div>
+        <div class="ficha-body">
+          <div class="pills">
+            <span class="pill pill-red">Sin sitio web</span>
+            <span class="pill pill-red">Sin redes sociales</span>
+            <span class="pill pill-red">Sin CRM</span>
+            <span class="pill pill-yellow">Nombre de marca definido</span>
+          </div>
+          <p class="diagnosis">
+            <strong>Diagnóstico:</strong> Tienen nombre de empresa establecido (ACCUANTIA) pero sin presencia online de ningún tipo. El nombre suena a marca con intención de crecer. Son candidatos ideales para una propuesta de identidad digital completa: sitio web, presencia en redes y sistema de captación automatizada de clientes.
+          </p>
+          <div class="contact-block">
+            <div class="contact-block-title">Datos de contacto</div>
+            <div class="contact-info">📞 <span>55 5454 1358</span></div>
+            <div class="msg-label">Mensaje sugerido (llamada)</div>
+            <div class="msg-box">
+              Hola, ¿con ACCUANTIA? Les llamo porque me especializo en ayudar a firmas contables a crecer digitalmente. Vi que tienen una marca bien establecida pero sin sitio web, y eso probablemente les está costando clientes que buscan en Google. Diseñamos páginas web para despachos como el suyo e implementamos sistemas que automatizan la atención al cliente: respuestas por WhatsApp, agenda de citas y seguimiento automático, todo sin que los contadores tengan que estar pendientes del teléfono. ¿Tienen unos minutos para contarles cómo funciona?
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. ALU SOL SC -->
+      <div class="ficha">
+        <div class="ficha-header">
+          <div>
+            <div class="ficha-title">ALU Sol SC</div>
+            <div class="ficha-sub">Contadores · Extranjeros y PyMEs · Narvarte, CDMX</div>
+          </div>
+          <div class="score-big s7">7</div>
+        </div>
+        <div class="ficha-body">
+          <div class="pills">
+            <span class="pill pill-red">Sin redes sociales</span>
+            <span class="pill pill-red">Sin CRM</span>
+            <span class="pill pill-yellow">Formulario básico sin automatización</span>
+            <span class="pill pill-green">Web moderna y profesional</span>
+            <span class="pill pill-green">WhatsApp activo</span>
+          </div>
+          <p class="diagnosis">
+            <strong>Diagnóstico:</strong> Sitio bien hecho, atienden a empresas extranjeras (oportunidad premium). Sin embargo, sin presencia en redes sociales y sin CRM para dar seguimiento. Cada prospecto que llega al formulario probablemente espera días para recibir respuesta. La automatización aquí se vende como mejora de conversión: respuesta inmediata, seguimiento automático y CRM para clientes internacionales.
+          </p>
+          <div class="contact-block">
+            <div class="contact-block-title">Datos de contacto</div>
+            <div class="contact-info">📞 <span>+52 55 3724 5817</span> · ✉️ <span>contacto@alusolsc.com</span></div>
+            <div class="msg-label">Mensaje sugerido (email)</div>
+            <div class="msg-box">
+              Estimado equipo ALU Sol, noté que atienden a empresas extranjeras que operan en México, lo cual implica un perfil de cliente que valora mucho la respuesta rápida y el seguimiento profesional. ¿Actualmente tienen un sistema que responde automáticamente cuando llega un prospecto por su sitio web? Implementamos CRM y automatización específicamente para despachos contables que manejan clientes corporativos: respuesta inmediata en WhatsApp o email, recordatorios de documentos y seguimiento del expediente, todo sin trabajo manual. ¿Les puedo compartir cómo funciona en una llamada corta?
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. CONTADOR CDMX -->
+      <div class="ficha">
+        <div class="ficha-header">
+          <div>
+            <div class="ficha-title">Contador CDMX</div>
+            <div class="ficha-sub">Contadores · Personas físicas y PyMEs · Reforma, CDMX</div>
+          </div>
+          <div class="score-big s7">7</div>
+        </div>
+        <div class="ficha-body">
+          <div class="pills">
+            <span class="pill pill-red">Sin CRM real</span>
+            <span class="pill pill-red">Redes sin enlaces funcionales</span>
+            <span class="pill pill-yellow">Videoconferencia mencionada pero sin sistema</span>
+            <span class="pill pill-green">Web moderna</span>
+            <span class="pill pill-green">WhatsApp muy prominente</span>
+          </div>
+          <p class="diagnosis">
+            <strong>Diagnóstico:</strong> Ubicados en Paseo de la Reforma (zona de alto valor), ofrecen videoconferencia pero sin sistema real de agenda. Sus redes sociales están en el sitio pero sin URLs funcionales. El sitio tiene secciones de equipo con descripciones genéricas de plantilla. Oportunidad de proponer integración real: sistema de videollamada + agenda automática + CRM.
+          </p>
+          <div class="contact-block">
+            <div class="contact-block-title">Datos de contacto</div>
+            <div class="contact-info">📞 <span>558 950 7198</span> · ✉️ <span>hola@contador-cdmx.com</span></div>
+            <div class="msg-label">Mensaje sugerido (WhatsApp)</div>
+            <div class="msg-box">
+              Hola, ¿con Contador CDMX? Vi que ofrecen videoconferencias para asesoría, lo cual es excelente. ¿Tienen un sistema donde el cliente pueda agendar solo su videollamada y recibir el enlace automáticamente, o aún lo coordinan de forma manual? Ayudamos a despachos a automatizar exactamente ese proceso: el cliente escoge hora, paga si aplica, y recibe el link sin que nadie tenga que intervenir. También podemos conectar eso con su WhatsApp para seguimiento automático post-consulta. ¿Les muestro cómo funciona?
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICIOS A OFRECER -->
+  <section>
+    <h2>Lo que más necesitan los contadores de CDMX</h2>
+    <div class="opp-grid">
+      <div class="opp-card">
+        <div class="opp-icon">🌐</div>
+        <div class="opp-title">Página web profesional</div>
+        <div class="opp-desc">4 de 13 prospectos no tienen sitio web. Los demás tienen sitios básicos o con placeholders sin terminar.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-icon">🤖</div>
+        <div class="opp-title">Bot de WhatsApp</div>
+        <div class="opp-desc">Respuesta automática a prospectos, envío de cotizaciones y calificación de leads sin intervención humana.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-icon">📄</div>
+        <div class="opp-title">Solicitud de documentos</div>
+        <div class="opp-desc">El mayor dolor del contador: pedirle al cliente sus estados de cuenta, facturas y comprobantes mes a mes. Se automatiza al 100%.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-icon">🔔</div>
+        <div class="opp-title">Recordatorios SAT/IMSS</div>
+        <div class="opp-desc">Alertas automáticas de vencimientos fiscales enviadas al cliente por WhatsApp o email antes de cada fecha límite.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-icon">🗂️</div>
+        <div class="opp-title">CRM contable</div>
+        <div class="opp-desc">Gestión centralizada de todos los clientes, status de cada declaración, documentos pendientes y fechas críticas.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-icon">📅</div>
+        <div class="opp-title">Agenda automática</div>
+        <div class="opp-desc">El cliente agenda su consulta solo (presencial o videollamada), recibe confirmación y recordatorio automático.</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Generado automáticamente · egonzalez@glwinba.com · CDMX · Junio 2026
+</footer>
+
+</body>
+</html>

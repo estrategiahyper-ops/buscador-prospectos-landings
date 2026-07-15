@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Correo de autotest — tracking prospectos</title>
+<style>
+  body { font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 20px; color: #1a1a1a; line-height: 1.5; }
+  h1 { font-size: 20px; }
+  .paso { background: #f4f7ff; border-left: 4px solid #3b6cff; padding: 12px 16px; margin: 14px 0; border-radius: 6px; }
+  .correo { border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin: 16px 0; background: #fff; }
+  button { background: #3b6cff; color: #fff; border: 0; padding: 10px 18px; border-radius: 6px; font-size: 15px; cursor: pointer; }
+  button:hover { background: #2a54d4; }
+  code { background: #eee; padding: 1px 5px; border-radius: 4px; font-size: 13px; }
+  .ok { color: #0a7d2c; font-weight: 600; }
+  small { color: #666; }
+</style>
+</head>
+<body>
+  <h1>Prueba real de tracking (autotest-01)</h1>
+  <p>Este archivo te deja hacer la primera prueba real en 3 pasos. El correo de abajo ya lleva el <strong>enlace rastreado</strong> y el <strong>píxel de apertura</strong> apuntando a tu Worker.</p>
+
+  <div class="paso"><strong>Paso 1.</strong> Pulsa el botón <em>Copiar correo</em>. Copia el contenido con formato (incluido el píxel invisible).</div>
+  <div class="paso"><strong>Paso 2.</strong> En Gmail (con <code>contacto@estrategiahyper.com</code>), crea un correo dirigido <strong>a ti mismo</strong>, haz clic en el cuerpo y pega (Cmd/Ctrl+V). Envíalo.</div>
+  <div class="paso"><strong>Paso 3.</strong> Ábrelo desde el móvil u otra cuenta y haz clic en el enlace. En segundos verás <code>autotest-01 / apertura</code> y <code>autotest-01 / clic</code> en tu hoja <em>Eventos</em>.</div>
+
+  <p><button onclick="copiar()">📋 Copiar correo</button> <span id="estado"></span></p>
+
+  <h3>Vista previa del correo</h3>
+  <div class="correo" id="correo">
+    <p>Hola,</p>
+    <p>Vi la web de tu negocio y detecté un par de cosas que se pueden mejorar rápido (velocidad y posicionamiento). Preparé una propuesta concreta pensada para ustedes:</p>
+    <p><a href="https://tracking-prospectos.estrateg-ia-hyper.workers.dev/c?id=autotest-01&u=https://estrategiahyper.com">Ver la propuesta</a></p>
+    <p>Si te encaja, respondemos por aquí y lo vemos sin compromiso.</p>
+    <p>Un saludo,<br>Estrategia Hyper</p>
+    <img src="https://tracking-prospectos.estrateg-ia-hyper.workers.dev/p?id=autotest-01" width="1" height="1" alt="" style="display:block">
+  </div>
+
+  <p><small>Nota: el clic es la señal fiable de interés; la apertura puede dar falsos positivos por los proxies de imágenes de Apple Mail y Gmail. Cuando el conector de Gmail esté aprobado, este paso lo haré yo automáticamente al generar cada informe.</small></p>
+
+<script>
+function copiar() {
+  const rango = document.createRange();
+  rango.selectNode(document.getElementById('correo'));
+  const sel = window.getSelection();
+  sel.removeAllRanges();
+  sel.addRange(rango);
+  try {
+    document.execCommand('copy');
+    document.getElementById('estado').innerHTML = '<span class="ok">✓ Copiado — pégalo en Gmail</span>';
+  } catch (e) {
+    document.getElementById('estado').textContent = 'Selecciónalo manualmente y copia con Cmd/Ctrl+C';
+  }
+  sel.removeAllRanges();
+}
+</script>
+</body>
+</html>

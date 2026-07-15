@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contadores Mismo Lenguaje — Propuesta de sitio web</title>
+<style>
+  :root { --brand:#2b59ff; --brand-dark:#1a3fcc; --ink:#141821; --muted:#5b6472; --bg:#ffffff; --soft:#f4f6fb; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.55; }
+  .wrap { max-width:1040px; margin:0 auto; padding:0 22px; }
+  .badge { display:inline-block; background:#fff3; border:1px solid #ffffff55; color:#fff; font-size:13px; padding:5px 12px; border-radius:99px; margin-bottom:18px; backdrop-filter:blur(4px); }
+  header.hero { background:linear-gradient(135deg,var(--brand),var(--brand-dark)); color:#fff; padding:64px 0 72px; }
+  header.hero h1 { font-size:clamp(30px,5vw,48px); line-height:1.1; letter-spacing:-.02em; margin-bottom:14px; }
+  header.hero p.tag { font-size:clamp(16px,2.4vw,20px); opacity:.92; max-width:620px; }
+  .cta { display:inline-flex; gap:8px; align-items:center; margin-top:26px; background:#fff; color:var(--brand-dark); font-weight:600; padding:14px 24px; border-radius:12px; text-decoration:none; box-shadow:0 8px 24px #0002; }
+  .cta.sec { background:transparent; color:#fff; border:1.5px solid #ffffff88; box-shadow:none; margin-left:10px; }
+  section { padding:56px 0; }
+  h2 { font-size:clamp(22px,3.5vw,30px); letter-spacing:-.01em; margin-bottom:8px; }
+  .sub { color:var(--muted); margin-bottom:34px; max-width:600px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px; }
+  .card { background:var(--soft); border:1px solid #e7ebf3; border-radius:16px; padding:26px; }
+  .card .ic { width:44px; height:44px; border-radius:11px; background:var(--brand); display:flex; align-items:center; justify-content:center; font-size:22px; margin-bottom:14px; }
+  .card h3 { font-size:18px; margin-bottom:6px; }
+  .card p { color:var(--muted); font-size:15px; }
+  .band { background:var(--ink); color:#fff; }
+  .band .grid { grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); }
+  .stat { text-align:center; }
+  .stat b { font-size:34px; display:block; color:#7ea0ff; }
+  .stat span { color:#aab3c5; font-size:14px; }
+  footer { background:var(--soft); padding:44px 0; text-align:center; color:var(--muted); font-size:14px; }
+  .contact { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:10px; }
+  .contact a { color:var(--brand-dark); font-weight:600; text-decoration:none; }
+  .aviso { background:#fffbe6; border-top:1px solid #f0e4a8; color:#7a6a1e; text-align:center; font-size:13px; padding:12px 22px; }
+</style>
+</head>
+<body>
+  <div class="aviso">Maqueta de propuesta preparada para Contadores Mismo Lenguaje · no es un sitio publicado</div>
+
+  <header class="hero">
+    <div class="wrap">
+      <span class="badge">Despacho contable · CDMX</span>
+      <h1>Contadores Mismo Lenguaje</h1>
+      <p class="tag">Contabilidad clara y en su mismo lenguaje. Acompañamos a personas y negocios de la CDMX con sus impuestos y finanzas, sin tecnicismos.</p>
+      <div>
+        <a class="cta" href="#contacto">Reservar / Contactar</a>
+        <a class="cta sec" href="#servicios">Ver servicios</a>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <h2>Nuestros servicios</h2>
+      <p class="sub">Todo lo que Contadores Mismo Lenguaje ofrece, claro y a un clic.</p>
+      <div class="grid">
+        <div class="card"><div class="ic">✓</div><h3>Contabilidad integral</h3><p>Llevamos su contabilidad al día y se la explicamos de forma sencilla.</p></div>
+        <div class="card"><div class="ic">✓</div><h3>Impuestos y SAT</h3><p>Declaraciones y cumplimiento ante el SAT, sin complicaciones.</p></div>
+        <div class="card"><div class="ic">✓</div><h3>Asesoría fiscal</h3><p>Le ayudamos a tomar mejores decisiones y a pagar lo justo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="grid">
+        <div class="stat"><b>24/7</b><span>Contacto y reservas en línea</span></div>
+        <div class="stat"><b>100%</b><span>Adaptado a celular</span></div>
+        <div class="stat"><b>SSL</b><span>Conexión segura (HTTPS)</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="wrap" style="text-align:center">
+      <h2>Hablemos</h2>
+      <p class="sub" style="margin:0 auto 18px">Así de fácil sería para sus clientes encontrarlo y contactarlo.</p>
+      <div class="contact">
+        <a href="tel:55 7703 2718">📞 55 7703 2718</a>
+        <a href="#">📍 CDMX</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Contadores Mismo Lenguaje · CDMX · Propuesta de diseño web<br>
+    <span style="font-size:12px">Maqueta creada como muestra. El diseño final se adapta a su marca.</span>
+  </footer>
+
+  <!-- píxel: confirma que el prospecto abrió la demo -->
+  <img src="https://tracking-prospectos.estrateg-ia-hyper.workers.dev/p?id=test-mismolenguaje-demo" width="1" height="1" alt="" style="display:block">
+</body>
+</html>

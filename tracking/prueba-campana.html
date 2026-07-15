@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prueba de campaña — activos de valor</title>
+<style>
+  body { font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif; max-width:760px; margin:36px auto; padding:0 20px; color:#1a1a1a; line-height:1.55; }
+  h1 { font-size:22px; } h2 { font-size:18px; margin-top:8px; }
+  .prospecto { border:1px solid #e2e6ee; border-radius:14px; padding:22px; margin:20px 0; }
+  .tag { display:inline-block; background:#eef2ff; color:#3346c7; font-size:12px; font-weight:600; padding:3px 10px; border-radius:99px; }
+  .links a { display:inline-block; margin:6px 10px 6px 0; background:#2b59ff; color:#fff; text-decoration:none; padding:9px 16px; border-radius:9px; font-size:14px; }
+  .correo { background:#f7f9fc; border:1px solid #e2e6ee; border-radius:10px; padding:16px 18px; margin-top:14px; white-space:pre-wrap; font-size:14px; }
+  button { background:#0e9f6e; color:#fff; border:0; padding:8px 14px; border-radius:8px; cursor:pointer; font-size:13px; margin-top:10px; }
+  small { color:#666; }
+  code { background:#eee; padding:1px 5px; border-radius:4px; font-size:12px; word-break:break-all; }
+</style>
+</head>
+<body>
+  <h1>Prueba de campaña — 2 prospectos reales (contadores CDMX)</h1>
+  <p>Así se vería el flujo completo con activos de valor. Cada botón azul es el <strong>enlace rastreado real</strong>: si lo abres, se registra un clic en tu hoja Eventos y verás la demo pública. Los correos están listos para copiar.</p>
+
+  <div class="prospecto">
+    <span class="tag">Sin web · demo de web</span>
+    <h2>Contadores Mismo Lenguaje</h2>
+    <small>Tel 55 7703 2718 · sin email ni web (en real, primer contacto por WhatsApp/llamada)</small>
+    <div class="links">
+      <a href="https://tracking-prospectos.estrateg-ia-hyper.workers.dev/c?id=test-mismolenguaje-demo&u=https://demos-prospectos.pages.dev/test-mismolenguaje" target="_blank">Ver su demo de web →</a>
+    </div>
+    <div class="correo" id="c1">Estimados señores de Contadores Mismo Lenguaje:
+
+Buen día. Mi nombre es Shmin, de Estrategia Hyper.
+
+Noté que su despacho trabaja principalmente por recomendación y aún no cuenta con página web. Me permití preparar una maqueta de cómo podría verse, con sus servicios y datos de contacto:
+
+https://tracking-prospectos.estrateg-ia-hyper.workers.dev/c?id=test-mismolenguaje-demo&u=https://demos-prospectos.pages.dev/test-mismolenguaje
+
+Si les parece interesante, con gusto les explico en una llamada breve cómo la dejaríamos lista y funcionando, sin ningún compromiso.
+
+Quedo al pendiente de sus comentarios.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+    <button onclick="cp('c1',this)">Copiar correo</button>
+  </div>
+
+  <div class="prospecto">
+    <span class="tag">Web ok · necesita automatización · diagnóstico + ROI</span>
+    <h2>Contador CDMX</h2>
+    <small>hola@contador-cdmx.com · web moderna sin agenda ni CRM</small>
+    <div class="links">
+      <a href="https://tracking-prospectos.estrateg-ia-hyper.workers.dev/c?id=test-contador-cdmx-diag&u=https://demos-prospectos.pages.dev/test-contador-cdmx-diagnostico" target="_blank">Ver su diagnóstico →</a>
+      <a href="https://tracking-prospectos.estrateg-ia-hyper.workers.dev/c?id=test-contador-cdmx-roi&u=https://demos-prospectos.pages.dev/test-contador-cdmx-roi" target="_blank">Ver su simulador de ahorro →</a>
+    </div>
+    <div class="correo" id="c2">Estimados señores de Contador CDMX:
+
+Buen día. Mi nombre es Shmin, de Estrategia Hyper.
+
+Al revisar su sitio web detecté un par de fugas que hoy podrían estarles costando consultas: ofrecen videollamada pero sin un sistema para agendarla, y no se da seguimiento a los contactos que llegan.
+
+Me permití preparar un diagnóstico breve con el antes y después de cada punto:
+https://tracking-prospectos.estrateg-ia-hyper.workers.dev/c?id=test-contador-cdmx-diag&u=https://demos-prospectos.pages.dev/test-contador-cdmx-diagnostico
+
+También incluyo una calculadora del tiempo y dinero que ahorrarían automatizando la agenda y el seguimiento:
+https://tracking-prospectos.estrateg-ia-hyper.workers.dev/c?id=test-contador-cdmx-roi&u=https://demos-prospectos.pages.dev/test-contador-cdmx-roi
+
+Si les parece interesante, con gusto lo revisamos en una llamada breve, sin ningún compromiso.
+
+Quedo al pendiente de sus comentarios.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+    <button onclick="cp('c2',this)">Copiar correo</button>
+  </div>
+
+  <p><small>Nota: estos correos son texto con enlaces (fáciles de mandar hoy). Cuando el conector de Gmail esté aprobado, los generaré en HTML con el píxel de apertura ya incrustado y como borrador listo para enviar.</small></p>
+
+<script>
+function cp(id,btn){
+  const t=document.getElementById(id).innerText;
+  navigator.clipboard.writeText(t).then(()=>{btn.textContent='✓ Copiado';setTimeout(()=>btn.textContent='Copiar correo',1500);});
+}
+</script>
+</body>
+</html>

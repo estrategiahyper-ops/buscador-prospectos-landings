@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>¿Cuánto ahorraría? — {{EMPRESA}}</title>
+<!--
+  PLANTILLA "Simulador de ahorro (ROI)" — kit de prospección. Design system: Trust & Authority (ui-ux-pro-max).
+  Tokens: {{EMPRESA}} {{SECTOR}} {{CIUDAD}} {{WORKER_URL}} {{TRACKING_ID}} {{URL_CONTACTO}}
+    {{TAREA}} = tarea repetitiva concreta   {{DEF_HORAS}} = horas/semana   {{DEF_COSTE}} = costo por hora (MXN)
+-->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+  :root{
+    --primary:#0F172A; --accent:#0369A1; --accent-dark:#075985; --bg:#F8FAFC; --fg:#020617;
+    --muted:#64748B; --border:#E2E8F0; --surface:#FFFFFF; --sky:#7DD3FC;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+  body{font-family:'IBM Plex Sans',-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6;font-size:16px}
+  .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+  header{background:linear-gradient(160deg,var(--primary),#1E293B 75%,#0C4A6E 140%);color:#fff;padding:60px 0 110px;text-align:center}
+  .kicker{display:inline-flex;align-items:center;gap:7px;background:#FFFFFF14;border:1px solid #FFFFFF2E;color:#BAE6FD;font-size:13px;font-weight:500;padding:6px 14px;border-radius:99px;margin-bottom:18px}
+  .kicker svg{width:14px;height:14px}
+  header h1{font-size:clamp(25px,4.4vw,38px);font-weight:700;letter-spacing:-.02em;max-width:640px;margin:0 auto}
+  .panel{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:32px;margin-top:-56px;position:relative;box-shadow:0 18px 44px #0F172A1A}
+  .field{margin-bottom:26px}
+  .field:last-child{margin-bottom:4px}
+  .field label{display:flex;justify-content:space-between;align-items:baseline;font-weight:600;font-size:15px;color:var(--primary);margin-bottom:12px}
+  .field label b{font-size:19px;color:var(--accent);font-variant-numeric:tabular-nums}
+  input[type=range]{width:100%;height:8px;border-radius:99px;appearance:none;-webkit-appearance:none;background:linear-gradient(to right,var(--accent) 0%,var(--accent) var(--fill,50%),var(--border) var(--fill,50%));cursor:pointer}
+  input[type=range]::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:#fff;border:3px solid var(--accent);box-shadow:0 2px 10px #0F172A33;cursor:pointer}
+  input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:#fff;border:3px solid var(--accent);box-shadow:0 2px 10px #0F172A33;cursor:pointer}
+  input[type=range]:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+  .hint{display:flex;justify-content:space-between;color:var(--muted);font-size:12.5px;margin-top:6px}
+  .result{background:var(--primary);border-radius:16px;padding:38px 28px;text-align:center;color:#fff;margin:26px 0 34px;box-shadow:0 18px 44px #0F172A26}
+  .result .lbl{color:#94A3B8;font-size:14px;font-weight:500;text-transform:uppercase;letter-spacing:.07em}
+  .result .big{font-size:clamp(40px,8.5vw,62px);font-weight:700;color:var(--sky);letter-spacing:-.025em;line-height:1.1;margin-top:6px;font-variant-numeric:tabular-nums}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+  .row>div{background:#FFFFFF10;border:1px solid #FFFFFF1C;border-radius:12px;padding:16px}
+  .row b{display:block;font-size:21px;font-weight:700;color:#BAE6FD;font-variant-numeric:tabular-nums}
+  .row span{font-size:13px;color:#94A3B8}
+  .btn{display:inline-flex;align-items:center;gap:9px;background:var(--accent);color:#fff;font-weight:600;font-size:15px;text-decoration:none;padding:15px 30px;border-radius:10px;transition:all .2s;cursor:pointer;min-height:48px;margin-top:28px;box-shadow:0 10px 28px #0369A15C}
+  .btn:hover{background:var(--accent-dark);transform:translateY(-1px)}
+  .btn svg{width:17px;height:17px}
+  .foot{text-align:center;color:var(--muted);font-size:13px;padding:0 20px 46px}
+  a:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <span class="kicker">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+        {{SECTOR}} · {{CIUDAD}}
+      </span>
+      <h1>Cuánto ahorraría {{EMPRESA}} automatizando {{TAREA}}</h1>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="panel">
+      <div class="field">
+        <label for="horas">Horas a la semana dedicadas a esa tarea <b><span id="vHoras">{{DEF_HORAS}}</span> h</b></label>
+        <input type="range" id="horas" min="1" max="40" value="{{DEF_HORAS}}" aria-describedby="hHint">
+        <div class="hint" id="hHint"><span>1 h</span><span>40 h</span></div>
+      </div>
+      <div class="field">
+        <label for="coste">Costo por hora (MXN) <b>$<span id="vCoste">{{DEF_COSTE}}</span></b></label>
+        <input type="range" id="coste" min="50" max="600" step="10" value="{{DEF_COSTE}}" aria-describedby="cHint">
+        <div class="hint" id="cHint"><span>$50</span><span>$600</span></div>
+      </div>
+    </div>
+
+    <div class="result" role="status" aria-live="polite">
+      <div class="lbl">Ahorro estimado al año</div>
+      <div class="big" id="anual">$0</div>
+      <div class="row">
+        <div><b id="horasAnio">0 h</b><span>tiempo liberado al año</span></div>
+        <div><b id="mensual">$0</b><span>ahorro al mes</span></div>
+      </div>
+      <a class="btn" href="{{WORKER_URL}}/c?id={{TRACKING_ID}}-roi&u={{URL_CONTACTO}}">
+        Me interesa este ahorro
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <p class="foot">Estimación orientativa basada en automatizar {{TAREA}}. Los números finales dependen de su operación real.</p>
+  </div>
+
+<script>
+  var h=document.getElementById('horas'),c=document.getElementById('coste');
+  var fmt=function(n){return '$'+Math.round(n).toLocaleString('es-MX')};
+  function fill(el){var p=(el.value-el.min)/(el.max-el.min)*100;el.style.setProperty('--fill',p+'%')}
+  function calc(){
+    var horas=+h.value,coste=+c.value;
+    document.getElementById('vHoras').textContent=horas;
+    document.getElementById('vCoste').textContent=coste;
+    var semanal=horas*coste;
+    document.getElementById('anual').textContent=fmt(semanal*52);
+    document.getElementById('mensual').textContent=fmt(semanal*4.33);
+    document.getElementById('horasAnio').textContent=Math.round(horas*52).toLocaleString('es-MX')+' h';
+    fill(h);fill(c);
+  }
+  h.addEventListener('input',calc);c.addEventListener('input',calc);calc();
+</script>
+
+  <img src="{{WORKER_URL}}/p?id={{TRACKING_ID}}-roi" width="1" height="1" alt="" style="display:block">
+</body>
+</html>

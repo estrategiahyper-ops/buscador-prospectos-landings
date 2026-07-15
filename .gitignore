@@ -1,0 +1,13 @@
+# Credenciales y secretos — NUNCA subir
+.claude/settings.local.json
+tracking/.secret-tracking
+*.secret
+.env
+.env.*
+
+# Cachés y artefactos de wrangler
+**/.wrangler/
+node_modules/
+
+# Sistema
+.DS_Store

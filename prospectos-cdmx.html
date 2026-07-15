@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prospectos CDMX — Automatización de Negocio</title>
+  <style>
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --surface2: #222636;
+      --accent: #6c63ff;
+      --accent2: #00d4aa;
+      --text: #e8eaf0;
+      --muted: #8b909e;
+      --border: #2d3147;
+      --red: #ff5c5c;
+      --yellow: #ffc947;
+      --green: #00d4aa;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; line-height: 1.6; }
+
+    header {
+      background: linear-gradient(135deg, #1a1d27 0%, #141728 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 48px 32px;
+    }
+    .header-meta { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+    h1 { font-size: 32px; font-weight: 700; color: var(--text); }
+    h1 span { color: var(--accent); }
+    .header-sub { color: var(--muted); margin-top: 6px; font-size: 14px; }
+    .stats-bar { display: flex; gap: 32px; margin-top: 28px; flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat-value { font-size: 28px; font-weight: 700; color: var(--accent); }
+    .stat-label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; }
+
+    main { max-width: 1300px; margin: 0 auto; padding: 40px 24px; }
+
+    section { margin-bottom: 56px; }
+    h2 { font-size: 20px; font-weight: 600; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+    h2 .tag { font-size: 11px; font-weight: 500; background: var(--accent); color: #fff; border-radius: 4px; padding: 2px 8px; margin-left: 10px; vertical-align: middle; }
+
+    /* TABLA GENERAL */
+    .table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; background: var(--surface); }
+    thead { background: var(--surface2); }
+    th { padding: 12px 16px; text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); font-weight: 600; }
+    td { padding: 13px 16px; border-top: 1px solid var(--border); vertical-align: middle; }
+    tr:hover td { background: var(--surface2); }
+    .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+    .badge-abogado { background: rgba(108,99,255,.15); color: #9c95ff; }
+    .badge-contador { background: rgba(0,212,170,.12); color: #00d4aa; }
+    .score-cell { font-size: 20px; font-weight: 700; }
+    .score-9, .score-10 { color: var(--red); }
+    .score-7, .score-8 { color: var(--yellow); }
+    .score-5, .score-6 { color: var(--green); }
+    .icon-ok { color: var(--green); }
+    .icon-no { color: var(--red); }
+    .icon-mid { color: var(--yellow); }
+    a.web { color: var(--accent); text-decoration: none; font-size: 13px; }
+    a.web:hover { text-decoration: underline; }
+
+    /* FICHAS DETALLADAS */
+    .fichas { display: grid; grid-template-columns: repeat(auto-fill, minmax(560px, 1fr)); gap: 24px; }
+    .ficha { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+    .ficha-header { padding: 20px 24px 14px; background: var(--surface2); display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+    .ficha-title { font-size: 17px; font-weight: 700; }
+    .ficha-sub { font-size: 12px; color: var(--muted); margin-top: 3px; }
+    .score-big { font-size: 36px; font-weight: 800; line-height: 1; }
+    .ficha-body { padding: 20px 24px; }
+    .pills { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .pill { font-size: 11px; padding: 4px 10px; border-radius: 20px; font-weight: 500; }
+    .pill-red { background: rgba(255,92,92,.15); color: #ff8080; }
+    .pill-green { background: rgba(0,212,170,.12); color: #00d4aa; }
+    .pill-gray { background: rgba(139,144,158,.12); color: var(--muted); }
+    .diagnosis { font-size: 13.5px; color: var(--muted); margin-bottom: 16px; }
+    .diagnosis strong { color: var(--text); }
+    .contact-block { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
+    .contact-block-title { font-size: 11px; text-transform: uppercase; letter-spacing: .6px; color: var(--accent); font-weight: 600; margin-bottom: 10px; }
+    .contact-info { font-size: 13px; color: var(--muted); margin-bottom: 12px; }
+    .contact-info span { color: var(--text); }
+    .msg-box { background: var(--surface2); border-radius: 8px; padding: 14px 16px; font-size: 13px; line-height: 1.7; color: #c5c9d8; border-left: 3px solid var(--accent); margin-top: 8px; }
+    .msg-label { font-size: 11px; text-transform: uppercase; letter-spacing: .5px; color: var(--muted); margin-bottom: 6px; }
+
+    /* OPORTUNIDADES */
+    .opp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+    .opp-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .opp-icon { font-size: 26px; margin-bottom: 10px; }
+    .opp-title { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+    .opp-desc { font-size: 13px; color: var(--muted); }
+
+    footer { text-align: center; padding: 32px; color: var(--muted); font-size: 12px; border-top: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-meta">Informe generado — 31 de mayo 2026 · CDMX</div>
+  <h1>Prospectos para <span>Automatización de Negocio</span></h1>
+  <p class="header-sub">Despachos de Abogados y Contadores · Ciudad de México · Análisis de presencia digital y oportunidad de ventas</p>
+  <div class="stats-bar">
+    <div class="stat"><div class="stat-value">10</div><div class="stat-label">Empresas analizadas</div></div>
+    <div class="stat"><div class="stat-value">5</div><div class="stat-label">Alta oportunidad (≥7)</div></div>
+    <div class="stat"><div class="stat-value">9</div><div class="stat-label">Sin CRM ni automatización</div></div>
+    <div class="stat"><div class="stat-value">7</div><div class="stat-label">Sin agenda en línea</div></div>
+  </div>
+</header>
+
+<main>
+
+  <!-- TABLA GENERAL -->
+  <section>
+    <h2>Todos los prospectos <span class="tag">10 empresas</span></h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Empresa</th>
+            <th>Tipo</th>
+            <th>HTTPS</th>
+            <th>WhatsApp</th>
+            <th>Agenda online</th>
+            <th>CRM/Automatización</th>
+            <th>Web</th>
+            <th>Contacto</th>
+            <th>Oportunidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><strong>Soluciones Jurídicas</strong></td>
+            <td><span class="badge badge-abogado">Abogados</span></td>
+            <td><span class="icon-mid">~</span></td>
+            <td><span class="icon-ok">✓</span></td>
+            <td><span class="icon-no">✗</span></td>
+            <td><span class="icon-no">✗</span></td>
+            <td><a class="web" href="https://www.solucionesjuridicas.com.mx" target="_blank">solucionesjuridicas.com.mx</a></td>
+            <td>55 2454 8118</td>
+            <td class="score-cell score-9">9/10</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><strong>TF Contadores</strong></td>
+            <td><span class="badge badge-contador">Contadores</span></td>
+            <td><span class="icon-mid">~</span></td>
+            <td><span class="icon-ok">✓</span></td>
+            <td><span class="icon-no">✗</span></td>
+            <td><span class="icon-no">✗</span></td>
+            <td><a class="web" href="https://tfcontadores.com" target="_blank">tfcontadores.com</a></td>
+            <td>servicios@tfcontadores.com</td>
+            <td class="score-cell score-9">9/10</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><strong>GByA Contadores Públicos</strong></td>
+            <td><span class="badge badge-contador">Contadores</span></td>
+            <td><span class="icon-mid">~</span></td>
+            <td><span class="icon-ok">✓</span></td>
+            <td><span class="icon-no">✗</span></td>
+            <td><span class="icon-no">✗</span></td>
+            <td><a class="web" href="https://gbyacontadorespublicos.com" target="_blank">gbyacontadorespublicos.com</a></td>
+            <td>contacto@GByAcontadorespublicos.com</td>
+            <td class="score-cell score-8">8/10</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><strong>BRC Contadores Públicos</strong></td>
+            <td><span class="badge badge-contador">Contadores</span></td>
+            <td><span class="icon-mid">~</span></td>
+            <td><span class="icon-ok">✓</span></td>
+            <td><span class="icon-no">✗</span></td>
+            <td><span class="icon-no">✗</span></td>
+            <td><a class="web" href="https://www.brccontadorespublicos.com.mx" target="_blank">brccontadorespublicos.com.mx</a></td>
+            <td>bustosfv@hotmail.com</td>
+            <td class="score-cell score-8">8/10</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><strong>Reyes Solís Abogados</strong></td>
+            <td><span class="badge badge-abogado">Abogados</span></td>
+            <td><span class="icon-ok">✓</span></td>
+            <td><span class="icon-ok">✓</span></td>
+            <td><span class="icon-no">✗</span></td>
+            <td><span class="icon-no">✗</span></td>
+            <td><a class="web" href="https://www.rsolisabogados.com" target="_blank">rsolisabogados.com</a></td>
+            <td>contacto@rsolisabogados.com</td>
+            <td class="score-cell score-7">7/10</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td><strong>SC Contadores Fiscalistas</strong></td>
+            <td><span class="badge badge-contador">Contadores</span></td>
+            <td><span class="icon-mid">~</span></td>
+            <td><span class="icon-ok">✓</span></td>
+            <td><span class="icon-mid">~</span></td>
+            <td><span class="icon-no">✗</span></td>
+            <td><a class="web" href="https://scfiscalistas.mx" target="_blank">scfiscalistas.mx</a></td>
+            <td>informacion@scfiscalistas.mx</td>
+            <td class="score-cell score-6">6/10</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td><strong>Abogados en CDMX</strong></td>
+            <td><span class="badge badge-abogado">Abogados</span></td>
+            <td><span class="icon-mid">~</span></td>
+            <td><span class="icon-ok">✓</span></td>
+            <td><span class="icon-mid">~</span></td>
+            <td><span class="icon-no">✗</span></td>
+            <td><a class="web" href="https://abogadosencdmx.com" target="_blank">abogadosencdmx.com</a></td>
+            <td>55 6465 5501</td>
+            <td class="score-cell score-6">6/10</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td><strong>Amaya y García Abogados</strong></td>
+            <td><span class="badge badge-abogado">Abogados</span></td>
+            <td><span class="icon-ok">✓</span></td>
+            <td><span class="icon-ok">✓</span></td>
+            <td><span class="icon-no">✗</span></td>
+            <td><span class="icon-no">✗</span></td>
+            <td><a class="web" href="https://www.amayaygarciaabogados.com" target="_blank">amayaygarciaabogados.com</a></td>
+            <td>info@amayaygarciaabogados.com</td>
+            <td class="score-cell score-6">6/10</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td><strong>Figueroa y Asociados</strong></td>
+            <td><span class="badge badge-abogado">Abogados</span></td>
+            <td><span class="icon-ok">✓</span></td>
+            <td><span class="icon-no">✗</span></td>
+            <td><span class="icon-mid">~</span></td>
+            <td><span class="icon-no">✗</span></td>
+            <td><a class="web" href="https://figueroayasociados.mx" target="_blank">figueroayasociados.mx</a></td>
+            <td>contacto@figueroayasociados.mx</td>
+            <td class="score-cell score-5">5/10</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td><strong>Despacho Contable México</strong></td>
+            <td><span class="badge badge-contador">Contadores</span></td>
+            <td><span class="icon-mid">~</span></td>
+            <td><span class="icon-no">✗</span></td>
+            <td><span class="icon-mid">~</span></td>
+            <td><span class="icon-mid">~</span></td>
+            <td><a class="web" href="https://despachocontablemexico.com.mx" target="_blank">despachocontablemexico.com.mx</a></td>
+            <td>(55) 50 15 06 57</td>
+            <td class="score-cell score-5">5/10</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ANÁLISIS DETALLADO TOP 5 -->
+  <section>
+    <h2>Análisis detallado — Top 5 oportunidades <span class="tag">Con mensaje de contacto</span></h2>
+    <div class="fichas">
+
+      <!-- 1. SOLUCIONES JURÍDICAS -->
+      <div class="ficha">
+        <div class="ficha-header">
+          <div>
+            <div class="ficha-title">Soluciones Jurídicas</div>
+            <div class="ficha-sub">Abogados · Lic. Víctor Carrillo Estrada · Roma Sur, CDMX</div>
+          </div>
+          <div class="score-big score-9">9</div>
+        </div>
+        <div class="ficha-body">
+          <div class="pills">
+            <span class="pill pill-red">Sin CRM</span>
+            <span class="pill pill-red">Sin agenda online</span>
+            <span class="pill pill-red">Web antigua</span>
+            <span class="pill pill-green">WhatsApp activo</span>
+            <span class="pill pill-green">Blog activo</span>
+            <span class="pill pill-green">Facebook · Twitter · YouTube</span>
+          </div>
+          <p class="diagnosis">
+            <strong>Diagnóstico:</strong> Sitio web con diseño de hace varios años, sin sistema de gestión de casos ni CRM. Tienen WhatsApp activo para atender 24h pero sin automatización. Sus 3 canales digitales (blog, WhatsApp, redes) son islas desconectadas. Alta oportunidad de integrar todo en un flujo automatizado: lead → WhatsApp bot → agenda → expediente.
+          </p>
+          <div class="contact-block">
+            <div class="contact-block-title">Datos de contacto</div>
+            <div class="contact-info">📞 <span>55 2454 8118</span> (oficina) · <span>55 1798 4108</span> (WhatsApp)</div>
+            <div class="msg-label">Mensaje sugerido (WhatsApp / email)</div>
+            <div class="msg-box">
+              Hola Lic. Carrillo, ¡buenos días! Vi que atienden consultas las 24h por WhatsApp, lo cual es excelente. ¿Han considerado automatizar esa atención para que el despacho responda al instante, agende citas y registre cada caso sin que ningún abogado tenga que estar pendiente del celular? Trabajamos con despachos en CDMX implementando exactamente eso: un sistema que recibe al cliente, obtiene sus datos, agenda la consulta y lo sube automáticamente a un expediente digital. ¿Les compartiría cómo funciona en 15 minutos?
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. TF CONTADORES -->
+      <div class="ficha">
+        <div class="ficha-header">
+          <div>
+            <div class="ficha-title">TF Contadores</div>
+            <div class="ficha-sub">Contadores · Auditoría, Fiscal y Contabilidad · CDMX/EDOMEX</div>
+          </div>
+          <div class="score-big score-9">9</div>
+        </div>
+        <div class="ficha-body">
+          <div class="pills">
+            <span class="pill pill-red">Sin CRM</span>
+            <span class="pill pill-red">Sin agenda online</span>
+            <span class="pill pill-red">Web incompleta (Lorem ipsum)</span>
+            <span class="pill pill-red">Sin blog activo</span>
+            <span class="pill pill-green">WhatsApp activo</span>
+          </div>
+          <p class="diagnosis">
+            <strong>Diagnóstico:</strong> El sitio web aún tiene texto "Lorem ipsum" en producción, lo que indica que no tienen un área de marketing o digital activa. Sin agenda, sin automatización, sin contenido. Firma con servicios de auditoría y consultoría fiscal donde el proceso de recopilación de documentos, recordatorios de declaraciones y seguimiento a clientes es completamente manual. Oportunidad perfecta para proponer un sistema que automatice el ciclo completo del cliente contable.
+          </p>
+          <div class="contact-block">
+            <div class="contact-block-title">Datos de contacto</div>
+            <div class="contact-info">📞 <span>55 3984-8000</span> · ✉️ <span>servicios@tfcontadores.com</span></div>
+            <div class="msg-label">Mensaje sugerido (email)</div>
+            <div class="msg-box">
+              Estimado equipo de TF Contadores, me pongo en contacto porque analizamos la operación digital de firmas contables en CDMX y encontramos que la mayoría dedica hasta 40% de su tiempo a tareas repetitivas: solicitar documentos a clientes, enviar recordatorios de fechas fiscales y capturar datos manualmente. Implementamos flujos automatizados que reducen ese trabajo a cero: el sistema solicita los archivos al cliente, le recuerda vencimientos, y centraliza todo sin intervención manual. ¿Tienen 20 minutos esta semana para ver un demo? No tiene costo.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. GByA CONTADORES -->
+      <div class="ficha">
+        <div class="ficha-header">
+          <div>
+            <div class="ficha-title">GByA Contadores Públicos</div>
+            <div class="ficha-sub">Contadores · +50 años de experiencia · CDMX</div>
+          </div>
+          <div class="score-big score-8">8</div>
+        </div>
+        <div class="ficha-body">
+          <div class="pills">
+            <span class="pill pill-red">Sin CRM</span>
+            <span class="pill pill-red">Sin agenda online</span>
+            <span class="pill pill-red">Sin blog</span>
+            <span class="pill pill-red">Sin redes sociales</span>
+            <span class="pill pill-green">WhatsApp activo</span>
+            <span class="pill pill-green">50 años de trayectoria</span>
+          </div>
+          <p class="diagnosis">
+            <strong>Diagnóstico:</strong> Firma con medio siglo de experiencia pero presencia digital mínima. Sin blog, sin redes sociales y sin agenda en línea. Toda su captación de clientes viene por referidos, lo que los hace vulnerables. La automatización aquí se vende fácil como "modernizar el despacho sin perder lo que ya funciona": un sistema que gestiona la comunicación, agenda citas y organiza la documentación de clientes.
+          </p>
+          <div class="contact-block">
+            <div class="contact-block-title">Datos de contacto</div>
+            <div class="contact-info">📞 <span>55 7219 1687</span> · ✉️ <span>contacto@GByAcontadorespublicos.com</span></div>
+            <div class="msg-label">Mensaje sugerido (WhatsApp)</div>
+            <div class="msg-box">
+              Buenas tardes, ¿con GByA Contadores? Los contacto porque ayudamos a despachos con más de 10 años de cartera a digitalizar su operación sin complicaciones. Con 50 años de trayectoria, seguro tienen clientes leales pero quizás el seguimiento, la agenda y la recopilación de documentos aún se hace manualmente, ¿verdad? Implementamos un sistema que automatiza todo eso en menos de 2 semanas. ¿Les interesa una llamada rápida para ver si aplica para su despacho?
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. BRC CONTADORES -->
+      <div class="ficha">
+        <div class="ficha-header">
+          <div>
+            <div class="ficha-title">BRC Contadores Públicos</div>
+            <div class="ficha-sub">Contadores · +27 años de experiencia · CDMX</div>
+          </div>
+          <div class="score-big score-8">8</div>
+        </div>
+        <div class="ficha-body">
+          <div class="pills">
+            <span class="pill pill-red">Sin CRM</span>
+            <span class="pill pill-red">Sin agenda online</span>
+            <span class="pill pill-red">Email Hotmail (no profesional)</span>
+            <span class="pill pill-red">Blog vacío</span>
+            <span class="pill pill-green">WhatsApp activo</span>
+          </div>
+          <p class="diagnosis">
+            <strong>Diagnóstico:</strong> Señal muy clara: usan un email <em>@hotmail.com</em> como contacto profesional, lo que indica que no han invertido en infraestructura digital. Tienen blog pero sin contenido. La oportunidad de automatización es total: desde email corporativo, gestión de clientes hasta recordatorios automáticos de declaraciones. Un cliente fácil de convencer con una propuesta de modernización integral.
+          </p>
+          <div class="contact-block">
+            <div class="contact-block-title">Datos de contacto</div>
+            <div class="contact-info">📞 <span>55-5357-3706</span> · 📱 <span>55-4500-0589</span> · ✉️ <span>bustosfv@hotmail.com</span></div>
+            <div class="msg-label">Mensaje sugerido (email)</div>
+            <div class="msg-box">
+              Estimado BRC Contadores, ¿cuántas horas a la semana dedican a contestar WhatsApps de clientes pidiendo el estatus de su declaración o solicitando documentos? Trabajamos con firmas contables en CDMX para automatizar exactamente eso: el cliente entra a un flujo donde puede subir documentos, recibir recordatorios automáticos y consultar el estado de su trámite, sin que ningún contador tenga que responder manualmente. En 2 semanas están operando. ¿Les puedo mostrar cómo funciona esta semana?
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. REYES SOLÍS -->
+      <div class="ficha">
+        <div class="ficha-header">
+          <div>
+            <div class="ficha-title">Reyes Solís Abogados</div>
+            <div class="ficha-sub">Abogados · +10 años · Presidente Masaryk, CDMX</div>
+          </div>
+          <div class="score-big score-7">7</div>
+        </div>
+        <div class="ficha-body">
+          <div class="pills">
+            <span class="pill pill-red">Sin CRM</span>
+            <span class="pill pill-red">Sin agenda online (solo "previa cita")</span>
+            <span class="pill pill-green">Web moderna y profesional</span>
+            <span class="pill pill-green">WhatsApp activo</span>
+            <span class="pill pill-green">Blog activo</span>
+            <span class="pill pill-green">FB · Twitter · Instagram</span>
+          </div>
+          <p class="diagnosis">
+            <strong>Diagnóstico:</strong> Despacho con presencia digital cuidada y buena imagen, pero sin automatización de back-office. Tienen WhatsApp, blog y redes activas, pero sin CRM para dar seguimiento a clientes ni agenda automática. Con el nivel de presentación que tienen, ya están listos para el siguiente paso: un sistema de gestión de casos integrado con su canal de WhatsApp y un portal de clientes.
+          </p>
+          <div class="contact-block">
+            <div class="contact-block-title">Datos de contacto</div>
+            <div class="contact-info">📞 <span>55 9865 8482</span> · ✉️ <span>contacto@rsolisabogados.com</span></div>
+            <div class="msg-label">Mensaje sugerido (email)</div>
+            <div class="msg-box">
+              Hola equipo Reyes Solís, su despacho tiene una presencia digital excelente. Justo por eso los contacto: cuando la imagen es tan profesional, el siguiente paso natural es que el servicio al cliente también lo sea. ¿Actualmente tienen forma de que un prospecto agende su consulta solo, sin tener que llamar o esperar respuesta? ¿Sus abogados pueden consultar el expediente de un cliente desde el celular? Implementamos sistemas que hacen exactamente eso, integrados con WhatsApp y sus canales actuales. ¿Conversamos 15 minutos?
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- OPORTUNIDADES DE AUTOMATIZACIÓN -->
+  <section>
+    <h2>Servicios de automatización más demandados en este sector</h2>
+    <div class="opp-grid">
+      <div class="opp-card">
+        <div class="opp-icon">🤖</div>
+        <div class="opp-title">Bot de WhatsApp</div>
+        <div class="opp-desc">Respuesta automática 24/7, calificación de leads y agenda de citas sin intervención humana.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-icon">📅</div>
+        <div class="opp-title">Agenda en línea</div>
+        <div class="opp-desc">Calendarios integrados donde el cliente reserva, cancela y recibe recordatorios automáticos.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-icon">🗂️</div>
+        <div class="opp-title">CRM legal/contable</div>
+        <div class="opp-desc">Gestión de casos, clientes y expedientes en un solo sistema con alertas y seguimiento automático.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-icon">📄</div>
+        <div class="opp-title">Solicitud de documentos</div>
+        <div class="opp-desc">Flujos automatizados para pedir, recibir y organizar documentos de clientes sin emails manuales.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-icon">🔔</div>
+        <div class="opp-title">Recordatorios fiscales</div>
+        <div class="opp-desc">Alertas automáticas de vencimientos del SAT, IMSS, INFONAVIT enviadas al cliente y al despacho.</div>
+      </div>
+      <div class="opp-card">
+        <div class="opp-icon">📊</div>
+        <div class="opp-title">Dashboard de clientes</div>
+        <div class="opp-desc">Portal donde el cliente ve el estado de su caso/declaración sin tener que llamar al despacho.</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Generado automáticamente · egonzalez@glwinba.com · CDMX · Mayo 2026
+</footer>
+
+</body>
+</html>

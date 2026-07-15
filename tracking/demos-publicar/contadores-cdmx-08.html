@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PAAE — Profesionales Asociados en Asesorías Especiales SC — Propuesta de sitio web</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+  :root{
+    --primary:#0F172A; --secondary:#334155; --accent:#0369A1; --accent-dark:#075985;
+    --bg:#F8FAFC; --fg:#020617; --muted:#64748B; --border:#E2E8F0; --surface:#FFFFFF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  body{font-family:'IBM Plex Sans',-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6;font-size:16px}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  .aviso{background:#FEF9C3;border-bottom:1px solid #FDE047;color:#713F12;text-align:center;font-size:13px;padding:10px 24px}
+  nav{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{font-weight:700;font-size:18px;color:var(--primary);letter-spacing:-.01em}
+  .logo span{color:var(--accent)}
+  nav a.navcta{background:var(--accent);color:#fff;font-weight:600;font-size:14px;text-decoration:none;padding:11px 20px;border-radius:8px;transition:background .2s;cursor:pointer}
+  nav a.navcta:hover{background:var(--accent-dark)}
+  .hero{background:linear-gradient(160deg,var(--primary) 0%,#1E293B 70%,#0C4A6E 130%);color:#fff;padding:88px 0 96px}
+  .badge{display:inline-flex;align-items:center;gap:7px;background:#FFFFFF14;border:1px solid #FFFFFF2E;color:#BAE6FD;font-size:13px;font-weight:500;padding:6px 14px;border-radius:99px;margin-bottom:22px}
+  .badge svg{width:14px;height:14px}
+  .hero h1{font-size:clamp(32px,5.2vw,54px);font-weight:700;line-height:1.08;letter-spacing:-.025em;max-width:760px}
+  .hero p.tag{font-size:clamp(16px,2.2vw,19px);color:#CBD5E1;max-width:600px;margin-top:18px}
+  .heroctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;text-decoration:none;padding:14px 26px;border-radius:10px;transition:all .2s;cursor:pointer;min-height:48px}
+  .btn svg{width:17px;height:17px}
+  .btn.primary{background:var(--accent);color:#fff;box-shadow:0 10px 28px #0369A14D}
+  .btn.primary:hover{background:var(--accent-dark);transform:translateY(-1px)}
+  .btn.ghost{background:transparent;color:#E2E8F0;border:1.5px solid #FFFFFF3D}
+  .btn.ghost:hover{border-color:#fff;color:#fff}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:-44px;position:relative;box-shadow:0 18px 44px #0F172A14}
+  .stat{background:var(--surface);padding:24px 20px;text-align:center}
+  .stat b{display:block;font-size:26px;font-weight:700;color:var(--primary);letter-spacing:-.02em}
+  .stat span{font-size:13.5px;color:var(--muted)}
+  section{padding:72px 0}
+  .kicker{color:var(--accent);font-weight:600;font-size:13.5px;text-transform:uppercase;letter-spacing:.08em}
+  h2{font-size:clamp(24px,3.4vw,34px);font-weight:700;letter-spacing:-.02em;color:var(--primary);margin:8px 0 10px}
+  .sub{color:var(--muted);max-width:560px;margin-bottom:40px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:30px;transition:box-shadow .25s,transform .25s}
+  .card:hover{box-shadow:0 16px 40px #0F172A12;transform:translateY(-3px)}
+  .card .ic{width:46px;height:46px;border-radius:11px;background:#E0F2FE;color:var(--accent);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+  .card .ic svg{width:23px;height:23px}
+  .card h3{font-size:18px;font-weight:600;color:var(--primary);margin-bottom:8px}
+  .card p{color:var(--muted);font-size:15px}
+  .cta-final{background:var(--primary);border-radius:18px;padding:52px 40px;text-align:center;color:#fff}
+  .cta-final h2{color:#fff}
+  .cta-final p{color:#94A3B8;max-width:480px;margin:0 auto 28px}
+  .contact-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+  .contact-chip{display:inline-flex;align-items:center;gap:9px;background:#FFFFFF12;border:1px solid #FFFFFF24;color:#E2E8F0;font-weight:500;text-decoration:none;padding:13px 22px;border-radius:10px;transition:background .2s;min-height:48px}
+  .contact-chip:hover{background:#FFFFFF20}
+  .contact-chip svg{width:17px;height:17px;color:#7DD3FC}
+  footer{border-top:1px solid var(--border);padding:36px 0;text-align:center;color:var(--muted);font-size:14px}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+  <div class="aviso">Maqueta de propuesta preparada para PAAE — Profesionales Asociados en Asesorías Especiales SC · no es un sitio publicado</div>
+
+  <nav>
+    <div class="wrap">
+      <div class="logo">PAAE — Profesionales Asociados en Asesorías Especiales SC</div>
+      <a class="navcta" href="#contacto">Contactar</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <span class="badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+        Despacho contable · CDMX
+      </span>
+      <h1>PAAE — Profesionales Asociados en Asesorías Especiales SC</h1>
+      <p class="tag">Profesionales asociados en asesorías contables y fiscales especializadas.</p>
+      <div class="heroctas">
+        <a class="btn primary" href="#contacto">
+          Agendar consulta
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a class="btn ghost" href="#servicios">Ver servicios</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>24/7</b><span>Contacto y citas en línea</span></div>
+      <div class="stat"><b>100%</b><span>Adaptado a celular</span></div>
+      <div class="stat"><b>HTTPS</b><span>Conexión segura</span></div>
+      <div class="stat"><b>&lt;2 s</b><span>Carga rápida</span></div>
+    </div>
+  </div>
+
+  <section id="servicios">
+    <div class="wrap">
+      <span class="kicker">Servicios</span>
+      <h2>Todo lo que PAAE — Profesionales Asociados en Asesorías Especiales SC ofrece, claro y a un clic</h2>
+      <p class="sub">Sus clientes encuentran lo que necesitan sin llamar ni esperar.</p>
+      <div class="grid">
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
+          <h3>Contabilidad integral</h3><p>Llevamos su contabilidad al día y se la explicamos de forma clara.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
+          <h3>Impuestos y SAT</h3><p>Declaraciones y cumplimiento ante el SAT, sin complicaciones.</p>
+        </div>
+        <div class="card">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg></div>
+          <h3>Asesoría fiscal</h3><p>Le ayudamos a tomar mejores decisiones y a pagar lo justo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" style="padding-top:0">
+    <div class="wrap">
+      <div class="cta-final">
+        <h2>Hablemos</h2>
+        <p>Así de fácil sería para sus clientes encontrarlo y ponerse en contacto.</p>
+        <div class="contact-row">
+          <a class="contact-chip" href="tel:55 5525 8641">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            55 5525 8641
+          </a>
+          <span class="contact-chip" style="cursor:default">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            CDMX
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      PAAE — Profesionales Asociados en Asesorías Especiales SC · CDMX · Propuesta de diseño web<br>
+      <span style="font-size:12.5px">Maqueta creada como muestra. El diseño final se adapta a su marca.</span>
+    </div>
+  </footer>
+
+  <img src="https://tracking-prospectos.estrateg-ia-hyper.workers.dev/p?id=contadores-cdmx-08-demo" width="1" height="1" alt="" style="display:block">
+</body>
+</html>

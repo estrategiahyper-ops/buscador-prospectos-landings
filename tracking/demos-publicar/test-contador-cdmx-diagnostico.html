@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diagnóstico rápido — Contador CDMX</title>
+<style>
+  :root { --brand:#0e9f6e; --bad:#e02424; --ink:#141821; --muted:#5b6472; --soft:#f4f7f6; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); line-height:1.55; background:#fff; }
+  .wrap { max-width:820px; margin:0 auto; padding:0 22px; }
+  header { background:linear-gradient(135deg,#0f172a,#1e293b); color:#fff; padding:52px 0; }
+  header .kicker { color:#5eead4; font-weight:600; font-size:14px; letter-spacing:.04em; text-transform:uppercase; }
+  header h1 { font-size:clamp(26px,4.5vw,38px); margin:8px 0 6px; letter-spacing:-.02em; }
+  header p { opacity:.85; }
+  section { padding:44px 0; }
+  .fuga { border:1px solid #e6ebe9; border-radius:16px; overflow:hidden; margin-bottom:24px; }
+  .fuga .top { padding:20px 24px; border-bottom:1px solid #eef1f0; display:flex; gap:12px; align-items:flex-start; }
+  .fuga .top .n { flex:0 0 30px; height:30px; border-radius:8px; background:var(--bad); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; }
+  .fuga .top h3 { font-size:18px; }
+  .cols { display:grid; grid-template-columns:1fr 1fr; }
+  .col { padding:20px 24px; }
+  .col.hoy { background:#fff5f5; }
+  .col.con { background:#f0fdf8; }
+  .col .lbl { font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; margin-bottom:6px; }
+  .col.hoy .lbl { color:var(--bad); }
+  .col.con .lbl { color:var(--brand); }
+  .col p { color:#374151; font-size:15px; }
+  .impacto { padding:14px 24px; background:#fffbea; border-top:1px solid #f3e9be; font-size:14px; color:#79691d; }
+  .cierre { background:var(--soft); border-radius:16px; padding:28px; text-align:center; }
+  .cierre a { display:inline-block; margin-top:14px; background:var(--brand); color:#fff; font-weight:600; text-decoration:none; padding:13px 26px; border-radius:12px; }
+  @media (max-width:560px){ .cols{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="kicker">Diagnóstico rápido · Despacho contable · Cuauhtémoc, CDMX</div>
+      <h1>Contador CDMX</h1>
+      <p>Al revisar su presencia digital encontramos fugas concretas que hoy le cuestan clientes. Se las presentamos a continuación.</p>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+
+      <div class="fuga">
+        <div class="top"><div class="n">1</div><h3>Videoconferencia sin sistema de agenda</h3></div>
+        <div class="cols">
+          <div class="col hoy"><div class="lbl">Hoy</div><p>Ofrecen videollamada, pero sin una forma de reservarla: el cliente tiene que escribir y esperar a que se coordine el horario manualmente.</p></div>
+          <div class="col con"><div class="lbl">Con la mejora</div><p>Agenda en línea 24/7 — el cliente elige su horario y recibe la liga de la videollamada de forma automática.</p></div>
+        </div>
+        <div class="impacto">💸 Cada solicitud fuera de horario que no se responde a tiempo es una consulta que se enfría o se va con otro despacho.</div>
+      </div>
+
+      <div class="fuga">
+        <div class="top"><div class="n">2</div><h3>Sin CRM ni seguimiento</h3></div>
+        <div class="cols">
+          <div class="col hoy"><div class="lbl">Hoy</div><p>Los contactos y su seguimiento viven en el correo; es fácil que un prospecto interesado se quede sin respuesta.</p></div>
+          <div class="col con"><div class="lbl">Con la mejora</div><p>Un CRM sencillo que registra cada contacto, recuerda dar seguimiento y no deja caer ninguna oportunidad.</p></div>
+        </div>
+        <div class="impacto">💸 Un solo cliente recurrente perdido por falta de seguimiento cuesta mucho más que automatizarlo.</div>
+      </div>
+
+      <div class="fuga">
+        <div class="top"><div class="n">3</div><h3>Redes sociales sin enlaces reales</h3></div>
+        <div class="cols">
+          <div class="col hoy"><div class="lbl">Hoy</div><p>En el pie de su sitio hay íconos de redes que no llevan a ningún lado; quien quiere validarlos no encuentra nada.</p></div>
+          <div class="col con"><div class="lbl">Con la mejora</div><p>Enlaces correctos y perfiles activos que refuerzan su credibilidad antes de que los contacten.</p></div>
+        </div>
+        <div class="impacto">💸 La confianza se pierde en segundos: un enlace roto resta profesionalismo justo cuando los están evaluando.</div>
+      </div>
+
+      <div class="cierre">
+        <strong>Estas fugas se resuelven en cuestión de días, no de meses.</strong>
+        <p style="color:var(--muted);margin-top:6px">Si lo desea, con gusto le explicamos cómo lo resolveríamos para Contador CDMX.</p>
+        <a href="https://tracking-prospectos.estrateg-ia-hyper.workers.dev/c?id=test-contador-cdmx-diag&u=https://contador-cdmx.com">Me interesa resolverlo →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <img src="https://tracking-prospectos.estrateg-ia-hyper.workers.dev/p?id=test-contador-cdmx-diag" width="1" height="1" alt="" style="display:block">
+</body>
+</html>

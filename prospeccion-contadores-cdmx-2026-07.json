@@ -1,0 +1,636 @@
+{
+  "campana": "contadores-cdmx-2026-07",
+  "generado": "2026-07-13",
+  "ciudad": "CDMX",
+  "sector": "Contadores / despachos contables",
+  "servicios_ofrecidos": [
+    "Diseño y desarrollo web",
+    "Automatización de negocio"
+  ],
+  "worker_url": "https://tracking-prospectos.estrateg-ia-hyper.workers.dev",
+  "demos_base": "https://demos-prospectos.pages.dev",
+  "total_prospectos": 18,
+  "prospectos": [
+    {
+      "id": 1,
+      "empresa": "Romero Silva y Asociados SC",
+      "url": "https://www.romerosilvayasociadossc.com",
+      "tiene_web": true,
+      "telefono": "55-5207-8714",
+      "telefono_alt": [
+        "55-5207-3004",
+        "55-3036-1220"
+      ],
+      "email": "contacto@rsamex.com.mx",
+      "whatsapp": true,
+      "direccion": "Cuauhtémoc, CDMX",
+      "oportunidad_score": 9,
+      "web_calidad": "Básica con placeholders sin terminar",
+      "https": false,
+      "agenda_online": false,
+      "crm_automatizacion": false,
+      "redes_sociales": [
+        "Facebook"
+      ],
+      "problemas_detectados": [
+        "Sitio con textos de plantilla visibles",
+        "Sin CRM",
+        "Sin agenda",
+        "Solo Facebook"
+      ],
+      "oportunidades": [
+        "Rediseño web completo",
+        "CRM contable",
+        "Bot WhatsApp",
+        "Agenda en línea"
+      ],
+      "estado_prospecto": "Por contactar",
+      "notas": "25 años de experiencia, imagen digital no los representa. Sitio en producción con 'Título de diapositiva' visible. Muy fácil de convencer con un screenshot de su propio sitio.",
+      "rank": 1,
+      "tracking_id": "contadores-cdmx-01",
+      "activo": "web-demo",
+      "servicio_recomendado": "Rediseño web + automatización",
+      "gancho": "Su sitio publicado muestra textos de plantilla ('Título de diapositiva') visibles"
+    },
+    {
+      "id": 2,
+      "empresa": "Contadores Mismo Lenguaje",
+      "url": null,
+      "tiene_web": false,
+      "telefono": "55 7703 2718",
+      "email": null,
+      "whatsapp": null,
+      "direccion": "CDMX",
+      "oportunidad_score": 9,
+      "web_calidad": "Sin sitio web",
+      "https": false,
+      "agenda_online": false,
+      "crm_automatizacion": false,
+      "redes_sociales": [],
+      "problemas_detectados": [
+        "Sin sitio web",
+        "Sin presencia digital",
+        "Sin CRM"
+      ],
+      "oportunidades": [
+        "Página web desde cero",
+        "Automatización de captación",
+        "Presencia en Google"
+      ],
+      "estado_prospecto": "Por contactar",
+      "notas": "Sin ninguna presencia digital. Toda su cartera probablemente viene de referidos. Llamada directa como primer contacto.",
+      "rank": 2,
+      "tracking_id": "contadores-cdmx-02",
+      "activo": "web-demo",
+      "servicio_recomendado": "Web desde cero + presencia en Google",
+      "gancho": "Sin sitio web ni presencia digital; cartera por referidos"
+    },
+    {
+      "id": 3,
+      "empresa": "ACCUANTIA",
+      "url": null,
+      "tiene_web": false,
+      "telefono": "55 5454 1358",
+      "email": null,
+      "whatsapp": null,
+      "direccion": "CDMX",
+      "oportunidad_score": 9,
+      "web_calidad": "Sin sitio web",
+      "https": false,
+      "agenda_online": false,
+      "crm_automatizacion": false,
+      "redes_sociales": [],
+      "problemas_detectados": [
+        "Sin sitio web",
+        "Sin presencia digital",
+        "Sin CRM"
+      ],
+      "oportunidades": [
+        "Página web + identidad digital completa",
+        "CRM",
+        "Automatización"
+      ],
+      "estado_prospecto": "Por contactar",
+      "notas": "Nombre de marca establecido pero sin presencia online. Potencial cliente para paquete completo web + automatización.",
+      "rank": 3,
+      "tracking_id": "contadores-cdmx-03",
+      "activo": "web-demo",
+      "servicio_recomendado": "Web desde cero + presencia en Google",
+      "gancho": "Sin sitio web ni presencia digital"
+    },
+    {
+      "id": 14,
+      "rank": 4,
+      "tracking_id": "contadores-cdmx-04",
+      "activo": "web-demo",
+      "empresa": "TF Contadores",
+      "url": "https://tfcontadores.com",
+      "tiene_web": true,
+      "telefono": "0155-1834-6938",
+      "telefono_alt": [
+        "55 3984 8000 (WhatsApp)"
+      ],
+      "email": "servicios@tfcontadores.com",
+      "whatsapp": true,
+      "direccion": "Atizapán de Zaragoza, Zona Metropolitana CDMX",
+      "oportunidad_score": 8,
+      "web_calidad": "Con secciones en 'Lorem ipsum' (incompleta)",
+      "https": true,
+      "agenda_online": false,
+      "crm_automatizacion": false,
+      "redes_sociales": [],
+      "problemas_detectados": [
+        "Texto 'Lorem ipsum' publicado",
+        "Sin meta description",
+        "Sin agenda online",
+        "Sin redes sociales"
+      ],
+      "oportunidades": [
+        "Completar/rediseñar web",
+        "Agenda online",
+        "CRM"
+      ],
+      "servicio_recomendado": "Rediseño web + automatización",
+      "gancho": "Sitio con 'Lorem ipsum' visible pese a 25 años de experiencia",
+      "estado_prospecto": "Por contactar",
+      "notas": "25 años de experiencia; el sitio incompleto contrasta con su trayectoria."
+    },
+    {
+      "id": 15,
+      "rank": 5,
+      "tracking_id": "contadores-cdmx-05",
+      "activo": "web-demo",
+      "empresa": "MYD Global",
+      "url": "https://mydglobal.com.mx",
+      "tiene_web": true,
+      "telefono": "55 6127 5935",
+      "email": "info@mydglobal.com.mx",
+      "whatsapp": false,
+      "direccion": "Eje 10 Sur 162, Copilco, Coyoacán, CDMX",
+      "oportunidad_score": 8,
+      "web_calidad": "Anticuada, con imágenes placeholder",
+      "https": true,
+      "agenda_online": false,
+      "crm_automatizacion": false,
+      "redes_sociales": [],
+      "problemas_detectados": [
+        "Diseño anticuado con placeholders",
+        "Sin meta description",
+        "Sin agenda online",
+        "Sin redes sociales",
+        "Sin WhatsApp"
+      ],
+      "oportunidades": [
+        "Rediseño web",
+        "Agenda online",
+        "WhatsApp Business",
+        "CRM"
+      ],
+      "servicio_recomendado": "Rediseño web + automatización",
+      "gancho": "Web anticuada con imágenes de relleno; sin canales digitales de captación",
+      "estado_prospecto": "Por contactar",
+      "notas": "Servicios sólidos (contabilidad electrónica, riesgo fiscal) mal presentados."
+    },
+    {
+      "id": 16,
+      "rank": 6,
+      "tracking_id": "contadores-cdmx-06",
+      "activo": "web-demo",
+      "empresa": "Despacho Contable y Fiscal CDMX",
+      "url": "https://www.despachocontablemx.com",
+      "tiene_web": true,
+      "telefono": "+52 55 5016 4678",
+      "email": "contacto@despachocontablemx.com",
+      "whatsapp": true,
+      "direccion": "Media Luna, Coyoacán, CDMX",
+      "oportunidad_score": 8,
+      "web_calidad": "Theme de 2016 con widgets placeholder visibles",
+      "https": true,
+      "agenda_online": false,
+      "crm_automatizacion": false,
+      "redes_sociales": [
+        "Facebook",
+        "Twitter",
+        "LinkedIn"
+      ],
+      "problemas_detectados": [
+        "Theme 2016 con 'Add a testimonial widget' visible",
+        "Sin agenda online",
+        "Sin CRM"
+      ],
+      "oportunidades": [
+        "Rediseño web",
+        "Agenda online",
+        "CRM"
+      ],
+      "servicio_recomendado": "Rediseño web + automatización",
+      "gancho": "Placeholders del theme visibles ('Add a testimonial widget'); 14 servicios mal lucidos",
+      "estado_prospecto": "Por contactar",
+      "notas": "Oferta amplia (14 servicios, CONTPAQi) en una web que no la vende."
+    },
+    {
+      "id": 4,
+      "empresa": "Sixcal y Asociados SAS de CV",
+      "url": null,
+      "tiene_web": false,
+      "telefono": "56 2456 1936",
+      "email": null,
+      "whatsapp": null,
+      "direccion": "CDMX",
+      "oportunidad_score": 8,
+      "web_calidad": "Sin sitio web",
+      "https": false,
+      "agenda_online": false,
+      "crm_automatizacion": false,
+      "redes_sociales": [],
+      "problemas_detectados": [
+        "Sin sitio web",
+        "Sin presencia digital"
+      ],
+      "oportunidades": [
+        "Página web",
+        "CRM",
+        "Automatización"
+      ],
+      "estado_prospecto": "Por contactar",
+      "notas": "Empresa constituida formalmente (SAS de CV) sin presencia digital.",
+      "rank": 7,
+      "tracking_id": "contadores-cdmx-07",
+      "activo": "web-demo",
+      "servicio_recomendado": "Web desde cero",
+      "gancho": "Sin sitio web ni presencia digital"
+    },
+    {
+      "id": 5,
+      "empresa": "PAAE — Profesionales Asociados en Asesorías Especiales SC",
+      "url": null,
+      "tiene_web": false,
+      "telefono": "55 5525 8641",
+      "email": null,
+      "whatsapp": null,
+      "direccion": "CDMX",
+      "oportunidad_score": 8,
+      "web_calidad": "Sin sitio web",
+      "https": false,
+      "agenda_online": false,
+      "crm_automatizacion": false,
+      "redes_sociales": [],
+      "problemas_detectados": [
+        "Sin sitio web",
+        "Sin presencia digital"
+      ],
+      "oportunidades": [
+        "Página web profesional",
+        "CRM",
+        "Automatización"
+      ],
+      "estado_prospecto": "Por contactar",
+      "notas": "Nombre largo y formal, probablemente despacho tradicional con cartera establecida.",
+      "rank": 8,
+      "tracking_id": "contadores-cdmx-08",
+      "activo": "web-demo",
+      "servicio_recomendado": "Web desde cero",
+      "gancho": "Sin sitio web ni presencia digital"
+    },
+    {
+      "id": 6,
+      "empresa": "ALU Sol SC",
+      "url": "https://alusolsc.com",
+      "tiene_web": true,
+      "telefono": "+52 55 3724 5817",
+      "email": "contacto@alusolsc.com",
+      "whatsapp": true,
+      "direccion": "Enrique Rébsamen 939, Narvarte, Benito Juárez, CDMX",
+      "oportunidad_score": 7,
+      "web_calidad": "Moderna y profesional",
+      "https": true,
+      "agenda_online": "parcial",
+      "crm_automatizacion": false,
+      "redes_sociales": [],
+      "problemas_detectados": [
+        "Sin redes sociales",
+        "Sin CRM real",
+        "Formulario sin automatización"
+      ],
+      "oportunidades": [
+        "CRM para clientes internacionales",
+        "Automatización de respuestas",
+        "Presencia en LinkedIn"
+      ],
+      "estado_prospecto": "Por contactar",
+      "notas": "Atienden empresas extranjeras en México. Sitio moderno pero sin automatización back-end ni redes sociales. Ticket potencialmente alto.",
+      "rank": 9,
+      "tracking_id": "contadores-cdmx-09",
+      "activo": "diagnostico",
+      "servicio_recomendado": "Automatización (agenda, CRM, redes)",
+      "gancho": "Web correcta pero formulario sin automatización, sin CRM ni redes"
+    },
+    {
+      "id": 7,
+      "empresa": "Contador CDMX",
+      "url": "https://contador-cdmx.com",
+      "tiene_web": true,
+      "telefono": "558 950 7198",
+      "email": "hola@contador-cdmx.com",
+      "whatsapp": true,
+      "direccion": "Av. Paseo de la Reforma 296, Cuauhtémoc, CDMX",
+      "oportunidad_score": 7,
+      "web_calidad": "Moderna",
+      "https": true,
+      "agenda_online": "mencionan videoconferencia sin sistema",
+      "crm_automatizacion": false,
+      "redes_sociales": [
+        "sin enlaces funcionales"
+      ],
+      "problemas_detectados": [
+        "Redes sin URLs funcionales",
+        "Videoconferencia sin sistema de agenda",
+        "Sin CRM"
+      ],
+      "oportunidades": [
+        "Sistema de videollamada con agenda automática",
+        "CRM",
+        "Integración WhatsApp"
+      ],
+      "estado_prospecto": "Por contactar",
+      "notas": "Ubicados en Reforma. Ofrecen videoconferencia pero sin sistema. Redes en el footer sin enlace real.",
+      "rank": 10,
+      "tracking_id": "contadores-cdmx-10",
+      "activo": "diagnostico+roi",
+      "servicio_recomendado": "Automatización (agenda de videollamadas, CRM, WhatsApp)",
+      "gancho": "Ofrecen videollamada sin sistema de agenda; redes sin enlaces funcionales"
+    },
+    {
+      "id": 17,
+      "rank": 11,
+      "tracking_id": "contadores-cdmx-11",
+      "activo": null,
+      "empresa": "GByA Contadores Públicos",
+      "url": "https://gbyacontadorespublicos.com",
+      "tiene_web": true,
+      "telefono": "55 7219 1687",
+      "email": "contacto@GByAcontadorespublicos.com",
+      "whatsapp": true,
+      "direccion": "CDMX",
+      "oportunidad_score": 7,
+      "web_calidad": "Anticuada y vaga (no lista servicios)",
+      "https": true,
+      "agenda_online": false,
+      "crm_automatizacion": false,
+      "redes_sociales": [],
+      "problemas_detectados": [
+        "Web anticuada",
+        "No especifica servicios",
+        "Sin dirección física",
+        "Sin agenda ni CRM"
+      ],
+      "oportunidades": [
+        "Rediseño web",
+        "Contenido de servicios",
+        "Agenda online"
+      ],
+      "servicio_recomendado": "Rediseño web",
+      "gancho": "50 años de experiencia con una web que no especifica servicios",
+      "estado_prospecto": "Por contactar",
+      "notas": "Firma con 50 años; web no está a la altura."
+    },
+    {
+      "id": 18,
+      "rank": 12,
+      "tracking_id": "contadores-cdmx-12",
+      "activo": null,
+      "empresa": "Martista Contadores Públicos",
+      "url": "https://contadoresmartista.com",
+      "tiene_web": true,
+      "telefono": "55 9238 6720",
+      "email": null,
+      "whatsapp": false,
+      "direccion": "Tablas de San Agustín, GAM, CDMX",
+      "oportunidad_score": 7,
+      "web_calidad": "Anticuada con keyword stuffing",
+      "https": true,
+      "agenda_online": false,
+      "crm_automatizacion": false,
+      "redes_sociales": [
+        "Facebook"
+      ],
+      "problemas_detectados": [
+        "Keyword stuffing (SEO penalizable)",
+        "Sin email visible",
+        "Sin agenda ni CRM"
+      ],
+      "oportunidades": [
+        "Rediseño web + SEO limpio",
+        "Agenda online"
+      ],
+      "servicio_recomendado": "Rediseño web + SEO",
+      "gancho": "Repetición masiva de keywords que Google penaliza",
+      "estado_prospecto": "Por contactar",
+      "notas": "Servicios diferenciados (valuación de marcas, antilavado)."
+    },
+    {
+      "id": 8,
+      "empresa": "Contadores en CDMX",
+      "url": "https://contadoresencdmx.com",
+      "tiene_web": true,
+      "telefono": "800 022 9902",
+      "email": "info@contadoresencdmx.com",
+      "whatsapp": true,
+      "direccion": "Av. Paseo de la Reforma 296, Cuauhtémoc, CDMX",
+      "oportunidad_score": 6,
+      "web_calidad": "Moderna",
+      "https": true,
+      "agenda_online": "parcial",
+      "crm_automatizacion": false,
+      "redes_sociales": [
+        "Facebook"
+      ],
+      "problemas_detectados": [
+        "Sin CRM",
+        "Contenido repetitivo en el sitio"
+      ],
+      "oportunidades": [
+        "CRM fiscal",
+        "Automatización de seguimiento",
+        "Más canales digitales"
+      ],
+      "estado_prospecto": "Por contactar",
+      "notas": "Misma dirección que Contador CDMX en Reforma. Posiblemente relacionados o competencia directa.",
+      "rank": 13,
+      "tracking_id": "contadores-cdmx-13",
+      "activo": null,
+      "servicio_recomendado": "CRM + contenido"
+    },
+    {
+      "id": 9,
+      "empresa": "RCA Despacho",
+      "url": "https://cdmx.rcadespacho.com",
+      "tiene_web": true,
+      "telefono": "800-001-0001",
+      "email": null,
+      "whatsapp": true,
+      "direccion": "CDMX",
+      "oportunidad_score": 6,
+      "web_calidad": "Moderna y profesional",
+      "https": true,
+      "agenda_online": "formulario básico",
+      "crm_automatizacion": false,
+      "redes_sociales": [
+        "Facebook",
+        "Twitter",
+        "Instagram",
+        "LinkedIn"
+      ],
+      "problemas_detectados": [
+        "Sin CRM",
+        "Sin automatización real"
+      ],
+      "oportunidades": [
+        "CRM integrado con 4 redes",
+        "Automatización de seguimiento",
+        "Portal del cliente"
+      ],
+      "estado_prospecto": "Por contactar",
+      "notas": "Blog activo junio 2026. Buena presencia en redes pero sin CRM que conecte todo.",
+      "rank": 14,
+      "tracking_id": "contadores-cdmx-14",
+      "activo": null,
+      "servicio_recomendado": "CRM + automatización"
+    },
+    {
+      "id": 10,
+      "empresa": "Gardnes Consultoría Empresarial",
+      "url": "https://gardnes.mx",
+      "tiene_web": true,
+      "telefono": "800 022 9902",
+      "email": "info@gardnes.mx",
+      "whatsapp": true,
+      "direccion": "CDMX",
+      "oportunidad_score": 5,
+      "web_calidad": "Moderna y bien diseñada",
+      "https": true,
+      "agenda_online": "parcial — 'Agendar Cita' disponible",
+      "crm_automatizacion": false,
+      "redes_sociales": [
+        "Facebook",
+        "LinkedIn"
+      ],
+      "problemas_detectados": [
+        "Sin automatización real",
+        "Sin CRM"
+      ],
+      "oportunidades": [
+        "CRM integrado",
+        "Automatización de solicitud de documentos",
+        "Recordatorios SAT"
+      ],
+      "estado_prospecto": "Por contactar",
+      "notas": "20 años de experiencia. Sitio bien mantenido. Tienen 'Agendar Cita' pero probablemente manual. Blog activo junio 2026.",
+      "rank": 15,
+      "tracking_id": "contadores-cdmx-15",
+      "activo": null,
+      "servicio_recomendado": "Automatización"
+    },
+    {
+      "id": 11,
+      "empresa": "Despacho Contable MX",
+      "url": "https://despachocontable.mx",
+      "tiene_web": true,
+      "telefono": "+52 55 7175 5133",
+      "email": "hola@despachocontable.mx",
+      "whatsapp": true,
+      "direccion": "Enrique Rébsamen 939, Benito Juárez, CDMX",
+      "oportunidad_score": 5,
+      "web_calidad": "Moderna",
+      "https": false,
+      "agenda_online": "formulario de asesoría",
+      "crm_automatizacion": "parcial — menciona 'sistemas en la nube'",
+      "redes_sociales": [
+        "Facebook",
+        "Twitter",
+        "YouTube"
+      ],
+      "problemas_detectados": [
+        "Menciona tecnología en la nube vagamente",
+        "Sin CRM real integrado"
+      ],
+      "oportunidades": [
+        "Integración real de sistemas en la nube",
+        "CRM",
+        "Automatización de recordatorios"
+      ],
+      "estado_prospecto": "Por contactar",
+      "notas": "15 años, menciona 'sistemas en la nube' sin especificar. Probablemente usan Excel o algo básico.",
+      "rank": 16,
+      "tracking_id": "contadores-cdmx-16",
+      "activo": null,
+      "servicio_recomendado": "CRM integrado"
+    },
+    {
+      "id": 12,
+      "empresa": "SC Contadores Fiscalistas",
+      "url": "https://scfiscalistas.mx",
+      "tiene_web": true,
+      "telefono": "+52 55 2768 6029",
+      "email": "informacion@scfiscalistas.mx",
+      "whatsapp": true,
+      "direccion": "CDMX",
+      "oportunidad_score": 5,
+      "web_calidad": "Moderna",
+      "https": false,
+      "agenda_online": "formulario de cotización",
+      "crm_automatizacion": false,
+      "redes_sociales": [],
+      "problemas_detectados": [
+        "Sin CRM",
+        "Sin redes sociales"
+      ],
+      "oportunidades": [
+        "CRM fiscal",
+        "Presencia en redes",
+        "Recordatorios SAT automáticos"
+      ],
+      "estado_prospecto": "Por contactar",
+      "notas": "30 años de experiencia. Tienen formulario de cotización funcional pero sin back-end automatizado.",
+      "rank": 17,
+      "tracking_id": "contadores-cdmx-17",
+      "activo": null,
+      "servicio_recomendado": "CRM + redes"
+    },
+    {
+      "id": 13,
+      "empresa": "Despacho Contable México",
+      "url": "https://despachocontablemexico.com.mx",
+      "tiene_web": true,
+      "telefono": "(55) 50 15 06 57",
+      "email": "contacto@despachocontablemexico.com.mx",
+      "whatsapp": false,
+      "direccion": "Calle Río Danubio 51 Piso 4, CDMX",
+      "oportunidad_score": 5,
+      "web_calidad": "Moderna",
+      "https": false,
+      "agenda_online": "formulario de cotización",
+      "crm_automatizacion": "parcial — usa ASPEL",
+      "redes_sociales": [
+        "Facebook",
+        "LinkedIn"
+      ],
+      "problemas_detectados": [
+        "Sin WhatsApp",
+        "ASPEL sin integrar a CRM",
+        "Sin agenda real"
+      ],
+      "oportunidades": [
+        "WhatsApp Business",
+        "Integración ASPEL con CRM",
+        "Portal cliente fiscal"
+      ],
+      "estado_prospecto": "Por contactar",
+      "notas": "Usan ASPEL (software contable) pero sin integrarlo con portal de clientes ni comunicación automática.",
+      "rank": 18,
+      "tracking_id": "contadores-cdmx-18",
+      "activo": null,
+      "servicio_recomendado": "Automatización (agenda, WhatsApp, CRM)"
+    }
+  ]
+}

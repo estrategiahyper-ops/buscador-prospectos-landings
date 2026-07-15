@@ -1,0 +1,4 @@
+{
+  "worker_url": "https://tracking-prospectos.estrateg-ia-hyper.workers.dev",
+  "_instrucciones": "URL del Cloudflare Worker de tracking. La skill prospeccion la usa para insertar el píxel y los enlaces rastreados en los mensajes de email."
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>¿Cuánto ahorraría? — Contador CDMX</title>
+<style>
+  :root { --brand:#7c3aed; --brand-dark:#5b21b6; --ink:#141821; --muted:#5b6472; --soft:#f6f4fc; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); line-height:1.5; background:#fff; }
+  .wrap { max-width:720px; margin:0 auto; padding:0 22px; }
+  header { background:linear-gradient(135deg,var(--brand),var(--brand-dark)); color:#fff; padding:48px 0; text-align:center; }
+  header .kicker { font-size:14px; opacity:.85; }
+  header h1 { font-size:clamp(24px,4.5vw,36px); margin:8px 0; letter-spacing:-.02em; }
+  .panel { background:var(--soft); border:1px solid #e9e3f7; border-radius:18px; padding:28px; margin:34px 0; }
+  .field { margin-bottom:22px; }
+  .field label { display:flex; justify-content:space-between; font-weight:600; margin-bottom:8px; }
+  .field label b { color:var(--brand-dark); }
+  input[type=range] { width:100%; accent-color:var(--brand); }
+  .result { text-align:center; background:var(--ink); color:#fff; border-radius:18px; padding:34px 24px; }
+  .result .big { font-size:clamp(36px,8vw,56px); font-weight:800; color:#c4b5fd; line-height:1; letter-spacing:-.02em; }
+  .result .lbl { color:#b9c0cf; margin-top:8px; }
+  .result .row { display:flex; gap:16px; justify-content:center; margin-top:22px; flex-wrap:wrap; }
+  .result .row div { background:#ffffff14; border-radius:12px; padding:14px 20px; }
+  .result .row b { display:block; font-size:22px; color:#e9d5ff; }
+  .result .row span { font-size:13px; color:#aab3c5; }
+  .cta { display:inline-block; margin-top:26px; background:var(--brand); color:#fff; font-weight:600; text-decoration:none; padding:14px 28px; border-radius:12px; }
+  .foot { text-align:center; color:var(--muted); font-size:13px; padding:24px 0 40px; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="kicker">Despacho contable · Cuauhtémoc, CDMX</div>
+      <h1>Cuánto ahorraría Contador CDMX<br>automatizando agendar citas y dar seguimiento</h1>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="panel">
+      <div class="field">
+        <label>Horas a la semana en esa tarea <b><span id="vHoras">8</span> h</b></label>
+        <input type="range" id="horas" min="1" max="40" value="8">
+      </div>
+      <div class="field">
+        <label>Costo por hora (MXN) <b>$<span id="vCoste">250</span></b></label>
+        <input type="range" id="coste" min="50" max="600" step="10" value="250">
+      </div>
+    </div>
+
+    <div class="result">
+      <div class="lbl">Ahorro estimado al año</div>
+      <div class="big" id="anual">$0</div>
+      <div class="row">
+        <div><b id="horasAnio">0 h</b><span>tiempo liberado/año</span></div>
+        <div><b id="mensual">$0</b><span>ahorro/mes</span></div>
+      </div>
+      <a class="cta" href="https://tracking-prospectos.estrateg-ia-hyper.workers.dev/c?id=test-contador-cdmx-roi&u=https://contador-cdmx.com">Me interesa este ahorro →</a>
+    </div>
+
+    <p class="foot">Estimación orientativa basada en automatizar agendar citas y dar seguimiento. Los números finales dependen de su operación real.</p>
+  </div>
+
+<script>
+  var h = document.getElementById('horas'), c = document.getElementById('coste');
+  var fmt = function(n){ return '$' + Math.round(n).toLocaleString('es-MX'); };
+  function calc(){
+    var horas = +h.value, coste = +c.value;
+    document.getElementById('vHoras').textContent = horas;
+    document.getElementById('vCoste').textContent = coste;
+    var semanal = horas * coste;
+    var mensual = semanal * 4.33;
+    var anual = semanal * 52;
+    document.getElementById('anual').textContent = fmt(anual);
+    document.getElementById('mensual').textContent = fmt(mensual);
+    document.getElementById('horasAnio').textContent = Math.round(horas*52).toLocaleString('es-MX') + ' h';
+  }
+  h.addEventListener('input', calc); c.addEventListener('input', calc); calc();
+</script>
+
+  <img src="https://tracking-prospectos.estrateg-ia-hyper.workers.dev/p?id=test-contador-cdmx-roi" width="1" height="1" alt="" style="display:block">
+</body>
+</html>
