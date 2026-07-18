@@ -1,0 +1,56 @@
+schema: spec-driven
+
+context: |
+  Type: Claude-skill-driven prospecting toolkit, not a conventional package-managed app.
+  Stack: Markdown Agent Skills (skills/*/SKILL.md), static HTML templates/demos,
+  Cloudflare Worker (tracking/worker.js + tracking/wrangler.toml), Google Apps Script (tracking/apps-script.gs).
+  No package.json/go.mod/pyproject.toml, no build system, no bundler, no CI detected.
+  Deploy: `npx wrangler pages deploy` (demos), wrangler (worker).
+  Skill/user-facing content is Spanish (Mexico); SDD internal artifacts are English.
+  Root CLAUDE.md is the single project policy file — never create a root AGENTS.md (skills/setup.sh overwrites CLAUDE.md with it).
+
+testing:
+  strict_tdd: true # per user-global marker; see sdd/buscador-prospectos-landings/testing-capabilities for full detail
+  test_runner: none
+  note: >
+    No automated test runner exists (no package.json/go.mod/pyproject.toml/CI).
+    Verification substitutes: HTML validation, Playwright-driven visual/responsive
+    checks via the user-level playwright-cli skill, manual review against the
+    Trust & Authority design system, and wrangler dev/deploy sanity checks.
+    Full checklist-based "red/green" substitute strategy is recorded in Engram
+    under sdd/buscador-prospectos-landings/testing-capabilities.
+
+rules:
+  proposal:
+    - Include rollback plan (e.g. keep prior template flow available / easy git revert since there is no deploy pipeline to roll back automatically)
+    - State impact on skills/prospeccion/SKILL.md and tracking/plantillas-valor/*.html explicitly
+  specs:
+    - Use Given/When/Then for scenarios
+    - Use RFC 2119 keywords (MUST, SHALL, SHOULD, MAY)
+    - Requirements about user-facing copy/messages must state the target language (Spanish) explicitly; SDD artifact text itself stays English
+  design:
+    - Document how the new skill's output (e.g. personalized demo pages) integrates with the existing tracking pixel/click-wrap convention in tracking/config.json and tracking/worker.js
+    - Preserve the Trust & Authority design system (IBM Plex Sans, navy #0F172A + azul #0369A1, SVG icons, no emojis) unless the design explicitly proposes changing it
+  tasks:
+    - Group by phase, use hierarchical numbering
+    - Keep tasks completable in one session
+    - Each task must state its manual/Playwright verification step since there is no automated test suite
+  apply:
+    guidelines:
+      - Follow existing SKILL.md structure (frontmatter, Activation Contract, Hard Rules, Decision Gates, Execution Steps, Output Contract, References)
+      - Do not touch skills/setup.sh sync behavior unless explicitly in scope
+      - Do not create AGENTS.md at the repo root
+    tdd: true # strict_tdd is globally enabled for this user; apply the checklist-based red/green substitute described in testing.note, not literal unit tests
+    test_command: ""
+  verify:
+    test_command: ""
+    build_command: ""
+    coverage_threshold: 0
+    manual_checklist:
+      - HTML output validates and all {{tokens}} are replaced
+      - Generated demo page matches the Trust & Authority design system
+      - Tracking pixel/click-wrap URLs (worker_url + tracking_id) are correctly formed
+      - Playwright-cli visual/responsive spot check performed
+  archive:
+    - Warn before merging destructive deltas
+    - Confirm skills/prospeccion/SKILL.md Paso 4 section stays internally consistent after the demo-page-skill change lands

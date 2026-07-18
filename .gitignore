@@ -11,3 +11,7 @@ node_modules/
 
 # Sistema
 .DS_Store
+
+# Agents & AI
+.atl/
+.codegraph/
