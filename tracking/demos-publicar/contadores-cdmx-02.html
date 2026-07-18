@@ -1,150 +1,636 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es-MX">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contadores Mismo Lenguaje — Propuesta de sitio web</title>
+<title>Contadores Mismo Lenguaje — Despacho contable en CDMX</title>
+<meta name="robots" content="noindex, nofollow">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
   :root{
-    --primary:#0F172A; --secondary:#334155; --accent:#0369A1; --accent-dark:#075985;
-    --bg:#F8FAFC; --fg:#020617; --muted:#64748B; --border:#E2E8F0; --surface:#FFFFFF;
+    --primario:#1E40AF;
+    --secundario:#3B82F6;
+    --acento:#059669;
+    --claro:#F8FAFC;
+    --texto:#1f2937;
+    --texto-claro:#f8fafc;
   }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-  body{font-family:'IBM Plex Sans',-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6;font-size:16px}
-  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-  .aviso{background:#FEF9C3;border-bottom:1px solid #FDE047;color:#713F12;text-align:center;font-size:13px;padding:10px 24px}
-  nav{background:var(--surface);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:50}
-  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .logo{font-weight:700;font-size:18px;color:var(--primary);letter-spacing:-.01em}
-  .logo span{color:var(--accent)}
-  nav a.navcta{background:var(--accent);color:#fff;font-weight:600;font-size:14px;text-decoration:none;padding:11px 20px;border-radius:8px;transition:background .2s;cursor:pointer}
-  nav a.navcta:hover{background:var(--accent-dark)}
-  .hero{background:linear-gradient(160deg,var(--primary) 0%,#1E293B 70%,#0C4A6E 130%);color:#fff;padding:88px 0 96px}
-  .badge{display:inline-flex;align-items:center;gap:7px;background:#FFFFFF14;border:1px solid #FFFFFF2E;color:#BAE6FD;font-size:13px;font-weight:500;padding:6px 14px;border-radius:99px;margin-bottom:22px}
-  .badge svg{width:14px;height:14px}
-  .hero h1{font-size:clamp(32px,5.2vw,54px);font-weight:700;line-height:1.08;letter-spacing:-.025em;max-width:760px}
-  .hero p.tag{font-size:clamp(16px,2.2vw,19px);color:#CBD5E1;max-width:600px;margin-top:18px}
-  .heroctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
-  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;text-decoration:none;padding:14px 26px;border-radius:10px;transition:all .2s;cursor:pointer;min-height:48px}
-  .btn svg{width:17px;height:17px}
-  .btn.primary{background:var(--accent);color:#fff;box-shadow:0 10px 28px #0369A14D}
-  .btn.primary:hover{background:var(--accent-dark);transform:translateY(-1px)}
-  .btn.ghost{background:transparent;color:#E2E8F0;border:1.5px solid #FFFFFF3D}
-  .btn.ghost:hover{border-color:#fff;color:#fff}
-  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-top:-44px;position:relative;box-shadow:0 18px 44px #0F172A14}
-  .stat{background:var(--surface);padding:24px 20px;text-align:center}
-  .stat b{display:block;font-size:26px;font-weight:700;color:var(--primary);letter-spacing:-.02em}
-  .stat span{font-size:13.5px;color:var(--muted)}
-  section{padding:72px 0}
-  .kicker{color:var(--accent);font-weight:600;font-size:13.5px;text-transform:uppercase;letter-spacing:.08em}
-  h2{font-size:clamp(24px,3.4vw,34px);font-weight:700;letter-spacing:-.02em;color:var(--primary);margin:8px 0 10px}
-  .sub{color:var(--muted);max-width:560px;margin-bottom:40px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
-  .card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:30px;transition:box-shadow .25s,transform .25s}
-  .card:hover{box-shadow:0 16px 40px #0F172A12;transform:translateY(-3px)}
-  .card .ic{width:46px;height:46px;border-radius:11px;background:#E0F2FE;color:var(--accent);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
-  .card .ic svg{width:23px;height:23px}
-  .card h3{font-size:18px;font-weight:600;color:var(--primary);margin-bottom:8px}
-  .card p{color:var(--muted);font-size:15px}
-  .cta-final{background:var(--primary);border-radius:18px;padding:52px 40px;text-align:center;color:#fff}
-  .cta-final h2{color:#fff}
-  .cta-final p{color:#94A3B8;max-width:480px;margin:0 auto 28px}
-  .contact-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
-  .contact-chip{display:inline-flex;align-items:center;gap:9px;background:#FFFFFF12;border:1px solid #FFFFFF24;color:#E2E8F0;font-weight:500;text-decoration:none;padding:13px 22px;border-radius:10px;transition:background .2s;min-height:48px}
-  .contact-chip:hover{background:#FFFFFF20}
-  .contact-chip svg{width:17px;height:17px;color:#7DD3FC}
-  footer{border-top:1px solid var(--border);padding:36px 0;text-align:center;color:var(--muted);font-size:14px}
-  a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+  }
+  body{
+    margin:0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background:var(--claro);
+    color:var(--texto);
+    line-height:1.6;
+    font-size:16px;
+    overflow-x:hidden;
+  }
+  a{color:inherit;}
+  img{max-width:100%;height:auto;display:block;}
+  .contenedor{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 20px;
+  }
+
+  /* Navbar */
+  header.nav-principal{
+    background:var(--primario);
+    color:var(--texto-claro);
+    position:sticky;
+    top:0;
+    z-index:100;
+  }
+  .nav-barra{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:14px 20px;
+    max-width:1120px;
+    margin:0 auto;
+  }
+  .nav-logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-weight:700;
+    font-size:1.1rem;
+    color:var(--texto-claro);
+    text-decoration:none;
+  }
+  .nav-monograma{
+    width:42px;
+    height:42px;
+    min-width:42px;
+    border-radius:8px;
+    background:var(--secundario);
+    color:var(--texto-claro);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:800;
+    font-size:1rem;
+    letter-spacing:0.5px;
+    border:2px solid var(--acento);
+  }
+  .nav-enlaces{
+    display:flex;
+    gap:28px;
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .nav-enlaces a{
+    text-decoration:none;
+    color:var(--texto-claro);
+    font-weight:500;
+    padding:10px 4px;
+    min-height:44px;
+    display:flex;
+    align-items:center;
+  }
+  .nav-toggle{
+    display:none;
+    background:transparent;
+    border:2px solid var(--texto-claro);
+    border-radius:6px;
+    width:44px;
+    height:44px;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+  }
+  .nav-toggle svg{stroke:var(--texto-claro);}
+
+  @media (max-width:768px){
+    .nav-toggle{display:flex;}
+    .nav-enlaces{
+      position:absolute;
+      top:100%;
+      left:0;
+      right:0;
+      background:var(--primario);
+      flex-direction:column;
+      gap:0;
+      max-height:0;
+      overflow:hidden;
+      transition:max-height 250ms ease-out;
+    }
+    .nav-enlaces.abierto{
+      max-height:320px;
+    }
+    .nav-enlaces li{
+      border-top:1px solid rgba(248,250,252,0.15);
+    }
+    .nav-enlaces a{
+      padding:14px 20px;
+    }
+  }
+
+  /* Reveal on scroll */
+  .reveal{
+    opacity:0;
+    transform:translateY(16px);
+    transition:opacity 260ms ease-out, transform 260ms ease-out;
+  }
+  .reveal.visible{
+    opacity:1;
+    transform:translateY(0);
+  }
+  @media (prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none;}
+  }
+
+  /* Hero */
+  .hero{
+    background:var(--primario);
+    color:var(--texto-claro);
+    padding:64px 0;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:40px;
+    align-items:center;
+  }
+  @media (max-width:768px){
+    .hero-grid{grid-template-columns:1fr;}
+  }
+  .hero h1{
+    font-size:2.1rem;
+    line-height:1.25;
+    margin:0 0 18px 0;
+  }
+  .hero p{
+    font-size:1.05rem;
+    margin:0 0 28px 0;
+    color:#e2e8f0;
+  }
+  .hero-img{
+    border-radius:12px;
+    border:1px solid rgba(248,250,252,0.25);
+  }
+
+  .boton{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    min-height:44px;
+    padding:12px 26px;
+    border-radius:8px;
+    background:var(--acento);
+    color:var(--texto-claro);
+    text-decoration:none;
+    font-weight:600;
+    font-size:1rem;
+    border:none;
+    cursor:pointer;
+  }
+  .boton svg{fill:none;stroke:currentColor;}
+
+  /* Secciones generales */
+  section{
+    padding:64px 0;
+  }
+  h2{
+    font-size:1.7rem;
+    margin:0 0 12px 0;
+    color:var(--texto);
+  }
+  .subrayado{
+    width:56px;
+    height:4px;
+    background:var(--secundario);
+    border-radius:2px;
+    margin-bottom:28px;
+  }
+
+  /* About */
+  .about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:36px;
+    align-items:start;
+  }
+  @media (max-width:768px){
+    .about-grid{grid-template-columns:1fr;}
+  }
+  .ubicacion{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-top:18px;
+    font-weight:600;
+    color:var(--primario);
+  }
+  .ubicacion svg{stroke:var(--acento);fill:none;}
+
+  /* Why us */
+  .why-us{
+    background:#eef2f9;
+  }
+  .why-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+  }
+  @media (max-width:640px){
+    .why-grid{grid-template-columns:1fr;}
+  }
+  .why-card{
+    background:#fff;
+    border:1px solid #dbe3f0;
+    border-left:4px solid var(--acento);
+    border-radius:10px;
+    padding:22px;
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+  }
+  .why-card svg{
+    stroke:var(--secundario);
+    fill:none;
+    min-width:28px;
+    margin-top:2px;
+  }
+  .why-card h3{
+    margin:0 0 6px 0;
+    font-size:1.05rem;
+    color:var(--texto);
+  }
+  .why-card p{
+    margin:0;
+    font-size:0.95rem;
+    color:#4b5563;
+  }
+
+  /* Services */
+  .servicios-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:22px;
+  }
+  .servicio-card{
+    background:#fff;
+    border:1px solid #e2e8f0;
+    border-radius:10px;
+    padding:26px 22px;
+  }
+  .servicio-card .icono{
+    width:48px;
+    height:48px;
+    border-radius:10px;
+    background:#eef2f9;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:16px;
+  }
+  .servicio-card .icono svg{
+    stroke:var(--primario);
+    fill:none;
+  }
+  .servicio-card h3{
+    margin:0 0 8px 0;
+    font-size:1.05rem;
+  }
+  .servicio-card p{
+    margin:0;
+    font-size:0.95rem;
+    color:#4b5563;
+  }
+
+  /* FAQ */
+  .faq{
+    background:#eef2f9;
+  }
+  details{
+    background:#fff;
+    border:1px solid #dbe3f0;
+    border-radius:10px;
+    padding:6px 20px;
+    margin-bottom:14px;
+  }
+  summary{
+    cursor:pointer;
+    font-weight:600;
+    padding:14px 0;
+    min-height:44px;
+    display:flex;
+    align-items:center;
+    color:var(--texto);
+  }
+  details p{
+    margin:0 0 16px 0;
+    color:#4b5563;
+  }
+
+  /* Footer */
+  footer{
+    background:var(--primario);
+    color:var(--texto-claro);
+    padding:48px 0 24px 0;
+  }
+  .footer-grid{
+    display:flex;
+    flex-wrap:wrap;
+    gap:24px;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding-bottom:28px;
+    border-bottom:1px solid rgba(248,250,252,0.2);
+  }
+  .footer-contacto{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .footer-contacto .fila{
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .footer-contacto svg{
+    stroke:var(--acento);
+    fill:none;
+    min-width:20px;
+  }
+  .maqueta-aviso{
+    font-size:0.85rem;
+    color:#cbd5e1;
+    border:1px dashed rgba(248,250,252,0.4);
+    border-radius:8px;
+    padding:10px 14px;
+    display:inline-block;
+  }
+
+  .sello-hyper{
+    margin-top:26px;
+    background:#0f2f66;
+    border:1px solid var(--acento);
+    border-radius:10px;
+    padding:20px 22px;
+    display:flex;
+    gap:16px;
+    align-items:flex-start;
+  }
+  .sello-hyper svg{
+    stroke:var(--acento);
+    fill:none;
+    min-width:28px;
+    margin-top:2px;
+  }
+  .sello-hyper h4{
+    margin:0 0 6px 0;
+    font-size:1rem;
+    color:#ffffff;
+  }
+  .sello-hyper p{
+    margin:0;
+    font-size:0.88rem;
+    color:#e2e8f0;
+    line-height:1.5;
+  }
+
+  .copy-final{
+    text-align:center;
+    font-size:0.82rem;
+    color:#cbd5e1;
+    margin-top:20px;
+  }
 </style>
 </head>
 <body>
-  <div class="aviso">Maqueta de propuesta preparada para Contadores Mismo Lenguaje · no es un sitio publicado</div>
 
-  <nav>
-    <div class="wrap">
-      <div class="logo">Contadores Mismo Lenguaje</div>
-      <a class="navcta" href="#contacto">Contactar</a>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <div class="wrap">
-      <span class="badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        Despacho contable · CDMX
-      </span>
-      <h1>Contadores Mismo Lenguaje</h1>
-      <p class="tag">Contabilidad clara y en su mismo lenguaje. Impuestos y finanzas sin tecnicismos.</p>
-      <div class="heroctas">
-        <a class="btn primary" href="#contacto">
-          Agendar consulta
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a class="btn ghost" href="#servicios">Ver servicios</a>
-      </div>
-    </div>
-  </header>
-
-  <div class="wrap">
-    <div class="stats">
-      <div class="stat"><b>24/7</b><span>Contacto y citas en línea</span></div>
-      <div class="stat"><b>100%</b><span>Adaptado a celular</span></div>
-      <div class="stat"><b>HTTPS</b><span>Conexión segura</span></div>
-      <div class="stat"><b>&lt;2 s</b><span>Carga rápida</span></div>
-    </div>
+<header class="nav-principal">
+  <div class="nav-barra">
+    <a href="#inicio" class="nav-logo">
+      <span class="nav-monograma">CML</span>
+      <span>Contadores Mismo Lenguaje</span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <ul class="nav-enlaces" id="menu-nav">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" id="btn-menu" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
   </div>
+</header>
 
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="contenedor hero-grid">
+      <div>
+        <h1>Contabilidad en su mismo lenguaje, en CDMX</h1>
+        <p>Acompañamos a empresas y personas en sus obligaciones fiscales y contables, con un trato claro y cercano, adaptado a las necesidades de su negocio.</p>
+        <a class="boton" href="tel:5577032718">
+          <svg width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Llamar
+        </a>
+      </div>
+      <div>
+        <img class="hero-img" src="assets/contadores-cdmx-02/hero.jpg" width="1200" height="800" loading="eager" alt="Despacho contable trabajando documentos fiscales y financieros en oficina">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="nosotros">
+    <div class="contenedor">
+      <h2 class="reveal">Quiénes somos</h2>
+      <div class="subrayado reveal"></div>
+      <div class="about-grid">
+        <div class="reveal">
+          <p>Somos un despacho contable enfocado en atender las necesidades fiscales, contables y administrativas de negocios y personas físicas, con atención directa y personalizada en cada caso.</p>
+          <p>Buscamos que cada cliente entienda con claridad su situación fiscal, sin tecnicismos innecesarios, acompañándolo en cada trámite y obligación ante las autoridades correspondientes.</p>
+          <div class="ubicacion">
+            <svg width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Ciudad de México</span>
+          </div>
+        </div>
+        <div class="reveal">
+          <p>Nuestro trabajo se centra en ofrecer certeza y respaldo a cada cliente, entendiendo que cada negocio tiene necesidades distintas en materia contable y fiscal.</p>
+          <p>Atendemos con responsabilidad y puntualidad cada solicitud, buscando ser un aliado confiable en la gestión contable de su empresa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why-us" id="beneficios">
+    <div class="contenedor">
+      <h2 class="reveal">Lo que esta propuesta habilita para su despacho</h2>
+      <div class="subrayado reveal"></div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <svg width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg>
+          <div>
+            <h3>Un sitio web propio donde sus clientes lo encuentran</h3>
+            <p>Una página con información clara de sus servicios, disponible en cualquier momento para quien lo busque.</p>
+          </div>
+        </div>
+        <div class="why-card reveal">
+          <svg width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <div>
+            <h3>Presencia en Google</h3>
+            <p>Que su despacho aparezca cuando alguien busca servicios contables en su zona.</p>
+          </div>
+        </div>
+        <div class="why-card reveal">
+          <svg width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <div>
+            <h3>Captación automatizada de clientes</h3>
+            <p>Un sitio que trabaja para usted, atrayendo interesados sin depender solo de referencias.</p>
+          </div>
+        </div>
+        <div class="why-card reveal">
+          <svg width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <div>
+            <h3>Seguimiento puntual de cada cliente</h3>
+            <p>Una organización más ordenada de la información de cada caso, para no perder de vista ningún pendiente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
   <section id="servicios">
-    <div class="wrap">
-      <span class="kicker">Servicios</span>
-      <h2>Todo lo que Contadores Mismo Lenguaje ofrece, claro y a un clic</h2>
-      <p class="sub">Sus clientes encuentran lo que necesitan sin llamar ni esperar.</p>
-      <div class="grid">
-        <div class="card">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></div>
-          <h3>Contabilidad integral</h3><p>Llevamos su contabilidad al día y se la explicamos de forma clara.</p>
+    <div class="contenedor">
+      <h2 class="reveal">Servicios</h2>
+      <div class="subrayado reveal"></div>
+      <div class="servicios-grid">
+        <div class="servicio-card reveal">
+          <div class="icono">
+            <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="16" y2="17"/></svg>
+          </div>
+          <h3>Contabilidad integral</h3>
+          <p>Registro y organización de la información contable de su negocio de forma ordenada y consistente.</p>
         </div>
-        <div class="card">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
-          <h3>Impuestos y SAT</h3><p>Declaraciones y cumplimiento ante el SAT, sin complicaciones.</p>
+        <div class="servicio-card reveal">
+          <div class="icono">
+            <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <h3>Impuestos y trámites ante el SAT</h3>
+          <p>Apoyo en la presentación y seguimiento de obligaciones fiscales ante las autoridades correspondientes.</p>
         </div>
-        <div class="card">
-          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg></div>
-          <h3>Asesoría fiscal</h3><p>Le ayudamos a tomar mejores decisiones y a pagar lo justo.</p>
+        <div class="servicio-card reveal">
+          <div class="icono">
+            <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Nóminas</h3>
+          <p>Gestión del proceso de nómina de su personal conforme a las disposiciones vigentes.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contacto" style="padding-top:0">
-    <div class="wrap">
-      <div class="cta-final">
-        <h2>Hablemos</h2>
-        <p>Así de fácil sería para sus clientes encontrarlo y ponerse en contacto.</p>
-        <div class="contact-row">
-          <a class="contact-chip" href="tel:55 7703 2718">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            55 7703 2718
-          </a>
-          <span class="contact-chip" style="cursor:default">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-            CDMX
-          </span>
+        <div class="servicio-card reveal">
+          <div class="icono">
+            <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          </div>
+          <h3>Asesoría fiscal</h3>
+          <p>Orientación para la toma de decisiones fiscales de su negocio o actividad profesional.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <footer>
-    <div class="wrap">
-      Contadores Mismo Lenguaje · CDMX · Propuesta de diseño web<br>
-      <span style="font-size:12.5px">Maqueta creada como muestra. El diseño final se adapta a su marca.</span>
-    </div>
-  </footer>
+  <!-- FAQ -->
+  <section class="faq" id="preguntas">
+    <div class="contenedor">
+      <h2 class="reveal">Preguntas frecuentes</h2>
+      <div class="subrayado reveal"></div>
 
-  <img src="https://tracking-prospectos.estrateg-ia-hyper.workers.dev/p?id=contadores-cdmx-02-demo" width="1" height="1" alt="" style="display:block">
+      <details class="reveal">
+        <summary>¿Qué documentos necesito para iniciar con un despacho contable?</summary>
+        <p>Generalmente se requiere identificación oficial, comprobante de domicilio y documentos relacionados con la actividad económica del negocio. Puede llamarnos al 55 7703 2718 para conocer el detalle según su caso.</p>
+      </details>
+
+      <details class="reveal">
+        <summary>¿Atienden tanto a personas físicas como a empresas?</summary>
+        <p>Sí, brindamos acompañamiento contable y fiscal tanto a personas físicas con actividad empresarial como a personas morales.</p>
+      </details>
+
+      <details class="reveal">
+        <summary>¿Cada cuánto debo entregar información a mi contador?</summary>
+        <p>La periodicidad depende de las obligaciones fiscales de cada contribuyente. Podemos revisar su caso particular en una llamada al 55 7703 2718.</p>
+      </details>
+
+      <details class="reveal">
+        <summary>¿Puedo recibir orientación si ya tengo un problema con el SAT?</summary>
+        <p>Sí, ofrecemos asesoría para revisar su situación y definir los pasos a seguir según el tipo de requerimiento.</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="contenedor">
+    <div class="footer-grid">
+      <div class="footer-contacto">
+        <div class="fila">
+          <svg width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:5577032718">55 7703 2718</a>
+        </div>
+        <div class="fila">
+          <svg width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Ciudad de México</span>
+        </div>
+      </div>
+      <div>
+        <span class="maqueta-aviso">Maqueta de propuesta — no es un sitio publicado</span>
+      </div>
+    </div>
+
+    <div class="sello-hyper">
+      <svg width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      <div>
+        <h4>Generada de forma 100% automatizada por Estrateg IA Hyper</h4>
+        <p>Automatizamos flujos de trabajo, escenarios con agentes de IA y tareas manuales con software e inteligencia artificial — imagine lo que podemos automatizar en su negocio.</p>
+      </div>
+    </div>
+
+    <p class="copy-final">Contadores Mismo Lenguaje · CDMX</p>
+  </div>
+</footer>
+
+<img src="https://tracking-prospectos.estrateg-ia-hyper.workers.dev/p?id=contadores-cdmx-02-demo" width="1" height="1" alt="">
+
+<script>
+(function(){
+  var btn = document.getElementById('btn-menu');
+  var menu = document.getElementById('menu-nav');
+  btn.addEventListener('click', function(){
+    var abierto = menu.classList.toggle('abierto');
+    btn.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+  });
+
+  var prefiereReducido = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var elementos = document.querySelectorAll('.reveal');
+  if(prefiereReducido || !('IntersectionObserver' in window)){
+    elementos.forEach(function(el){ el.classList.add('visible'); });
+  } else {
+    var obs = new IntersectionObserver(function(entradas){
+      entradas.forEach(function(entrada){
+        if(entrada.isIntersecting){
+          entrada.target.classList.add('visible');
+          obs.unobserve(entrada.target);
+        }
+      });
+    }, {threshold:0.15});
+    elementos.forEach(function(el){ obs.observe(el); });
+  }
+})();
+</script>
+
 </body>
 </html>
