@@ -32,6 +32,12 @@ de un registro real de prospecto.
 No la use para rediseñar `diagnostico.html` ni `roi.html` (esos activos siguen su propio
 flujo), ni para generar demos sin un JSON real de prospecto de respaldo.
 
+**Precondición de deliverabilidad (obligatoria):** la demo se entrega por correo. Si el
+prospecto **no tiene `email`** (nulo/ausente), **no genere la demo** — devuelva de inmediato
+sin generar (`resumen.revision: "omitida-sin-email"`) para no gastar recursos en una maqueta
+que no se puede hacer llegar. El filtrado principal es responsabilidad de `prospeccion` (ver su
+Compuerta de deliverabilidad), pero esta skill lo valida también como defensa.
+
 ### Contrato de invocación
 
 ```yaml
@@ -116,6 +122,7 @@ convención existente y no debe romperse.
 
 | Situación | Acción |
 | --- | --- |
+| **`email` nulo/ausente** | **NO genere la demo.** Devuelva `resumen.revision: "omitida-sin-email"` sin escribir archivo ni descargar imágenes (la demo se entrega por correo; sin email no hay canal). Es la primera compuerta, antes que cualquier otra. |
 | `tiene_web:true` | Intente paleta de **marca**: `curl` del HTML + CSS enlazados y luego minar tokens de color (no WebFetch). Ver `references/diseno-visual.md`. |
 | Sitio con señales de **plantilla/constructor** (placeholders visibles, markup genérico de builder) | Colores de baja confianza: úselos igual, pero registre `paleta: marca-dudosa` para que el operador los revise a ojo. |
 | `tiene_web:false` o <2 colores usables tras el gate de contraste | Fallback a **paleta de sector** (ui-ux-pro-max) y registre `paleta: sector`. |

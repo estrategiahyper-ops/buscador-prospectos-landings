@@ -155,25 +155,25 @@ Si `worker_url` está vacía, genera los mensajes sin tracking y menciona que pu
 ### Activos de valor (demo personalizada por prospecto)
 Para que el correo demuestre valor en vez de solo prometerlo, genera un **activo personalizado** para el **top 10** de prospectos (por `oportunidad_score`). Los demás reciben el correo normal sin demo. Regla de oro: **solo datos reales verificados**; el activo se enmarca siempre como "maqueta/propuesta", nunca como algo ya publicado.
 
-Las plantillas usan el sistema de diseño **Trust & Authority** (ui-ux-pro-max): tipografía IBM Plex Sans, paleta navy #0F172A + azul #0369A1, íconos SVG (nunca emojis), hero degradado oscuro, tarjetas con sombra y barra de stats. Si se rediseñan, mantener ese sistema para coherencia.
+**Compuerta de deliverabilidad (obligatoria, antes de generar cualquier activo):** el activo de valor se entrega por **correo** (borrador en Gmail con el enlace rastreado). Por lo tanto, **solo genera el activo si el prospecto tiene `email` no nulo**. Si `email` es nulo, **NO gastes recursos** en generar/desplegar su maqueta: márcalo como **contacto telefónico** en el informe y sáltalo. Para elegir el top 10 al que se le genera activo, filtra **primero** por `email` presente y luego ordena por `oportunidad_score` (un prospecto sin correo nunca entra al lote de maquetas, aunque su score sea alto). Excepción manual: si más adelante un prospecto sin correo entrega uno (p. ej. en una llamada), se le puede generar el activo bajo demanda para ese caso puntual.
 
 Elige el activo según el hueco del prospecto y el servicio que vende el usuario:
 
-- **Demo de web** → prospectos SIN web o con web mala (cuando el usuario vende web/diseño). Plantilla: `tracking/plantillas-valor/web-demo.html`.
-- **Diagnóstico de fugas** → cualquier prospecto de automatización/procesos; muestra 1-3 pérdidas concretas detectadas + antes/después. Plantilla: `tracking/plantillas-valor/diagnostico.html`.
-- **Simulador de ahorro (ROI)** → prospectos de automatización con una tarea repetitiva clara (agendar, cobrar, responder). Plantilla: `tracking/plantillas-valor/roi.html`.
+- **Demo de web** → prospectos SIN web o con web mala (cuando el usuario vende web/diseño). **Se genera invocando la skill `demo-landing`** (una invocación por prospecto), pasándole su contrato: `{prospecto: <registro JSON completo>, sector, ciudad, servicio_usuario, tracking_id, worker_url}`. Esa skill resuelve paleta (marca/sector), imágenes locales, sello de agencia y el ciclo generar→revisar→corregir, y devuelve un `resumen` por demo que debes incluir en el reporte de campaña. **No uses la plantilla vieja `tracking/plantillas-valor/web-demo.html`** (obsoleta; queda solo como referencia histórica).
+- **Diagnóstico de fugas** → cualquier prospecto de automatización/procesos; muestra 1-3 pérdidas concretas detectadas + antes/después. Plantilla: `tracking/plantillas-valor/diagnostico.html` (sustituir tokens `{{...}}` con datos reales).
+- **Simulador de ahorro (ROI)** → prospectos de automatización con una tarea repetitiva clara (agendar, cobrar, responder). Plantilla: `tracking/plantillas-valor/roi.html` (sustituir tokens).
 
-Flujo por cada prospecto del top 10:
-1. Copia la plantilla adecuada y sustituye los tokens `{{...}}` con datos reales del prospecto y el `worker_url`/`tracking_id`. Guarda el resultado en `tracking/demos-publicar/[tracking_id].html`.
-2. Cuando tengas todas listas, despliega la carpeta:
-   `cd tracking/demos-publicar && npx wrangler pages deploy . --project-name=demos-prospectos --commit-dirty=true`
-   La URL pública de cada demo será `https://demos-prospectos.pages.dev/[tracking_id]`.
+Flujo del lote (top 10 filtrado por email):
+1. Genera cada activo (demo-landing para webs; plantillas para diagnóstico/ROI). Todo queda en `tracking/demos-publicar/[tracking_id].html` con assets en `assets/[tracking_id]/`.
+2. Cuando tengas todos listos, despliega la carpeta **a producción**:
+   `cd tracking/demos-publicar && npx wrangler pages deploy . --project-name=demos-prospectos --branch=main --commit-dirty=true`
+   (sin `--branch=main`, wrangler usa la rama git actual y puede irse a una URL de preview). La URL pública será `https://demos-prospectos.pages.dev/[tracking_id]`.
 3. En el mensaje de email, el CTA principal es un enlace rastreado a la demo:
    `[worker_url]/c?id=[tracking_id]-demo&u=https://demos-prospectos.pages.dev/[tracking_id]`
    (así un clic ahí = el prospecto miró su propia demo = interés fuerte).
-4. Las plantillas ya incluyen su propio píxel `[worker_url]/p?id=[tracking_id]-{demo|diag|roi}`, que registra en la hoja cuándo abrieron la demo.
+4. Los activos ya incluyen su propio píxel `[worker_url]/p?id=[tracking_id]-{demo|diag|roi}`, que registra en la hoja cuándo abrieron la demo.
 
-Si `worker_url` está vacía, genera las demos igual pero enlázalas como archivos locales y avisa que sin tracking no sabrás si las vieron.
+Si `worker_url` está vacía, genera los activos igual pero enlázalos como archivos locales y avisa que sin tracking no sabrás si los vieron.
 
 ## Paso 5 - Guardar y presentar
 - Guarda como "prospeccion-[nicho]-[ciudad].html"
