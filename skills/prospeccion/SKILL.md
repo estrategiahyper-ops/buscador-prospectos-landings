@@ -160,20 +160,21 @@ Para que el correo demuestre valor en vez de solo prometerlo, genera un **activo
 Elige el activo según el hueco del prospecto y el servicio que vende el usuario:
 
 - **Demo de web** → prospectos SIN web o con web mala (cuando el usuario vende web/diseño). **Se genera invocando la skill `demo-landing`** (una invocación por prospecto), pasándole su contrato: `{prospecto: <registro JSON completo>, sector, ciudad, servicio_usuario, tracking_id, worker_url}`. Esa skill resuelve paleta (marca/sector), imágenes locales, sello de agencia y el ciclo generar→revisar→corregir, y devuelve un `resumen` por demo que debes incluir en el reporte de campaña. **No uses la plantilla vieja `tracking/plantillas-valor/web-demo.html`** (obsoleta; queda solo como referencia histórica).
-- **Diagnóstico de fugas** → cualquier prospecto de automatización/procesos; muestra 1-3 pérdidas concretas detectadas + antes/después. Plantilla: `tracking/plantillas-valor/diagnostico.html` (sustituir tokens `{{...}}` con datos reales).
-- **Simulador de ahorro (ROI)** → prospectos de automatización con una tarea repetitiva clara (agendar, cobrar, responder). Plantilla: `tracking/plantillas-valor/roi.html` (sustituir tokens).
+- **Hiperautomatización (infografía)** → activo principal para prospectos de automatización/procesos. Es una **infografía fija y genérica** (no personalizada) que explica a grandes rasgos, con gancho de curiosidad y enfoque en dinero/rentabilidad, cómo Estrategia Hyper convierte el trabajo manual y repetitivo en procesos automáticos. Ya está creada y publicada: imagen en `tracking/activos-imagen/hiperautomatizacion.png`, página en `https://demos-prospectos.pages.dev/hiperautomatizacion`. **No se regenera por prospecto**; el correo lleva un enlace rastreado por prospecto `/c?id=[tracking_id]-auto&u=https://demos-prospectos.pages.dev/hiperautomatizacion`. El correo lleva un gancho breve y personalizado (una tarea manual real observada) y luego el enlace. Usa la paleta/marca real de Estrategia Hyper (navy #0A1330, azul #2E5BFF; brand-package en `/Users/emmanuelheredia/Downloads/Estrateg IA/brand-package/`).
+- **Diagnóstico de fugas / Simulador ROI → activos de PASO 2** (no en el correo en frío): se reservan para cuando el prospecto responde interesado, como profundización. Plantillas en `tracking/plantillas-valor/{diagnostico,roi}.html`.
 
 Flujo del lote (top 10 filtrado por email):
-1. Genera cada activo (demo-landing para webs; plantillas para diagnóstico/ROI). Todo queda en `tracking/demos-publicar/[tracking_id].html` con assets en `assets/[tracking_id]/`.
-2. Cuando tengas todos listos, despliega la carpeta **a producción**:
+1. **Prospectos de web**: genera su demo invocando `demo-landing` (queda en `tracking/demos-publicar/[tracking_id].html` con assets en `assets/[tracking_id]/`). **Prospectos de automatización**: no se genera nada — usan la infografía fija ya publicada.
+2. Si generaste demos nuevas, despliega la carpeta **a producción**:
    `cd tracking/demos-publicar && npx wrangler pages deploy . --project-name=demos-prospectos --branch=main --commit-dirty=true`
    (sin `--branch=main`, wrangler usa la rama git actual y puede irse a una URL de preview). La URL pública será `https://demos-prospectos.pages.dev/[tracking_id]`.
-3. En el mensaje de email, el CTA principal es un enlace rastreado a la demo:
-   `[worker_url]/c?id=[tracking_id]-demo&u=https://demos-prospectos.pages.dev/[tracking_id]`
-   (así un clic ahí = el prospecto miró su propia demo = interés fuerte).
-4. Los activos ya incluyen su propio píxel `[worker_url]/p?id=[tracking_id]-{demo|diag|roi}`, que registra en la hoja cuándo abrieron la demo.
+3. En el mensaje de email, el CTA principal es un enlace rastreado:
+   - Web: `[worker_url]/c?id=[tracking_id]-demo&u=https://demos-prospectos.pages.dev/[tracking_id]`
+   - Automatización: `[worker_url]/c?id=[tracking_id]-auto&u=https://demos-prospectos.pages.dev/hiperautomatizacion`
+   (así un clic ahí = el prospecto miró la propuesta = interés fuerte; además dispara la alerta de Telegram).
+4. Las demos de web ya incluyen su propio píxel `[worker_url]/p?id=[tracking_id]-demo`; la página de la infografía registra vistas con el id genérico `hiperautomatizacion-view`.
 
-Si `worker_url` está vacía, genera los activos igual pero enlázalos como archivos locales y avisa que sin tracking no sabrás si los vieron.
+Si `worker_url` está vacía, enlaza los activos como URLs/archivos planos y avisa que sin tracking no sabrás si los vieron.
 
 ## Paso 5 - Guardar y presentar
 - Guarda como "prospeccion-[nicho]-[ciudad].html"
