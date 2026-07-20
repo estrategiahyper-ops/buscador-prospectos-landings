@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prospección · Despachos jurídicos y notarías · CDMX</title>
+<style>
+  :root{
+    --navy:#0A1330; --navy2:#0F1A3D; --azul:#2E5BFF; --azul-soft:#88A2FF;
+    --ink:#0B1220; --paper:#F5F7FB; --card:#fff; --line:#E4E9F2; --muted:#5A6577;
+    --ok:#12A150; --warn:#E68A00; --hot:#E5484D;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 18px}
+  header{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:38px 0 44px}
+  header .wrap{display:flex;flex-direction:column;gap:6px}
+  .kicker{color:var(--azul-soft);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:12.5px}
+  h1{font-size:30px;line-height:1.2;font-weight:800}
+  header p{color:#B9C4DA;max-width:720px;margin-top:6px}
+  .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:26px}
+  .stat{background:#ffffff10;border:1px solid #ffffff22;border-radius:12px;padding:14px}
+  .stat b{display:block;font-size:26px;font-weight:800}
+  .stat span{color:#B9C4DA;font-size:12.5px}
+  section{padding:34px 0}
+  h2{font-size:20px;margin-bottom:4px}
+  h2 + .sub{color:var(--muted);margin-bottom:18px;font-size:14px}
+  .grid2{display:grid;grid-template-columns:1.3fr 1fr;gap:22px;align-items:start}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .bar-row{display:flex;align-items:center;gap:10px;margin:9px 0;font-size:13.5px}
+  .bar-row .lbl{width:120px;color:var(--muted)}
+  .bar{flex:1;height:10px;background:#EDF1F8;border-radius:6px;overflow:hidden}
+  .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--azul),var(--azul-soft))}
+  .bar-row .num{width:26px;text-align:right;font-weight:700}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:13.5px}
+  th,td{padding:11px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+  th{background:#F0F4FB;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  tr:last-child td{border-bottom:0}
+  td.emp{font-weight:700;min-width:170px}
+  td.emp small{display:block;font-weight:500;color:var(--muted)}
+  .score{display:inline-flex;align-items:center;gap:7px;font-weight:800}
+  .score .dot{width:34px;height:8px;border-radius:5px;background:#EDF1F8;position:relative;overflow:hidden}
+  .score .dot i{position:absolute;inset:0;border-radius:5px}
+  .s-hi i{background:var(--hot)} .s-mid i{background:var(--warn)} .s-lo i{background:var(--ok)}
+  .badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11.5px;font-weight:700;white-space:nowrap}
+  .b-demo{background:#E7EDFF;color:#1F3FB0} .b-info{background:#E9F7EF;color:#0B7a3b} .b-tel{background:#FCEBEA;color:#B23138}
+  .b-web{background:#EEF1F6;color:#43506a} .b-noweb{background:#FFF3E0;color:#9a5b00}
+  .muted{color:var(--muted)} a{color:var(--azul);text-decoration:none} a:hover{text-decoration:underline}
+  .lead{border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:16px;background:var(--card)}
+  .lead h3{font-size:16px;margin-bottom:3px}
+  .lead .meta{font-size:12.5px;color:var(--muted);margin-bottom:10px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+  .chip{background:#F0F4FB;border:1px solid var(--line);border-radius:20px;padding:3px 10px;font-size:12px;color:#3a465c}
+  .msg{background:#0C1533;color:#E7ECF7;border-radius:12px;padding:14px 15px;font-size:13px;white-space:pre-wrap;margin-top:10px;position:relative;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1.5}
+  .msg .tag{position:absolute;top:8px;right:10px;font-size:10.5px;color:#8AA0D6;text-transform:uppercase;letter-spacing:.05em}
+  .track{font-size:12px;color:var(--muted);margin-top:8px;word-break:break-all}
+  .track code{background:#F0F4FB;padding:1px 5px;border-radius:5px}
+  .foot{background:var(--navy);color:#B9C4DA;padding:26px 0;font-size:13px}
+  .foot b{color:#fff}
+  .pill{display:inline-block;background:#ffffff14;border:1px solid #ffffff22;color:#fff;border-radius:20px;padding:3px 10px;font-size:12px;margin-right:6px}
+  @media(max-width:820px){.stats{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.tablewrap{overflow-x:auto}h1{font-size:24px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="kicker">Estrategia Hyper · Campaña de prospección</span>
+    <h1>Despachos jurídicos y notarías · Ciudad de México</h1>
+    <p>15 prospectos reales analizados por su presencia digital. Enrutamiento por web: con sitio → infografía de automatización; sin sitio → maqueta web + infografía. Solo se genera activo si hay correo (compuerta de deliverabilidad).</p>
+    <div class="stats">
+      <div class="stat"><b>15</b><span>Prospectos analizados</span></div>
+      <div class="stat"><b>14</b><span>Con correo (activo)</span></div>
+      <div class="stat"><b>2</b><span>Maquetas web generadas</span></div>
+      <div class="stat"><b>12</b><span>Solo infografía (con web)</span></div>
+      <div class="stat"><b>1</b><span>Solo teléfono (sin correo)</span></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap grid2">
+    <div>
+      <h2>Resumen ejecutivo</h2>
+      <p class="sub">Sector con baja madurez digital: casi ninguno resuelve la agenda de citas en línea; varios arrastran webs rotas, de plantilla o inexistentes.</p>
+      <div class="card">
+        <strong style="font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em">Distribución por oportunidad (0–10)</strong>
+        <div style="margin-top:12px">
+          <div class="bar-row"><span class="lbl">9 · máxima</span><span class="bar"><i style="width:100%"></i></span><span class="num">4</span></div>
+          <div class="bar-row"><span class="lbl">8 · muy alta</span><span class="bar"><i style="width:75%"></i></span><span class="num">3</span></div>
+          <div class="bar-row"><span class="lbl">7 · alta</span><span class="bar"><i style="width:25%"></i></span><span class="num">1</span></div>
+          <div class="bar-row"><span class="lbl">6 · media</span><span class="bar"><i style="width:100%"></i></span><span class="num">4</span></div>
+          <div class="bar-row"><span class="lbl">5 · media-baja</span><span class="bar"><i style="width:25%"></i></span><span class="num">1</span></div>
+          <div class="bar-row"><span class="lbl">4 · baja</span><span class="bar"><i style="width:50%"></i></span><span class="num">2</span></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h2>Top 5 recomendados</h2>
+      <p class="sub">Por oportunidad y facilidad de conversión.</p>
+      <div class="card">
+        <ol style="margin-left:18px;display:flex;flex-direction:column;gap:9px;font-size:14px">
+          <li><b>Despacho Jurídico (Pantitlán)</b> — 9/10 · Wix con texto de plantilla visible.</li>
+          <li><b>Notaría 5 (Lic. Zermeño)</b> — 9/10 · sin web, todo por teléfono. <span class="badge b-demo">maqueta</span></li>
+          <li><b>Notaría 141 (Lic. Ruiz del Río)</b> — 9/10 · sin web, avisos a correo genérico. <span class="badge b-demo">maqueta</span></li>
+          <li><b>Bufete Rubio Molina</b> — 8/10 · web rota que redirige sola.</li>
+          <li><b>Notaría 1 (Lic. Núñez)</b> — 8/10 · dominio con SSL expirado.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <h2>Tabla de prospectos</h2>
+    <p class="sub">Ordenada por oportunidad. Score alto = más necesidad del servicio.</p>
+    <div class="tablewrap">
+    <table>
+      <thead><tr>
+        <th>#</th><th>Negocio</th><th>Contacto</th><th>Web</th><th>Score</th><th>Activo</th><th>Problema clave</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td class="emp">Despacho Jurídico (Pantitlán)<small>Despacho · Pantitlán</small></td>
+          <td>56 2432 3215<br><span class="muted">despachodeabogadosgold@gmail.com</span></td>
+          <td><span class="badge b-web">Wix</span></td>
+          <td><span class="score s-hi"><span class="dot"><i style="width:90%"></i></span>9</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Texto de plantilla "Nuestro alimentos" visible</td>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td class="emp">Cortes Sierra &amp; Asociados<small>Despacho · Centro</small></td>
+          <td>55 5502 2611<br><span class="muted">— sin correo —</span></td>
+          <td><span class="badge b-noweb">Sin web</span></td>
+          <td><span class="score s-hi"><span class="dot"><i style="width:90%"></i></span>9</span></td>
+          <td><span class="badge b-tel">Solo teléfono</span></td>
+          <td>Sin web ni correo; solo en directorio ajeno</td>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td class="emp">Notaría 5 — Lic. Zermeño<small>Notaría · Centro</small></td>
+          <td>55 5521 2424<br><span class="muted">azi@notaria5.com.mx</span></td>
+          <td><span class="badge b-noweb">Sin web</span></td>
+          <td><span class="score s-hi"><span class="dot"><i style="width:90%"></i></span>9</span></td>
+          <td><span class="badge b-demo">Maqueta + infografía</span></td>
+          <td>Todo el agendamiento entra por teléfono</td>
+        </tr>
+        <tr>
+          <td>04</td>
+          <td class="emp">Notaría 141 — Lic. Ruiz del Río<small>Notaría · Lomas de Chapultepec</small></td>
+          <td>55 5271 8099<br><span class="muted">avisos@notaria141.com.mx</span></td>
+          <td><span class="badge b-noweb">Sin web</span></td>
+          <td><span class="score s-hi"><span class="dot"><i style="width:90%"></i></span>9</span></td>
+          <td><span class="badge b-demo">Maqueta + infografía</span></td>
+          <td>Avisos y trámites a correo genérico, sin seguimiento</td>
+        </tr>
+        <tr>
+          <td>05</td>
+          <td class="emp">Bufete Rubio Molina, S.C.<small>Despacho · Col. Moderna</small></td>
+          <td>55 5579 9905<br><span class="muted">rubiomolina@prodigy.net.mx</span></td>
+          <td><span class="badge b-web">Web rota</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:80%"></i></span>8</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Redirige sola a los 10 s; correo prodigy</td>
+        </tr>
+        <tr>
+          <td>06</td>
+          <td class="emp">BSYC Abogados<small>Despacho · Tlalpan</small></td>
+          <td>55 7089 3469<br><span class="muted">bsyc@bsyc-abogados.com.mx</span></td>
+          <td><span class="badge b-web">.php antigua</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:80%"></i></span>8</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Diseño de 2015, sin responsive</td>
+        </tr>
+        <tr>
+          <td>07</td>
+          <td class="emp">Notaría 1 — Lic. Núñez<small>Notaría · Molino del Rey</small></td>
+          <td>55 5202 8833<br><span class="muted">rnunez@notariouno.mx</span></td>
+          <td><span class="badge b-web">SSL expirado</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:80%"></i></span>8</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Certificado de seguridad vencido: "sitio no seguro"</td>
+        </tr>
+        <tr>
+          <td>08</td>
+          <td class="emp">Gerardo Cuéllar &amp; Abogados<small>Despacho · Centro</small></td>
+          <td>55 5578 6211<br><span class="muted">info@gerardocuellaryabogados.com</span></td>
+          <td><span class="badge b-web">WordPress</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:70%"></i></span>7</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>50 abogados, 5 líneas, cero agenda en línea</td>
+        </tr>
+        <tr>
+          <td>09</td>
+          <td class="emp">AG Despacho Jurídico<small>Despacho · Juárez</small></td>
+          <td>55 9816 0285<br><span class="muted">contacto@agdespachojuridico.net</span></td>
+          <td><span class="badge b-web">Plantilla</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:60%"></i></span>6</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Slider y sección "shop" impropios de un despacho</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td class="emp">C F Despacho Legal<small>Despacho · Nápoles</small></td>
+          <td>55 9008 5697<br><span class="muted">contacto@cfdespacholegal.net</span></td>
+          <td><span class="badge b-web">Wix</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:60%"></i></span>6</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Web .com y correo .net: dominios distintos</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td class="emp">Notaría 210 — Lic. Cuevas<small>Notaría · Col. Cuauhtémoc</small></td>
+          <td>55 5591 1239<br><span class="muted">mjborja@notaria210df.com</span></td>
+          <td><span class="badge b-web">WordPress</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:60%"></i></span>6</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>La web pide agendar la cita por teléfono</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td class="emp">Notaría 126 — Lic. Moreno<small>Notaría · Polanco</small></td>
+          <td>55 5281 4126<br><span class="muted">amoreno@notariashlom.mx</span></td>
+          <td><span class="badge b-web">Sitio compartido</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:60%"></i></span>6</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Página compartida con otras 3 notarías, sin identidad propia</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td class="emp">Notaría 72 — Lic. Viñas<small>Notaría · Mixcoac</small></td>
+          <td>55 5615 0603<br><span class="muted">notaria72@prodigy.net.mx</span></td>
+          <td><span class="badge b-web">Wix</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:50%"></i></span>5</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Agenda en Wix pero correo @prodigy</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td class="emp">Bufete Figueroa y Asociados<small>Despacho · San Pedro de los Pinos</small></td>
+          <td>55 8722 2297<br><span class="muted">contacto@figueroayasociados.mx</span></td>
+          <td><span class="badge b-web">Moderna</span></td>
+          <td><span class="score s-lo"><span class="dot"><i style="width:40%"></i></span>4</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Buena web y 4 redes, pero sin agenda ni bot 24/7</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td class="emp">Notaría 47 — Lic. Morán<small>Notaría · Jardines del Pedregal</small></td>
+          <td>55 5677 8777<br><span class="muted">contacto@notaria47cdmx.com</span></td>
+          <td><span class="badge b-web">Moderna</span></td>
+          <td><span class="score s-lo"><span class="dot"><i style="width:40%"></i></span>4</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Formularios se descargan y llenan a mano</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <h2>Estadísticas del nicho</h2>
+    <p class="sub">Sobre los 15 prospectos analizados.</p>
+    <div class="grid2" style="grid-template-columns:repeat(4,1fr);gap:12px">
+      <div class="card"><b style="font-size:24px">20%</b><div class="muted" style="font-size:13px">sin sitio web (3 de 15)</div></div>
+      <div class="card"><b style="font-size:24px">~93%</b><div class="muted" style="font-size:13px">sin agenda de citas en línea (14 de 15)</div></div>
+      <div class="card"><b style="font-size:24px">47%</b><div class="muted" style="font-size:13px">web rota, de plantilla o inexistente (7 de 15)</div></div>
+      <div class="card"><b style="font-size:24px">3</b><div class="muted" style="font-size:13px">correos aún en @prodigy.net.mx / gmail</div></div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <strong>Conclusión.</strong> <span class="muted">El nicho jurídico-notarial de CDMX tiene una brecha digital amplia y muy vendible: casi nadie resuelve la agenda de citas en línea ni el seguimiento de trámites/casos, y una parte relevante arrastra webs rotas, de plantilla o simplemente no tiene sitio. La automatización (agenda, recordatorios, seguimiento y WhatsApp) es el gancho transversal para los 14 con correo; la maqueta web refuerza a las notarías sin sitio (05, 03 y 04).</span>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <h2>Mensajes de contacto listos</h2>
+    <p class="sub">Español formal de México, trato de usted, firma Shmin. Cada correo lleva enlace(s) rastreado(s) y píxel de apertura. <b>Los borradores quedan en Gmail; el envío lo hace usted.</b> Recomendación: 3–4 correos por día para calentar el dominio.</p>
+
+    <div class="lead">
+      <h3>03 · Notaría 5 — Lic. Alfonso Zermeño Infante <span class="badge b-demo">Maqueta + infografía</span></h3>
+      <div class="meta">azi@notaria5.com.mx · 55 5521 2424 · sin web</div>
+      <div class="msg"><span class="tag">Correo</span>Estimado Lic. Alfonso Zermeño Infante:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de la Notaría 5, noté que hoy toda solicitud de cita e información de trámites entra por teléfono, sin ninguna forma de agendar o consultar en línea.
+
+Me permití preparar una maqueta de cómo podría verse un sitio propio de la notaría, pensado para que los clientes conozcan los trámites y agenden en línea:
+» maqueta del sitio
+
+Y una breve infografía de cómo automatizamos el trabajo repetitivo —agenda, recordatorios y seguimiento de trámites— para que su equipo deje de coordinar cada cita por teléfono:
+» infografía de automatización
+
+Ambos son una propuesta, sin ningún compromiso; con gusto se los explico en una llamada breve.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Maqueta: <code>/c?id=juridicos-cdmx-03-demo</code> → demos-prospectos.pages.dev/juridicos-cdmx-03 &nbsp;·&nbsp; Infografía: <code>/c?id=juridicos-cdmx-03-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=juridicos-cdmx-03</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>04 · Notaría 141 — Lic. Alfredo Ruiz del Río Prieto <span class="badge b-demo">Maqueta + infografía</span></h3>
+      <div class="meta">avisos@notaria141.com.mx · 55 5271 8099 · sin web</div>
+      <div class="msg"><span class="tag">Correo</span>Estimado Lic. Alfredo Ruiz del Río Prieto:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de la Notaría 141, noté que los avisos y solicitudes se reciben en un correo genérico, sin ningún sistema que rastree el estado de cada trámite.
+
+Me permití preparar una maqueta de cómo podría verse un sitio propio de la notaría, con un módulo de avisos y trámites en línea:
+» maqueta del sitio
+
+Y una breve infografía de cómo automatizamos el seguimiento de trámites y los recordatorios de cita, para que nada dependa de revisar el correo a mano:
+» infografía de automatización
+
+Ambos son una propuesta, sin ningún compromiso; con gusto se los explico en una llamada breve.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Maqueta: <code>/c?id=juridicos-cdmx-04-demo</code> → demos-prospectos.pages.dev/juridicos-cdmx-04 &nbsp;·&nbsp; Infografía: <code>/c?id=juridicos-cdmx-04-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=juridicos-cdmx-04</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>01 · Despacho Jurídico (Pantitlán) <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">despachodeabogadosgold@gmail.com · 56 2432 3215 · Wix</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores del Despacho Jurídico:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su despacho, noté que su página en Wix todavía muestra texto de plantilla que dice "Nuestro alimentos", lo primero que ve un cliente que llega buscando un abogado.
+
+Ayudamos a despachos de la CDMX a resolver eso y, sobre todo, a convertir el trabajo manual en procesos que se ejecutan solos: agenda de consultas, atención por WhatsApp y seguimiento de casos. Me permití preparar una breve infografía de cómo lo hacemos y su impacto en tiempo y clientes atendidos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=juridicos-cdmx-01-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=juridicos-cdmx-01</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>05 · Bufete Jurídico Rubio Molina, S.C. <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">rubiomolina@prodigy.net.mx · 55 5579 9905 · web rota</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores del Bufete Rubio Molina:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su despacho, noté que su página redirige sola a los diez segundos y usa un correo @prodigy.net.mx, de modo que cada cliente que llega se pierde antes de encontrar el teléfono.
+
+Ayudamos a despachos de la CDMX a recuperar esas consultas y a convertir el trabajo manual en procesos que se ejecutan solos: agenda en línea, atención por WhatsApp y seguimiento de casos. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=juridicos-cdmx-05-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=juridicos-cdmx-05</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>06 · BSYC Abogados <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">bsyc@bsyc-abogados.com.mx · 55 7089 3469 · web .php antigua</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de BSYC Abogados:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su despacho, noté que su sitio se ve como de 2015 y no abre bien en celular, justo donde busca hoy la mayoría de quien necesita un abogado.
+
+Más allá del diseño, ayudamos a despachos de la CDMX a convertir el trabajo manual en procesos que se ejecutan solos: agenda de consultas en línea, atención por WhatsApp y seguimiento de casos. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=juridicos-cdmx-06-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=juridicos-cdmx-06</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>07 · Notaría 1 — Lic. Roberto Núñez y Bandera <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">rnunez@notariouno.mx · 55 5202 8833 · SSL expirado</div>
+      <div class="msg"><span class="tag">Correo</span>Estimado Lic. Roberto Núñez y Bandera:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de la Notaría 1, noté que su dominio notariouno.mx da un error de certificado de seguridad vencido, así que cualquier persona que lo abra ve una advertencia de "sitio no seguro".
+
+Ayudamos a notarías de la CDMX a resolver eso y a convertir el trabajo manual en procesos que se ejecutan solos: agenda de citas en línea, recordatorios y seguimiento de trámites. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=juridicos-cdmx-07-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=juridicos-cdmx-07</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>08 · Gerardo Cuéllar &amp; Abogados <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">info@gerardocuellaryabogados.com · 55 5578 6211 · WordPress</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de Gerardo Cuéllar &amp; Abogados:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su despacho, noté que, con 50 abogados y cinco líneas telefónicas, no cuentan con ninguna forma de agendar cita en línea: todo el filtro de casos cae en el teléfono.
+
+Ayudamos a despachos de la CDMX a convertir ese trabajo manual en procesos que se ejecutan solos: agenda en línea, CRM para distribuir consultas y un bot de WhatsApp que filtra casos. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=juridicos-cdmx-08-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=juridicos-cdmx-08</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>09 · AG Despacho Jurídico <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">contacto@agdespachojuridico.net · 55 9816 0285 · plantilla WordPress</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de AG Despacho Jurídico:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su despacho, noté que su sitio todavía arrastra un slider genérico y una sección de "tienda" que no encajan en un despacho y distraen de la consulta.
+
+Además del acomodo del sitio, ayudamos a despachos de la CDMX a convertir el trabajo manual en procesos que se ejecutan solos y a integrar sus dos oficinas: agenda en línea, bot de WhatsApp y CRM. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=juridicos-cdmx-09-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=juridicos-cdmx-09</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>10 · C F Despacho Legal <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">contacto@cfdespacholegal.net · 55 9008 5697 · Wix</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de C F Despacho Legal:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su despacho, noté un detalle que resta confianza: su web es cfdespacholegal.com pero su correo es cfdespacholegal.net, dos dominios distintos que hacen dudar al cliente de si le escribe al despacho real.
+
+Ayudamos a despachos de la CDMX a ordenar eso y a convertir el trabajo manual en procesos que se ejecutan solos: agenda en línea, atención por WhatsApp y seguimiento de casos. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=juridicos-cdmx-10-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=juridicos-cdmx-10</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>11 · Notaría 210 — Lic. Ricardo Cuevas Miguel <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">mjborja@notaria210df.com · 55 5591 1239 · WordPress antiguo</div>
+      <div class="msg"><span class="tag">Correo</span>Estimado Lic. Ricardo Cuevas Miguel:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de la Notaría 210, noté que en su propia web indican que es indispensable concertar la cita por teléfono, sin ninguna opción de agendar en línea.
+
+Ayudamos a notarías de la CDMX a convertir ese trabajo manual en procesos que se ejecutan solos: agenda de citas en línea, recordatorios y atención por WhatsApp para consultas de trámites. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=juridicos-cdmx-11-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=juridicos-cdmx-11</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>12 · Notaría 126 — Lic. Adrián Moreno Rivera <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">amoreno@notariashlom.mx · 55 5281 4126 · sitio compartido</div>
+      <div class="msg"><span class="tag">Correo</span>Estimado Lic. Adrián Moreno Rivera:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de la Notaría 126, noté que el agendamiento depende de contactar primero a la asistente por teléfono; no hay forma de reservar cita ni iniciar un trámite desde la web.
+
+Ayudamos a notarías de la CDMX a convertir ese trabajo manual en procesos que se ejecutan solos: agenda de citas en línea, filtrado inicial por WhatsApp y seguimiento de trámites. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=juridicos-cdmx-12-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=juridicos-cdmx-12</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>13 · Notaría 72 — Lic. Carlos Ricardo Viñas Berea <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">notaria72@prodigy.net.mx · 55 5615 0603 · Wix</div>
+      <div class="msg"><span class="tag">Correo</span>Estimado Lic. Carlos Ricardo Viñas Berea:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de la Notaría 72, noté que reciben citas por un booking de Wix, pero su correo de contacto sigue siendo una cuenta @prodigy.net.mx, sin un dominio profesional propio.
+
+Ayudamos a notarías de la CDMX a profesionalizar eso y a convertir el trabajo manual en procesos que se ejecutan solos: integrar la agenda con recordatorios automáticos, seguimiento de trámites y WhatsApp. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=juridicos-cdmx-13-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=juridicos-cdmx-13</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>14 · Bufete Jurídico Figueroa y Asociados <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">contacto@figueroayasociados.mx · 55 8722 2297 · web moderna</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores del Bufete Figueroa y Asociados:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su despacho, noté que tienen una buena web y cuatro redes muy activas atrayendo consultas, pero todo desemboca en un formulario manual, sin agenda ni un bot que atienda al instante.
+
+Justo ahí ayudamos a despachos de la CDMX: convertir esas consultas en procesos que se ejecutan solos con agenda de confirmación automática, recordatorios y un CRM que unifica los leads de sus redes. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=juridicos-cdmx-14-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=juridicos-cdmx-14</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>15 · Notaría 47 — Lic. Alfredo Miguel Morán Moguel <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">contacto@notaria47cdmx.com · 55 5677 8777 · web moderna</div>
+      <div class="msg"><span class="tag">Correo</span>Estimado Lic. Alfredo Miguel Morán Moguel:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de la Notaría 47, noté que tienen un sitio moderno, pero los formularios se descargan para llenarse a mano y las citas solo se agendan por teléfono, sin captura ni reserva en línea.
+
+Ayudamos a notarías de la CDMX a cerrar esa brecha y a convertir el trabajo manual en procesos que se ejecutan solos: agenda en línea integrada al sitio, formularios digitales y seguimiento automatizado de trámites. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=juridicos-cdmx-15-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=juridicos-cdmx-15</code></div>
+    </div>
+
+    <div class="lead" style="border-style:dashed">
+      <h3>02 · Cortes Sierra &amp; Asociados <span class="badge b-tel">Solo teléfono — sin correo</span></h3>
+      <div class="meta">55 5502 2611 · sin web · sin correo verificado</div>
+      <p class="muted" style="font-size:13.5px;margin-top:6px">No entra al lote de correos por la compuerta de deliverabilidad (sin email). Sugerencia: primer contacto telefónico; si comparten un correo, se le puede generar la maqueta bajo demanda. Es un prospecto de score 9 (sin web ni correo propios), de alto valor si contesta.</p>
+    </div>
+
+  </div>
+</section>
+
+<div class="foot">
+  <div class="wrap">
+    <span class="pill">Campaña juridicos-cdmx-2026-07</span>
+    <span class="pill">15 prospectos</span>
+    <span class="pill">14 borradores en Gmail (sin enviar)</span>
+    <span class="pill">2 maquetas web</span>
+    <br><br>
+    <b>Estrategia Hyper</b> · Hiperautomatización e infraestructura de IA · Shmin · 56 1021 1798<br>
+    <span style="opacity:.7">Datos reales verificados por WebSearch/WebFetch. El clic en un enlace es la señal fiable de interés (dispara alerta de Telegram). Enviar 3–4 correos al día para calentar el dominio.</span>
+  </div>
+</div>
+</body>
+</html>
