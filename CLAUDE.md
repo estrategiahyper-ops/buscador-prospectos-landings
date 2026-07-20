@@ -52,18 +52,18 @@ Compuerta obligatoria de modelo: toda llamada a la herramienta Agent DEBE inclui
 | Phase | Default Model | Reason |
 | :--- | :--- | :--- |
 | sdd-explore | sonnet | Reads code, structural - not architectural |
-| sdd-propose | fable | Architectural decisions |
-| sdd-spec | opus | Structured writing |
-| sdd-design | fable | Architecture decisions |
-| sdd-tasks | opus | Mechanical breakdown |
-| sdd-apply | opus | Implementation |
+| sdd-propose | opus | Architectural decisions |
+| sdd-spec | sonnet | Structured writing |
+| sdd-design | opus | Architecture decisions |
+| sdd-tasks | sonnet | Mechanical breakdown |
+| sdd-apply | sonnet | Implementation |
 | sdd-verify | sonnet | Validation against spec |
 | sdd-archive | haiku | Copy and close |
 | sdd-onboard | haiku | Guided walkthrough, pedagogical |
 | jd-judge-a | sonnet | Adversarial review - blind judge A |
 | jd-judge-b | sonnet | Adversarial review - blind judge B |
-| jd-fix-agent | opus | Surgical fixes from confirmed issues |
-| default | opus | Non-SDD general delegation |
+| jd-fix-agent | sonnet | Surgical fixes from confirmed issues |
+| default | sonnet | Non-SDD general delegation |
 
 ## 5. Uso de Skills
 
@@ -74,6 +74,7 @@ Usa estas skills para obtener patrones detallados bajo demanda.
 | Skill | Descripción | URL |
 | :---- | :---------- | :-- |
 | prospeccion | Busca clientes potenciales de un nicho, analiza su presencia digital y genera un informe con oportunidades y datos de contacto. | [SKILL.md](skills/prospeccion/SKILL.md) |
+| demo-landing | Genera una landing de demostración personalizada para un prospecto a partir de su JSON real, con ciclo generar→revisar→corregir. Invocada por `prospeccion` (Paso 4). | [SKILL.md](skills/demo-landing/SKILL.md) |
 | commits | Crea commits profesionales en formato conventional-commits, con mensajes en español (México). | [SKILL.md](skills/commits/SKILL.md) |
 | skill-creator | Crea y actualiza skills locales de agente siguiendo el estándar Agent Skills. | [SKILL.md](skills/skill-creator/SKILL.md) |
 
@@ -84,6 +85,7 @@ Al realizar estas acciones, SIEMPRE invoca primero la skill correspondiente:
 | Acción | Skill |
 | :----- | :---- |
 | Buscar clientes, hacer prospección, encontrar leads, analizar negocios de un sector | `prospeccion` |
+| Generar demo web, landing de demostración, maqueta o activo web personalizado para un prospecto | `demo-landing` |
 | Crear commits, al completar cambios de código, cuando el usuario pida hacer commit | `commits` |
 | Crear, modificar o gestionar skills de agente | `skill-creator` |
 | Sincronizar o enlazar skills en las carpetas de asistentes | Re-ejecuta `skills/setup.sh`; no existe una skill `skill-sync`. |
