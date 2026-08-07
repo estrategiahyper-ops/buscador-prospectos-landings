@@ -1,0 +1,548 @@
+{
+ "campana": "contadores-cdmx-2026-07-r2",
+ "generado": "2026-07-29",
+ "ciudad": "CDMX",
+ "sector": "Contadores / despachos contables",
+ "ronda": 2,
+ "servicios_ofrecidos": [
+  "Automatización (CRM, WhatsApp, agenda en línea)",
+  "Diseño / rediseño web"
+ ],
+ "worker_url": "https://tracking-prospectos.estrateg-ia-hyper.workers.dev",
+ "demos_base": "https://demos-prospectos.pages.dev",
+ "total_prospectos": 15,
+ "prospectos": [
+  {
+   "empresa": "Despacho Contable APC",
+   "url": "https://www.despachocontableapc.com",
+   "tiene_web": true,
+   "telefono": null,
+   "email": null,
+   "whatsapp": false,
+   "direccion": "Calzada de Tlalpan 890/6, Col. Villa de Cortés, Benito Juárez, CDMX",
+   "oportunidad_score": 10,
+   "web_calidad": "inaccesible: el dominio no resuelve (error DNS)",
+   "https": null,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [],
+   "problemas_detectados": [
+    "El dominio despachocontableapc.com no resuelve (ENOTFOUND) tanto con www como sin www — el sitio está caído aunque Google lo tiene indexado",
+    "Sin teléfono ni correo verificables en fuentes públicas",
+    "Sin redes sociales encontradas"
+   ],
+   "oportunidades": [
+    "Reconstruir un sitio funcional con captación de leads",
+    "WhatsApp Business para primer contacto",
+    "Agenda en línea para citas fiscales"
+   ],
+   "notas": "Fundado por el C.P. Arturo Pérez Cruz, más de 30 años de experiencia según snippet de Google. Intenté cargar https://www.despachocontableapc.com/ y https://despachocontableapc.com/ (sin www): ambos fallan por error de resolución DNS. No se pudo verificar nada más en vivo.",
+   "gancho": "Su despacho aparece en Google con más de 30 años de trayectoria, pero su sitio despachocontableapc.com está caído — ni siquiera resuelve en el navegador, así que cualquier búsqueda o referido que los busque en línea no los encuentra.",
+   "fuente": "https://www.despachocontableapc.com/",
+   "id": 1,
+   "rank": 1,
+   "tracking_id": "contadores-cdmx-19",
+   "estado_prospecto": "Por contactar",
+   "activo": "contacto-telefonico",
+   "servicio_recomendado": "Rediseño web + automatización"
+  },
+  {
+   "empresa": "Adquosc (ADQUO SC Contadores)",
+   "url": "https://adquosc.com",
+   "tiene_web": true,
+   "telefono": null,
+   "email": null,
+   "whatsapp": false,
+   "direccion": "Miguel Laurent 630, Col. Del Valle, Benito Juárez, 03100 CDMX",
+   "oportunidad_score": 9,
+   "web_calidad": "inaccesible: la conexión es rechazada",
+   "https": null,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [],
+   "problemas_detectados": [
+    "Al intentar cargar https://adquosc.com/ el servidor rechaza la conexión (ECONNREFUSED), señal de hosting/DNS mal configurado",
+    "Sin teléfono ni correo verificables"
+   ],
+   "oportunidades": [
+    "Sitio web funcional con formulario de contacto real",
+    "WhatsApp Business",
+    "Agenda en línea"
+   ],
+   "notas": "Se anuncian con servicios de contabilidad, impuestos, nómina y seguridad social para Del Valle/Benito Juárez. El sitio no cargó en el intento directo (conexión rechazada); dirección obtenida de snippet de búsqueda de Google, no del sitio en vivo.",
+   "gancho": "Buscamos su despacho y encontramos que adquosc.com actualmente no carga (la conexión es rechazada) — están invisibles para cualquier prospecto que los busque en Google ahora mismo.",
+   "fuente": "https://adquosc.com/",
+   "id": 2,
+   "rank": 2,
+   "tracking_id": "contadores-cdmx-20",
+   "estado_prospecto": "Por contactar",
+   "activo": "contacto-telefonico",
+   "servicio_recomendado": "Rediseño web + automatización"
+  },
+  {
+   "empresa": "Ficog Asesores",
+   "url": "https://ficogasesores.oficinaweb.mx/",
+   "tiene_web": true,
+   "telefono": "55 7090 8408",
+   "email": null,
+   "whatsapp": null,
+   "direccion": "Pitágoras 931, Col. Narvarte Poniente, Benito Juárez, C.P. 03020, CDMX",
+   "oportunidad_score": 9,
+   "web_calidad": "no carga: error de certificado SSL",
+   "https": false,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [],
+   "problemas_detectados": [
+    "El sitio da error de certificado SSL tanto en https como en http ('unable to verify the first certificate') — no carga en un navegador estándar",
+    "Usa un subdominio gratuito de 'oficinaweb.mx', señal de sitio de bajo costo"
+   ],
+   "oportunidades": [
+    "Sitio propio con certificado SSL válido",
+    "WhatsApp Business",
+    "Agenda en línea"
+   ],
+   "notas": "Intenté cargar el sitio dos veces (https y http); ambos intentos fallaron por error de certificado. Teléfono y dirección confirmados vía snippets de Google, no vía el sitio en vivo.",
+   "gancho": "El sitio de su despacho no carga por un error de certificado de seguridad — cualquier prospecto que dé clic desde Google ve una advertencia de 'sitio no seguro'.",
+   "fuente": "https://ficogasesores.oficinaweb.mx/",
+   "id": 3,
+   "rank": 3,
+   "tracking_id": "contadores-cdmx-21",
+   "estado_prospecto": "Por contactar",
+   "activo": "contacto-telefonico",
+   "servicio_recomendado": "Rediseño web + automatización"
+  },
+  {
+   "empresa": "Emilio Narváez López, S.C. (Despacho Narváez / ENLSC)",
+   "url": "http://enarvaez.com/",
+   "tiene_web": true,
+   "telefono": null,
+   "email": null,
+   "whatsapp": false,
+   "direccion": "Insurgentes Sur 1194-404, Col. Del Valle, 03100 CDMX",
+   "oportunidad_score": 8,
+   "web_calidad": "certificado SSL vencido",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [],
+   "problemas_detectados": [
+    "Al cargar enarvaez.com el navegador reporta 'certificate has expired' — el certificado SSL está caducado",
+    "Sin teléfono ni correo visibles en snippets",
+    "Sin redes sociales encontradas"
+   ],
+   "oportunidades": [
+    "Renovar certificado SSL y modernizar el sitio",
+    "WhatsApp Business",
+    "Agenda en línea",
+    "Aprovechar 40 años de trayectoria (3 generaciones) que hoy no se refleja en su presencia digital"
+   ],
+   "notas": "Despacho familiar con 40 años de experiencia y tres generaciones de contadores, según su propia descripción indexada por Google. El intento de carga directa del sitio arrojó error de certificado SSL vencido — dato confirmado en vivo.",
+   "gancho": "Su despacho tiene 40 años y tres generaciones de trayectoria, pero su sitio (enarvaez.com) tiene el certificado de seguridad vencido — el navegador lo marca como no confiable a cualquiera que entre.",
+   "fuente": "http://enarvaez.com/",
+   "id": 4,
+   "rank": 4,
+   "tracking_id": "contadores-cdmx-22",
+   "estado_prospecto": "Por contactar",
+   "activo": "contacto-telefonico",
+   "servicio_recomendado": "Rediseño web + automatización"
+  },
+  {
+   "empresa": "AFIEM Consultoría Fiscal",
+   "url": "https://afiem.com.mx/",
+   "tiene_web": true,
+   "telefono": "+52 55 2301 7071",
+   "email": null,
+   "whatsapp": false,
+   "direccion": "Av. Coyoacán 1622, Col. Del Valle, Benito Juárez, 03310 CDMX",
+   "oportunidad_score": 8,
+   "web_calidad": "certificado SSL vencido",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [],
+   "problemas_detectados": [
+    "Al cargar afiem.com.mx el navegador reporta 'certificate has expired'",
+    "Sin correo ni redes sociales encontrados",
+    "Buena reputación (5/5, 19+ reseñas en Google según directorio) que no se aprovecha por el problema técnico del sitio"
+   ],
+   "oportunidades": [
+    "Renovar el certificado SSL urgentemente",
+    "WhatsApp Business para capitalizar sus buenas reseñas",
+    "Agenda en línea"
+   ],
+   "notas": "Según el directorio redlegalmx.com, el despacho tiene calificación de 5/5 con más de 19 reseñas en Google y horario Lun-Sáb 10:00-19:00. Al intentar cargar directamente afiem.com.mx obtuve error de certificado SSL vencido — confirmado en vivo.",
+   "gancho": "Tienen 5 de 5 estrellas con más de 19 reseñas en Google, pero su sitio afiem.com.mx muestra advertencia de certificado de seguridad vencido — están perdiendo esa buena reputación por un detalle técnico.",
+   "fuente": "https://redlegalmx.com/contadores/benito-juarez-ciudad-de-mexico/afiem-consultoria-fiscal/",
+   "id": 5,
+   "rank": 5,
+   "tracking_id": "contadores-cdmx-23",
+   "estado_prospecto": "Por contactar",
+   "activo": "contacto-telefonico",
+   "servicio_recomendado": "Rediseño web + automatización"
+  },
+  {
+   "empresa": "CYTA Integración de Negocios, S.C.",
+   "url": "https://www.cyta.mx/",
+   "tiene_web": true,
+   "telefono": "55-6587-8741 / 55-6587-8742 ext.104 / 55-3423-3672",
+   "email": "clientes@cyta.mx",
+   "whatsapp": false,
+   "direccion": "Av. Eugenia 926 Int. 15 CN-4, Col. Del Valle, 03100 CDMX",
+   "oportunidad_score": 7,
+   "web_calidad": "plantilla Wix estándar",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [],
+   "problemas_detectados": [
+    "Muestra un ícono de WhatsApp pero sin enlace wa.me funcional",
+    "Sin redes sociales enlazadas",
+    "Sin agenda en línea ni chat"
+   ],
+   "oportunidades": [
+    "Activar WhatsApp Business con enlace real",
+    "Agenda en línea para citas",
+    "Presencia en redes sociales"
+   ],
+   "notas": "Sitio construido en Wix, tres números de contacto y correo institucional visibles. El ícono de WhatsApp en el sitio no tiene un enlace wa.me activo verificable.",
+   "gancho": "Su sitio muestra un ícono de WhatsApp, pero no tiene un enlace funcional — el visitante no puede iniciar la conversación con un clic.",
+   "fuente": "https://www.cyta.mx/",
+   "id": 6,
+   "rank": 6,
+   "tracking_id": "contadores-cdmx-24",
+   "estado_prospecto": "Por contactar",
+   "activo": "infografia-automatizacion",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "Rexih Despacho de Contadores Públicos",
+   "url": "https://rexihcontadores.com/",
+   "tiene_web": true,
+   "telefono": "55 1486 7522 / 55 8848 7501 / 55 8848 7496",
+   "email": null,
+   "whatsapp": false,
+   "direccion": "Av. Cafetales 140, Edif. D #301, Col. Granjas Coapa, Tlalpan, CDMX, C.P. 14330",
+   "oportunidad_score": 7,
+   "web_calidad": "plantilla WordPress básica",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [
+    "Facebook",
+    "Twitter"
+   ],
+   "problemas_detectados": [
+    "Sin enlace de WhatsApp (wa.me) en el sitio",
+    "Sin agenda en línea ni chat/CRM",
+    "Sin correo de contacto visible"
+   ],
+   "oportunidades": [
+    "WhatsApp Business",
+    "Agenda en línea",
+    "Formulario de contacto con captura automática de leads"
+   ],
+   "notas": "Equipo de contadores del IPN con 25 años de experiencia acumulada, según su propio sitio. Tres teléfonos visibles pero ningún canal de WhatsApp ni correo.",
+   "gancho": "Tienen 25 años de experiencia y tres teléfonos publicados, pero ningún enlace de WhatsApp — obligan al prospecto a llamar en vez de escribir, que es como la mayoría prefiere contactar hoy.",
+   "fuente": "https://rexihcontadores.com/",
+   "id": 7,
+   "rank": 7,
+   "tracking_id": "contadores-cdmx-25",
+   "estado_prospecto": "Por contactar",
+   "activo": "contacto-telefonico",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "Miranda & Asociados",
+   "url": "https://mirandaef.com/",
+   "tiene_web": true,
+   "telefono": "(55) 5696-3502 / (55) 5579-8563",
+   "email": "contacto@mirandaef.com",
+   "whatsapp": true,
+   "direccion": "Torres Adalid 1906, Narvarte Oriente, Benito Juárez, 03023 CDMX",
+   "oportunidad_score": 6,
+   "web_calidad": "plantilla WordPress básica, diseño anticuado",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [
+    "Facebook",
+    "Instagram"
+   ],
+   "problemas_detectados": [
+    "Sin agenda en línea",
+    "Sin chatbot ni CRM visible",
+    "Diseño con jerarquía visual limitada y pocos elementos interactivos"
+   ],
+   "oportunidades": [
+    "Agenda en línea para primeras consultas",
+    "Automatizar seguimiento de leads desde WhatsApp",
+    "Modernizar el diseño del sitio"
+   ],
+   "notas": "Se describen con más de 30 años de experiencia; ofrecen contabilidad, auditoría, legal, consultoría, capacitación y administración de personal. Tienen WhatsApp activo (wa.link) y redes sociales, pero cero automatización de agenda o CRM.",
+   "gancho": "Ya tienen WhatsApp y redes sociales activas, pero cualquier cita o seguimiento se hace manualmente — no hay agenda en línea ni sistema que capture al prospecto automáticamente.",
+   "fuente": "https://mirandaef.com/",
+   "id": 8,
+   "rank": 8,
+   "tracking_id": "contadores-cdmx-26",
+   "estado_prospecto": "Por contactar",
+   "activo": "infografia-automatizacion",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "Consultoría Empresarial MSA (Muñoz Solé y Asociados, S.C.)",
+   "url": "https://consultoriaempresarialmsa.com/",
+   "tiene_web": true,
+   "telefono": "55 2575 2545 / 55 5661 3544 / 55 5661 3221",
+   "email": "contacto@munozsole.com",
+   "whatsapp": true,
+   "direccion": "Alcaldía Benito Juárez, CDMX (sin calle específica publicada)",
+   "oportunidad_score": 6,
+   "web_calidad": "plantilla WordPress estándar",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [],
+   "problemas_detectados": [
+    "Sin redes sociales encontradas",
+    "Sin agenda en línea",
+    "Sin chat ni CRM"
+   ],
+   "oportunidades": [
+    "Presencia en redes sociales",
+    "Agenda en línea",
+    "Automatizar respuesta inicial por WhatsApp"
+   ],
+   "notas": "Tienen WhatsApp activo (wa.me) y tres números de teléfono, horario publicado (Lun-Vie 9:30-18:30), pero ninguna red social ni sistema de agenda.",
+   "gancho": "Publican horario de atención y WhatsApp, pero no tienen ninguna red social ni forma de agendar una cita en línea — todo el seguimiento depende de contestar el teléfono.",
+   "fuente": "https://consultoriaempresarialmsa.com/Servicios/contabilidad/",
+   "id": 9,
+   "rank": 9,
+   "tracking_id": "contadores-cdmx-27",
+   "estado_prospecto": "Por contactar",
+   "activo": "infografia-automatizacion",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "ESGO Consultores",
+   "url": "https://esgoconsul.com/",
+   "tiene_web": true,
+   "telefono": "56-2763-4380",
+   "email": "esgoconsul@gmail.com",
+   "whatsapp": false,
+   "direccion": "Copal Lt 3, Mz 12, Secc 10, Col. Pedregal de Santo Domingo, Coyoacán, C.P. 04369",
+   "oportunidad_score": 6,
+   "web_calidad": "plantilla básica con imágenes genéricas",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [
+    "Instagram",
+    "Facebook"
+   ],
+   "problemas_detectados": [
+    "Usan correo genérico de Gmail en vez de dominio propio",
+    "Sin enlace de WhatsApp visible",
+    "Sin agenda en línea"
+   ],
+   "oportunidades": [
+    "Correo corporativo con su propio dominio",
+    "WhatsApp Business",
+    "Agenda en línea"
+   ],
+   "notas": "Sitio con formulario de contacto e imágenes de plantilla. Correo de contacto es una cuenta de Gmail, no del dominio propio.",
+   "gancho": "Su correo de contacto es una cuenta de Gmail genérica en vez de uno con su propio dominio — una señal rápida de que la imagen digital no está alineada con su experiencia profesional.",
+   "fuente": "https://esgoconsul.com/",
+   "id": 10,
+   "rank": 10,
+   "tracking_id": "contadores-cdmx-28",
+   "estado_prospecto": "Por contactar",
+   "activo": "infografia-automatizacion",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "STC Contadores (Servicios Tributarios & Contables, SAS de CV)",
+   "url": "https://stccontadores.com/",
+   "tiene_web": true,
+   "telefono": "+52 55 6748 3468 / +52 81 3981 0620",
+   "email": "asesoria_integral@stccontadores.com",
+   "whatsapp": true,
+   "direccion": "Av. Isaac Newton 186, Polanco V Secc., Miguel Hidalgo, 11560 CDMX",
+   "oportunidad_score": 6,
+   "web_calidad": "HTML básico, plantilla simple",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [],
+   "problemas_detectados": [
+    "Sin redes sociales encontradas",
+    "Sin agenda en línea",
+    "Diseño con estructura HTML mínima"
+   ],
+   "oportunidades": [
+    "Presencia en redes sociales",
+    "Agenda en línea",
+    "Modernizar el sitio"
+   ],
+   "notas": "Tienen dos correos de contacto (asesoría y ventas) y WhatsApp activo (wa.me), oficinas en Polanco, pero ninguna red social ni agenda.",
+   "gancho": "Ubicados en Polanco con WhatsApp activo, pero sin ninguna red social ni forma de agendar cita en línea — dependen 100% de que alguien llame o escriba directo.",
+   "fuente": "https://stccontadores.com/",
+   "id": 11,
+   "rank": 11,
+   "tracking_id": "contadores-cdmx-29",
+   "estado_prospecto": "Por contactar",
+   "activo": "infografia-automatizacion",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "AZP Despacho Contable (A&ZP Consultoría Contable Fiscal)",
+   "url": "https://azp.mx/",
+   "tiene_web": true,
+   "telefono": "+55 1201 1499",
+   "email": "contacto@azp.mx",
+   "whatsapp": true,
+   "direccion": "C. Querétaro 226-despacho 3B, Roma Nte., Cuauhtémoc, 06700 CDMX",
+   "oportunidad_score": 5,
+   "web_calidad": "plantilla WordPress con imágenes de stock",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [
+    "Facebook",
+    "Instagram"
+   ],
+   "problemas_detectados": [
+    "Sin agenda en línea",
+    "Sin chatbot ni CRM"
+   ],
+   "oportunidades": [
+    "Agenda en línea para consultas fiscales",
+    "Chatbot para calificar leads antes de pasarlos a un asesor"
+   ],
+   "notas": "Ya tienen WhatsApp (api.whatsapp.com) y redes sociales activas; el sitio usa plantilla WordPress con imágenes genéricas de stock.",
+   "gancho": "Tienen WhatsApp y redes sociales activas, un buen punto de partida, pero les falta el siguiente paso: agendar consultas automáticamente sin depender de ida y vuelta por chat.",
+   "fuente": "https://azp.mx/",
+   "id": 12,
+   "rank": 12,
+   "tracking_id": "contadores-cdmx-30",
+   "estado_prospecto": "Por contactar",
+   "activo": "infografia-automatizacion",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "CC & PWS Asesores",
+   "url": "https://www.cocapws.com/",
+   "tiene_web": true,
+   "telefono": "55 5099 4826",
+   "email": null,
+   "whatsapp": false,
+   "direccion": "Av. Revolución 1877, Tizapán San Ángel, C.P. 01000, CDMX",
+   "oportunidad_score": 5,
+   "web_calidad": "plantilla WordPress (tema Neve), moderna pero estándar",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [
+    "Facebook",
+    "Instagram",
+    "LinkedIn"
+   ],
+   "problemas_detectados": [
+    "Mencionan un botón de WhatsApp pero sin enlace wa.me verificable",
+    "Sin correo de contacto publicado",
+    "Sin agenda en línea"
+   ],
+   "oportunidades": [
+    "Enlace de WhatsApp funcional",
+    "Agenda en línea",
+    "Correo corporativo visible"
+   ],
+   "notas": "Presencia sólida en tres redes sociales (incluye LinkedIn) y tema de WordPress relativamente moderno, pero el botón de WhatsApp mencionado no tiene enlace directo funcional confirmado.",
+   "gancho": "Están presentes en Facebook, Instagram y LinkedIn — buena base — pero el botón de WhatsApp de su sitio no enlaza a ningún chat real, así que ese tráfico social se pierde antes de convertir.",
+   "fuente": "https://www.cocapws.com/contador-publico-para-pymes-en-cdmx/",
+   "id": 13,
+   "rank": 13,
+   "tracking_id": "contadores-cdmx-31",
+   "estado_prospecto": "Por contactar",
+   "activo": "contacto-telefonico",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "AS Consulting Group (ASCG)",
+   "url": "https://www.ascg.mx/",
+   "tiene_web": true,
+   "telefono": "+52 55 5859 4873 / 55 5840 4611 / 55 5859 9296",
+   "email": "contacto@ascg.mx",
+   "whatsapp": false,
+   "direccion": "Obrero Mundial 644, Col. Atenor Salas, CDMX, 03010 (también oficina en Monterrey)",
+   "oportunidad_score": 5,
+   "web_calidad": "moderna, diseño profesional con secciones organizadas",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [
+    "Facebook",
+    "Instagram",
+    "Twitter",
+    "LinkedIn",
+    "YouTube"
+   ],
+   "problemas_detectados": [
+    "Sin WhatsApp encontrado",
+    "Sin agenda en línea pese a tener el sitio más profesional del grupo",
+    "Todo el contacto depende de llamada o formulario"
+   ],
+   "oportunidades": [
+    "Agregar WhatsApp Business",
+    "Agenda en línea para primeras llamadas de diagnóstico",
+    "Aprovechar su ya buena base de redes sociales con automatización de leads"
+   ],
+   "notas": "Firma con más de 33 años de experiencia (fundada en 1991), presencia en CDMX y Monterrey, y la presencia en redes más completa del grupo (5 plataformas), pero sin WhatsApp ni agenda automatizada — el sitio más 'moderno' del lote pero le falta la capa de automatización conversacional.",
+   "gancho": "Tienen 33 años de trayectoria y presencia en cinco redes sociales distintas, pero ningún canal de WhatsApp — con esa base de audiencia ya construida, la conversión se queda corta por falta de un canal de contacto instantáneo.",
+   "fuente": "https://www.ascg.mx/",
+   "id": 14,
+   "rank": 14,
+   "tracking_id": "contadores-cdmx-32",
+   "estado_prospecto": "Por contactar",
+   "activo": "infografia-automatizacion",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "AG Consejería Empresarial Integral",
+   "url": "http://www.agconsejeria.com.mx/",
+   "tiene_web": true,
+   "telefono": "55 5848 0374 / 55 7141 2272",
+   "email": "contacto@agconsejeria.com.mx",
+   "whatsapp": true,
+   "direccion": "Volcán Batur 18, Tlalpan, 14449 CDMX",
+   "oportunidad_score": 3,
+   "web_calidad": "moderna, bien ejecutada, branding cohesivo",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [
+    "Facebook",
+    "Instagram",
+    "LinkedIn",
+    "TikTok"
+   ],
+   "problemas_detectados": [
+    "El link 'Agenda una consulta' solo lleva a un formulario de contacto genérico, no a un sistema real de agenda (tipo Calendly)",
+    "Sin chatbot ni CRM visible"
+   ],
+   "oportunidades": [
+    "Implementar un sistema real de agenda en línea (no solo formulario)",
+    "Chatbot/CRM para calificar leads que llegan desde TikTok e Instagram"
+   ],
+   "notas": "El despacho con la presencia digital más completa del grupo: WhatsApp activo, cuatro redes sociales incluyendo TikTok, sitio moderno. Su única brecha clara es que 'agenda una consulta' no es una agenda real, solo un enlace a contacto.",
+   "gancho": "Tienen presencia en TikTok, Instagram, Facebook y LinkedIn más WhatsApp activo — están adelante de casi todo el sector, pero su botón de 'agenda una consulta' en realidad solo abre un formulario de contacto, no una agenda real.",
+   "fuente": "http://www.agconsejeria.com.mx/",
+   "id": 15,
+   "rank": 15,
+   "tracking_id": "contadores-cdmx-33",
+   "estado_prospecto": "Por contactar",
+   "activo": "infografia-automatizacion",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  }
+ ]
+}

@@ -1,0 +1,555 @@
+{
+ "campana": "juridicos-cdmx-2026-07-r2",
+ "generado": "2026-07-29",
+ "ciudad": "CDMX",
+ "sector": "Despachos jurídicos / abogados",
+ "ronda": 2,
+ "servicios_ofrecidos": [
+  "Automatización (CRM, WhatsApp, agenda en línea)",
+  "Diseño / rediseño web"
+ ],
+ "worker_url": "https://tracking-prospectos.estrateg-ia-hyper.workers.dev",
+ "demos_base": "https://demos-prospectos.pages.dev",
+ "total_prospectos": 15,
+ "prospectos": [
+  {
+   "empresa": "MGL Abogados",
+   "url": "https://mglabogados.com.mx/",
+   "tiene_web": true,
+   "telefono": "5545-8288, 5545-8299, 5250-1568",
+   "email": "contacto@mglabogados.com.mx",
+   "whatsapp": false,
+   "direccion": "Heráclito No 316, Polanco V Sección, Miguel Hidalgo, C.P. 11560, CDMX",
+   "oportunidad_score": 9,
+   "web_calidad": "Plantilla genérica con keyword stuffing SEO en el título, sin elementos modernos de interactividad",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [],
+   "problemas_detectados": [
+    "Sin botón de WhatsApp",
+    "Sin sistema de agenda en línea",
+    "Sin ninguna red social enlazada",
+    "Título de página saturado de palabras clave (SEO anticuado)"
+   ],
+   "oportunidades": [
+    "WhatsApp Business como canal de primer contacto",
+    "Agenda en línea para consultas",
+    "Rediseño web con SEO técnico limpio"
+   ],
+   "notas": "Tres teléfonos fijos distintos publicados pero ningún canal digital de automatización visible.",
+   "gancho": "Noté que mglabogados.com.mx no tiene botón de WhatsApp ni agenda en línea, y publican tres teléfonos distintos para que el cliente marque manualmente.",
+   "fuente": "https://mglabogados.com.mx/",
+   "id": 1,
+   "rank": 1,
+   "tracking_id": "juridicos-cdmx-16",
+   "estado_prospecto": "Por contactar",
+   "activo": "infografia-automatizacion",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "Roel Abogados",
+   "url": "https://www.roelabogados.com/",
+   "tiene_web": true,
+   "telefono": "+52 55 5533 1766",
+   "email": "Info@roelabogados.com",
+   "whatsapp": false,
+   "direccion": "Paseo de la Reforma 369, 8o piso, Col. Cuauhtémoc, C.P. 06500, CDMX",
+   "oportunidad_score": 9,
+   "web_calidad": "Funcional pero anticuado, estructura corporativa básica sin elementos modernos",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [],
+   "problemas_detectados": [
+    "Sin WhatsApp",
+    "Sin redes sociales enlazadas",
+    "Sin agenda en línea",
+    "Diseño desactualizado para un despacho con historia desde 1925"
+   ],
+   "oportunidades": [
+    "Bot de WhatsApp para filtrar consultas laborales",
+    "CRM para seguimiento de expedientes",
+    "Rediseño que refleje su trayectoria histórica"
+   ],
+   "notas": "Despacho especializado en derecho laboral activo desde 1925, con presencia digital mínima.",
+   "gancho": "Es llamativo que Roel Abogados, despacho laboral con historia desde 1925, no tenga WhatsApp ni redes sociales enlazadas en su sitio.",
+   "fuente": "https://www.roelabogados.com/",
+   "id": 2,
+   "rank": 2,
+   "tracking_id": "juridicos-cdmx-17",
+   "estado_prospecto": "Por contactar",
+   "activo": "infografia-automatizacion",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "RB Abogados",
+   "url": "https://rbabogados.com.mx/",
+   "tiene_web": true,
+   "telefono": "+52 55 8778 2102",
+   "email": "contacto@rbabogados.com.mx",
+   "whatsapp": false,
+   "direccion": "Av. Baja California 274, Despacho 2-B, Col. Hipódromo Condesa, Cuauhtémoc, C.P. 06100, CDMX",
+   "oportunidad_score": 8,
+   "web_calidad": "Plantilla genérica de WordPress, funcional pero anticuada, sin elementos de diseño contemporáneo",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [
+    "Facebook: RB Abogados",
+    "Instagram: @rbabogadosmx"
+   ],
+   "problemas_detectados": [
+    "Sin WhatsApp pese a tener redes sociales activas",
+    "Sin agenda en línea",
+    "Plantilla WordPress sin personalizar"
+   ],
+   "oportunidades": [
+    "Activar WhatsApp Business conectado a sus redes",
+    "Agenda en línea",
+    "Rediseño con identidad propia"
+   ],
+   "notas": "Equipo interdisciplinario de abogados y contadores; RRSS activas pero sin conectar con WhatsApp ni agenda.",
+   "gancho": "RB Abogados tiene Instagram y Facebook activos, pero su sitio no ofrece WhatsApp ni agenda en línea para convertir esos seguidores en consultas.",
+   "fuente": "https://rbabogados.com.mx/",
+   "id": 3,
+   "rank": 3,
+   "tracking_id": "juridicos-cdmx-18",
+   "estado_prospecto": "Por contactar",
+   "activo": "infografia-automatizacion",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "Covarrubias & Carrillo Asesoría Laboral, S.C.",
+   "url": "https://www.covarrubiasabogados.mx/",
+   "tiene_web": true,
+   "telefono": "55-7159-8046",
+   "email": "contacto@covarrubiasabogados.com.mx",
+   "whatsapp": false,
+   "direccion": "Nicolás San Juan #243, Interior 7, Col. Del Valle, C.P. 03100, CDMX",
+   "oportunidad_score": 8,
+   "web_calidad": "Plantilla Wix genérica, anticuada y minimalista",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [
+    "Facebook: CovarrubiasyCarrillo",
+    "LinkedIn: covarrubias-carrillo-abogados"
+   ],
+   "problemas_detectados": [
+    "Sitio construido en plantilla Wix sin personalizar",
+    "Sin WhatsApp",
+    "Sin agenda en línea"
+   ],
+   "oportunidades": [
+    "WhatsApp para consultas laborales rápidas",
+    "Agenda en línea",
+    "Rediseño fuera de la plantilla Wix"
+   ],
+   "notas": "Especializados en asesoría laboral; presencia en Facebook y LinkedIn pero sitio Wix básico.",
+   "gancho": "El sitio de Covarrubias & Carrillo corre sobre una plantilla Wix genérica y no tiene WhatsApp, pese a tener actividad en Facebook y LinkedIn.",
+   "fuente": "https://www.covarrubiasabogados.mx/",
+   "id": 4,
+   "rank": 4,
+   "tracking_id": "juridicos-cdmx-19",
+   "estado_prospecto": "Por contactar",
+   "activo": "infografia-automatizacion",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "Soluciones Jurídicas (Lic. Víctor Carrillo Estrada)",
+   "url": "https://www.solucionesjuridicas.com.mx/",
+   "tiene_web": true,
+   "telefono": "55 2454 8118 / 55 1798 4108",
+   "email": null,
+   "whatsapp": true,
+   "direccion": "Ario 5, Col. Roma Sur, Cuauhtémoc, CDMX",
+   "oportunidad_score": 7,
+   "web_calidad": "Anticuado: slider de imágenes obsoleto y estructura HTML básica tipo 2015",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [
+    "Facebook",
+    "Twitter",
+    "YouTube"
+   ],
+   "problemas_detectados": [
+    "Diseño con slider e interfaz obsoletos",
+    "Sin agenda en línea",
+    "Sin CRM para dar seguimiento a leads de redes sociales"
+   ],
+   "oportunidades": [
+    "Agenda en línea para primera consulta",
+    "CRM para seguimiento de leads",
+    "Rediseño responsive moderno"
+   ],
+   "notas": "Ya usa WhatsApp y tiene RRSS activas, pero el diseño del sitio está muy desactualizado.",
+   "gancho": "Soluciones Jurídicas ya atiende por WhatsApp, pero su sitio conserva un slider y un diseño de hace más de diez años que no transmite la misma confianza.",
+   "fuente": "https://www.solucionesjuridicas.com.mx/",
+   "id": 5,
+   "rank": 5,
+   "tracking_id": "juridicos-cdmx-20",
+   "estado_prospecto": "Por contactar",
+   "activo": "contacto-telefonico",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "Ortiz Rubio Legal",
+   "url": "https://www.ortizrubiolegal.com.mx/",
+   "tiene_web": true,
+   "telefono": "55 49 83 02 59",
+   "email": null,
+   "whatsapp": true,
+   "direccion": "Av. Insurgentes Sur No. 2047 Edificio B, Col. San Ángel, C.P. 01000, CDMX (también oficina en Cuernavaca)",
+   "oportunidad_score": 7,
+   "web_calidad": "Anticuado, plantilla estilo 2000-2010, sin evidencia clara de responsive",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [
+    "Facebook",
+    "YouTube",
+    "Twitter",
+    "TikTok",
+    "Instagram"
+   ],
+   "problemas_detectados": [
+    "Diseño no responsive/anticuado pese a tener 5 redes sociales activas",
+    "Sin agenda en línea",
+    "Sin CRM para leads de divorcio express"
+   ],
+   "oportunidades": [
+    "Agenda en línea para consultas de divorcio express",
+    "CRM/bot para calificar leads desde RRSS",
+    "Rediseño responsive"
+   ],
+   "notas": "Servicio de Divorcio Express con presencia en dos ciudades y cinco redes sociales, pero sitio anticuado.",
+   "gancho": "Ortiz Rubio Legal tiene actividad en cinco redes sociales, pero su sitio no es responsive y no ofrece agenda en línea para su servicio de Divorcio Express.",
+   "fuente": "https://www.ortizrubiolegal.com.mx/",
+   "id": 6,
+   "rank": 6,
+   "tracking_id": "juridicos-cdmx-21",
+   "estado_prospecto": "Por contactar",
+   "activo": "contacto-telefonico",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "Ortiz y Asociados",
+   "url": "https://www.ortizyasociados.com.mx/",
+   "tiene_web": true,
+   "telefono": "55-5578-6576",
+   "email": "ortizasociados_abogados@hotmail.com",
+   "whatsapp": true,
+   "direccion": "Dr. Lucio 127-103, Col. Doctores, Cuauhtémoc, C.P. 06720, CDMX",
+   "oportunidad_score": 7,
+   "web_calidad": "Plantilla genérica anticuada, formularios simples",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [],
+   "problemas_detectados": [
+    "Usa correo de Hotmail como contacto oficial",
+    "Sin redes sociales",
+    "Sin agenda en línea",
+    "Plantilla genérica anticuada"
+   ],
+   "oportunidades": [
+    "Correo corporativo propio + CRM",
+    "WhatsApp Business con respuestas automáticas",
+    "Agenda en línea"
+   ],
+   "notas": "El uso de una cuenta de Hotmail como contacto oficial es señal de baja madurez digital.",
+   "gancho": "Ortiz y Asociados usa una cuenta de Hotmail como correo de contacto oficial y no tiene redes sociales ni agenda en línea.",
+   "fuente": "https://www.ortizyasociados.com.mx/",
+   "id": 7,
+   "rank": 7,
+   "tracking_id": "juridicos-cdmx-22",
+   "estado_prospecto": "Por contactar",
+   "activo": "infografia-automatizacion",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "LH Consultoría Legal",
+   "url": "https://www.lhconsultorialegal.com.mx/",
+   "tiene_web": true,
+   "telefono": null,
+   "email": "info@lhconsultorialegal.com.mx",
+   "whatsapp": true,
+   "direccion": "Maricopa 58, Col. Nápoles, Benito Juárez, C.P. 03810, CDMX",
+   "oportunidad_score": 6,
+   "web_calidad": "Plantilla básica y funcional, moderadamente actual pero genérica",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [],
+   "problemas_detectados": [
+    "Sin teléfono visible, solo email y WhatsApp",
+    "Iconos de redes sociales sin enlaces activos verificables",
+    "Sin agenda en línea"
+   ],
+   "oportunidades": [
+    "Agenda en línea para primera consulta",
+    "Bot de WhatsApp para triage de casos de despido",
+    "Vincular redes sociales reales"
+   ],
+   "notas": "Sitio enfocado en despido injustificado; no se encontró teléfono, solo WhatsApp/formulario/email.",
+   "gancho": "El sitio de LH Consultoría Legal no muestra teléfono ni enlaces reales a redes sociales, solo WhatsApp y un formulario — fácil perder leads sin un sistema de seguimiento.",
+   "fuente": "https://www.lhconsultorialegal.com.mx/",
+   "id": 8,
+   "rank": 8,
+   "tracking_id": "juridicos-cdmx-23",
+   "estado_prospecto": "Por contactar",
+   "activo": "infografia-automatizacion",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "Ser Legales Abogados",
+   "url": "https://www.serlegales.com/",
+   "tiene_web": true,
+   "telefono": "+52 55 1012 0362",
+   "email": null,
+   "whatsapp": true,
+   "direccion": "Calle Retorno 20 #38, Col. Avante, Alcaldía Coyoacán, C.P. 04460, CDMX (dato de directorio, no confirmado en el propio sitio)",
+   "oportunidad_score": 6,
+   "web_calidad": "Plantilla genérica pero funcional, con widget de WhatsApp integrado",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [],
+   "problemas_detectados": [
+    "Sin redes sociales enlazadas",
+    "Sin agenda en línea",
+    "Sin email de contacto visible en el sitio"
+   ],
+   "oportunidades": [
+    "Agenda en línea",
+    "Vincular redes sociales",
+    "CRM para seguimiento de casos"
+   ],
+   "notas": "WhatsApp activo y plantilla genérica; la dirección proviene de un directorio, no se confirmó en su propio sitio.",
+   "gancho": "Ser Legales ya usa WhatsApp para primer contacto, pero su sitio no muestra redes sociales ni agenda en línea.",
+   "fuente": "https://www.serlegales.com/",
+   "id": 9,
+   "rank": 9,
+   "tracking_id": "juridicos-cdmx-24",
+   "estado_prospecto": "Por contactar",
+   "activo": "contacto-telefonico",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "Bufete de Buen, S.C.",
+   "url": "https://www.bufetedebuen.com.mx/",
+   "tiene_web": true,
+   "telefono": "(52) 55 5203 3252",
+   "email": "bufetedebuen@bdebuen.mx",
+   "whatsapp": false,
+   "direccion": "Mariano Escobedo 353-A-1402, Polanco, C.P. 11560, CDMX",
+   "oportunidad_score": 6,
+   "web_calidad": "Moderno y profesional, estructura responsive con buena iconografía",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [
+    "Facebook: BufetedeBuen",
+    "LinkedIn (mencionado, sin enlace funcional)"
+   ],
+   "problemas_detectados": [
+    "Sin WhatsApp pese al buen diseño general",
+    "Sin agenda en línea",
+    "Enlace de LinkedIn mencionado pero no funcional"
+   ],
+   "oportunidades": [
+    "Agregar WhatsApp Business",
+    "Agenda en línea para primera cita",
+    "Activar el enlace de LinkedIn"
+   ],
+   "notas": "Sitio bien diseñado pero sin ningún canal de automatización de contacto.",
+   "gancho": "Bufete de Buen tiene un sitio moderno y cuidado, pero no ofrece WhatsApp ni agenda en línea — solo llamada o formulario.",
+   "fuente": "https://www.bufetedebuen.com.mx/contacto",
+   "id": 10,
+   "rank": 10,
+   "tracking_id": "juridicos-cdmx-25",
+   "estado_prospecto": "Por contactar",
+   "activo": "infografia-automatizacion",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "Riva Palacio Marquez Abogados, S.C.",
+   "url": "https://bufeterivapalacio.com/",
+   "tiene_web": true,
+   "telefono": "55 5524 9333",
+   "email": "contacto@bufeterivapalacio.com",
+   "whatsapp": false,
+   "direccion": "Patricio Sanz 1711, Col. del Valle, Benito Juárez, C.P. 03100, CDMX",
+   "oportunidad_score": 6,
+   "web_calidad": "Moderno, responsive, imágenes optimizadas (formato AVIF)",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [],
+   "problemas_detectados": [
+    "Sin redes sociales enlazadas",
+    "Sin WhatsApp",
+    "Sin agenda en línea"
+   ],
+   "oportunidades": [
+    "WhatsApp Business",
+    "Agenda en línea",
+    "Presencia en redes sociales"
+   ],
+   "notas": "Sitio técnicamente cuidado pero sin ningún canal de automatización de contacto.",
+   "gancho": "Riva Palacio Marquez Abogados invirtió en un sitio técnicamente cuidado, pero no tiene WhatsApp, redes sociales ni agenda en línea conectados.",
+   "fuente": "https://bufeterivapalacio.com/",
+   "id": 11,
+   "rank": 11,
+   "tracking_id": "juridicos-cdmx-26",
+   "estado_prospecto": "Por contactar",
+   "activo": "infografia-automatizacion",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "Nexo Legal MX",
+   "url": "https://www.nexolegalmx.com.mx/",
+   "tiene_web": true,
+   "telefono": "+52 55 4823 5234",
+   "email": "contacto@nexolegalmx.com.mx",
+   "whatsapp": false,
+   "direccion": "Adolfo Prieto 820, Col. del Valle Centro, Benito Juárez, C.P. 03100, CDMX",
+   "oportunidad_score": 6,
+   "web_calidad": "Moderno, responsive, diseño aparentemente personalizado (crédito a agencia digital)",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [
+    "Facebook",
+    "X/Twitter",
+    "Instagram",
+    "LinkedIn"
+   ],
+   "problemas_detectados": [
+    "'Programa una cita' es solo un formulario, no un calendario real",
+    "Sin WhatsApp directo pese a tener 4 redes sociales activas"
+   ],
+   "oportunidades": [
+    "Convertir el formulario de citas en agenda automatizada real",
+    "WhatsApp Business conectado a sus redes activas",
+    "CRM para leads de sus redes sociales"
+   ],
+   "notas": "Buen diseño general y RRSS activas, pero 'agenda tu cita' es un formulario, no un sistema automatizado.",
+   "gancho": "Nexo Legal tiene buen diseño y 4 redes sociales activas, pero su 'Programa una cita' es solo un formulario de contacto, no una agenda automatizada real.",
+   "fuente": "https://www.nexolegalmx.com.mx/",
+   "id": 12,
+   "rank": 12,
+   "tracking_id": "juridicos-cdmx-27",
+   "estado_prospecto": "Por contactar",
+   "activo": "infografia-automatizacion",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "Campuzano Abogados",
+   "url": "https://campuzanoabogados.mx/",
+   "tiene_web": true,
+   "telefono": "52 555162-6300",
+   "email": "contacto@campuzanoabogados.mx",
+   "whatsapp": false,
+   "direccion": "Av. Prado Norte #325, Lomas de Chapultepec III Secc, Miguel Hidalgo, C.P. 11000, CDMX",
+   "oportunidad_score": 5,
+   "web_calidad": "Moderno, sobre WordPress, con slider interactivo",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [
+    "Instagram",
+    "X/Twitter",
+    "LinkedIn"
+   ],
+   "problemas_detectados": [
+    "Sin WhatsApp pese a tener 3 redes sociales activas",
+    "Sin agenda en línea"
+   ],
+   "oportunidades": [
+    "WhatsApp Business para consultas penales urgentes",
+    "Agenda en línea",
+    "CRM para leads desde RRSS"
+   ],
+   "notas": "Diseño cuidado y RRSS activas; la ausencia de WhatsApp destaca en un despacho penal donde la urgencia importa.",
+   "gancho": "Campuzano Abogados tiene un sitio bien cuidado y RRSS activas, pero no ofrece WhatsApp para casos urgentes de derecho penal.",
+   "fuente": "https://campuzanoabogados.mx/",
+   "id": 13,
+   "rank": 13,
+   "tracking_id": "juridicos-cdmx-28",
+   "estado_prospecto": "Por contactar",
+   "activo": "infografia-automatizacion",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "Cuevas & Rivera Abogados Penalistas, S.C.",
+   "url": "https://cyrpenalistas.mx/",
+   "tiene_web": true,
+   "telefono": "(+52) 55 3687 4049",
+   "email": null,
+   "whatsapp": true,
+   "direccion": "Av. Presidente Masaryk 61, 9o piso, Polanco, C.P. 11560, CDMX",
+   "oportunidad_score": 5,
+   "web_calidad": "Moderno, profesional, branding consistente",
+   "https": true,
+   "agenda_online": false,
+   "crm_automatizacion": false,
+   "redes_sociales": [
+    "Facebook",
+    "Twitter: @cyr_penalistas"
+   ],
+   "problemas_detectados": [
+    "Proceso de citas 100% manual pese a atender emergencias 24/7",
+    "Sin agenda en línea ni bot de triage"
+   ],
+   "oportunidades": [
+    "Agenda en línea o bot de triage para emergencias penales 24/7",
+    "CRM para dar seguimiento a casos"
+   ],
+   "notas": "Atienden emergencias 24/7 pero sin ningún sistema automatizado de agenda; ya tienen WhatsApp, el resto del embudo es manual.",
+   "gancho": "Cuevas & Rivera atiende emergencias penales 24/7, pero agenda cada caso manualmente por teléfono o WhatsApp, sin un sistema de triage automatizado.",
+   "fuente": "https://cyrpenalistas.mx/",
+   "id": 14,
+   "rank": 14,
+   "tracking_id": "juridicos-cdmx-29",
+   "estado_prospecto": "Por contactar",
+   "activo": "contacto-telefonico",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  },
+  {
+   "empresa": "Padilla & Bujalil, S.C.",
+   "url": "https://www.padilla-bujalil.com.mx/",
+   "tiene_web": true,
+   "telefono": "55 5592-8816",
+   "email": "info@padilla-bujalil.com.mx",
+   "whatsapp": false,
+   "direccion": "Insurgentes Centro No. 23-102, Col. San Rafael, Alcaldía Cuauhtémoc, CDMX",
+   "oportunidad_score": 3,
+   "web_calidad": "Moderno, responsive, plantilla profesional adaptada al sector inmobiliario/laboral",
+   "https": true,
+   "agenda_online": true,
+   "crm_automatizacion": false,
+   "redes_sociales": [],
+   "problemas_detectados": [
+    "Sin WhatsApp directo pese a tener agenda automatizada (Outlook 365 Bookings)",
+    "Sin redes sociales enlazadas"
+   ],
+   "oportunidades": [
+    "Conectar WhatsApp Business a su sistema de citas ya existente",
+    "Vincular redes sociales",
+    "Firma ya abierta a la automatización: buen candidato para ampliar con CRM"
+   ],
+   "notas": "Ya usa Outlook 365 Bookings para citas, señal de apertura a herramientas digitales; despacho con 40 años en derecho laboral. Prioridad menor para automatización básica, pero buen prospecto para complementar con WhatsApp/CRM y posible rediseño.",
+   "gancho": "Padilla & Bujalil ya usa Outlook Bookings para agendar citas, lo que muestra apertura a la automatización — sería sencillo sumar un bot de WhatsApp conectado a ese mismo calendario.",
+   "fuente": "https://www.padilla-bujalil.com.mx/contacto/",
+   "id": 15,
+   "rank": 15,
+   "tracking_id": "juridicos-cdmx-30",
+   "estado_prospecto": "Por contactar",
+   "activo": "infografia-automatizacion",
+   "servicio_recomendado": "Automatización (WhatsApp, agenda en línea, CRM)"
+  }
+ ]
+}

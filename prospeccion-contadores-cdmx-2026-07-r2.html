@@ -1,0 +1,329 @@
+<!doctype html><html lang="es-MX"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prospección Contadores CDMX — Ronda 2 · Estrategia Hyper</title>
+<style>
+:root{--acc:#2E5BFF;--navy:#0A1330;--ink:#0F1419;--paper:#FAFAF7;--n60:#5A6573;--n40:#8C95A3;--line:#E5E3DC}
+*{box-sizing:border-box}body{margin:0;font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink)}
+.mono{font-family:'JetBrains Mono',ui-monospace,Menlo,monospace;font-size:.85em}
+header{background:var(--navy);color:var(--paper);padding:48px 6vw}
+header .k{font-family:'JetBrains Mono',monospace;color:var(--acc);letter-spacing:.18em;text-transform:uppercase;font-size:13px;font-weight:600}
+header h1{margin:10px 0 6px;font-size:34px;letter-spacing:-.01em}
+header .sub{color:rgba(250,250,247,.75)}
+section{padding:36px 6vw}h2{font-size:24px;margin:0 0 16px}
+.resumen{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.pill{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 20px}
+.pill .n{font-size:26px;font-weight:800;color:var(--acc)}.pill .l{font-size:13px;color:var(--n60)}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+th{background:var(--navy);color:var(--paper);text-align:left;padding:10px 12px;font-size:13px}
+td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top;font-size:14px}
+.small{font-size:12.5px;color:var(--n60)}
+.scorebar{width:90px;height:8px;background:var(--line);border-radius:4px;overflow:hidden;display:inline-block;margin-right:8px}
+.scorebar div{height:100%}
+.tag.rojo{background:#FDE8E8;color:#B22020;font-size:11px;padding:2px 8px;border-radius:99px}
+.ficha{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px 28px;margin-bottom:22px}
+.ficha h3{margin:6px 0}.ficha h4{margin:18px 0 8px;font-size:15px}
+.fcols{display:grid;grid-template-columns:1fr 1fr;gap:18px}.fcols ul{margin:0;padding-left:18px;font-size:14px;color:var(--n60)}
+.acc{color:var(--acc)}
+pre.msg{white-space:pre-wrap;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:16px;font-family:inherit;font-size:14px}
+button{background:var(--acc);color:#fff;border:none;border-radius:99px;padding:9px 18px;font-weight:600;cursor:pointer;margin-right:8px;font-size:13px}
+.hid{position:absolute;left:-9999px}
+.stats{display:flex;gap:14px;flex-wrap:wrap}
+.stat{background:var(--navy);color:var(--paper);border-radius:12px;padding:18px 22px;min-width:150px}
+.stat .n{font-size:30px;font-weight:800;color:var(--acc)}.stat .l{font-size:12.5px;color:rgba(250,250,247,.75)}
+.export{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-top:14px;font-size:13.5px;word-break:break-all}
+footer{padding:26px 6vw;color:var(--n40);font-size:12.5px}
+ol li{margin-bottom:8px}
+</style></head><body>
+<header><div class="k">Prospección · Ronda 2 · 2026-07-29</div>
+<h1>Contadores CDMX — Ronda 2</h1>
+<div class="sub">Contadores / despachos contables · CDMX · Servicio: automatización (WhatsApp, agenda, CRM) + web · Tracking activo</div></header>
+
+<section><h2>Resumen ejecutivo</h2>
+<div class="resumen">
+  <div class="pill"><div class="n">15</div><div class="l">prospectos nuevos (sin repetir ronda 1)</div></div>
+  <div class="pill"><div class="n">5</div><div class="l">oportunidad alta (8-10)</div></div>
+  <div class="pill"><div class="n">9</div><div class="l">oportunidad media (5-7)</div></div>
+  <div class="pill"><div class="n">1</div><div class="l">oportunidad baja (0-4)</div></div>
+  <div class="pill"><div class="n">8</div><div class="l">con correo → candidatos a activo de valor</div></div>
+</div>
+<h2>Top 5</h2><ol><li><strong>Despacho Contable APC</strong> (10/10) — Su despacho aparece en Google con más de 30 años de trayectoria, pero su sitio despachocontableapc.com está caído — ni siquiera resuelve en el navegador, así que cualquier búsqueda o referido que los busque en línea no los encuentra.</li><li><strong>Adquosc (ADQUO SC Contadores)</strong> (9/10) — Buscamos su despacho y encontramos que adquosc.com actualmente no carga (la conexión es rechazada) — están invisibles para cualquier prospecto que los busque en Google ahora mismo.</li><li><strong>Ficog Asesores</strong> (9/10) — El sitio de su despacho no carga por un error de certificado de seguridad — cualquier prospecto que dé clic desde Google ve una advertencia de &#x27;sitio no seguro&#x27;.</li><li><strong>Emilio Narváez López, S.C. (Despacho Narváez / ENLSC)</strong> (8/10) — Su despacho tiene 40 años y tres generaciones de trayectoria, pero su sitio (enarvaez.com) tiene el certificado de seguridad vencido — el navegador lo marca como no confiable a cualquiera que entre.</li><li><strong>AFIEM Consultoría Fiscal</strong> (8/10) — Tienen 5 de 5 estrellas con más de 19 reseñas en Google, pero su sitio afiem.com.mx muestra advertencia de certificado de seguridad vencido — están perdiendo esa buena reputación por un detalle técnico.</li></ol></section>
+
+<section><h2>Tabla de prospectos</h2>
+<table><tr><th>ID</th><th>Negocio</th><th>Contacto</th><th>Oportunidad</th><th>Problemas clave</th><th>Activo</th></tr><tr><td class="mono">contadores-cdmx-19</td><td><strong>Despacho Contable APC</strong> · <a href="https://www.despachocontableapc.com" target="_blank">sitio</a> <span class="tag rojo">web rota</span></td><td>—</td><td><div class="scorebar"><div style="width:100%;background:#1E7F3C"></div></div><span class="mono">10/10</span></td><td class="small">El dominio despachocontableapc.com no resuelve (ENOTFOUND) tanto con www como sin www — el sitio está caído aunque Google lo tiene indexado; Sin teléfono ni correo verificables en fuentes públicas</td><td class="small">contacto-telefonico</td></tr><tr><td class="mono">contadores-cdmx-20</td><td><strong>Adquosc (ADQUO SC Contadores)</strong> · <a href="https://adquosc.com" target="_blank">sitio</a> <span class="tag rojo">web rota</span></td><td>—</td><td><div class="scorebar"><div style="width:90%;background:#1E7F3C"></div></div><span class="mono">9/10</span></td><td class="small">Al intentar cargar https://adquosc.com/ el servidor rechaza la conexión (ECONNREFUSED), señal de hosting/DNS mal configurado; Sin teléfono ni correo verificables</td><td class="small">contacto-telefonico</td></tr><tr><td class="mono">contadores-cdmx-21</td><td><strong>Ficog Asesores</strong> · <a href="https://ficogasesores.oficinaweb.mx/" target="_blank">sitio</a> <span class="tag rojo">web rota</span></td><td>55 7090 8408</td><td><div class="scorebar"><div style="width:90%;background:#1E7F3C"></div></div><span class="mono">9/10</span></td><td class="small">El sitio da error de certificado SSL tanto en https como en http (&#x27;unable to verify the first certificate&#x27;) — no carga en un navegador estándar; Usa un subdominio gratuito de &#x27;oficinaweb.mx&#x27;, señal de sitio de bajo costo</td><td class="small">contacto-telefonico</td></tr><tr><td class="mono">contadores-cdmx-22</td><td><strong>Emilio Narváez López, S.C. (Despacho Narváez / ENLSC)</strong> · <a href="http://enarvaez.com/" target="_blank">sitio</a> <span class="tag rojo">web rota</span></td><td>—</td><td><div class="scorebar"><div style="width:80%;background:#1E7F3C"></div></div><span class="mono">8/10</span></td><td class="small">Al cargar enarvaez.com el navegador reporta &#x27;certificate has expired&#x27; — el certificado SSL está caducado; Sin teléfono ni correo visibles en snippets</td><td class="small">contacto-telefonico</td></tr><tr><td class="mono">contadores-cdmx-23</td><td><strong>AFIEM Consultoría Fiscal</strong> · <a href="https://afiem.com.mx/" target="_blank">sitio</a> <span class="tag rojo">web rota</span></td><td>+52 55 2301 7071</td><td><div class="scorebar"><div style="width:80%;background:#1E7F3C"></div></div><span class="mono">8/10</span></td><td class="small">Al cargar afiem.com.mx el navegador reporta &#x27;certificate has expired&#x27;; Sin correo ni redes sociales encontrados</td><td class="small">contacto-telefonico</td></tr><tr><td class="mono">contadores-cdmx-24</td><td><strong>CYTA Integración de Negocios, S.C.</strong> · <a href="https://www.cyta.mx/" target="_blank">sitio</a></td><td>clientes@cyta.mx</td><td><div class="scorebar"><div style="width:70%;background:#2E5BFF"></div></div><span class="mono">7/10</span></td><td class="small">Muestra un ícono de WhatsApp pero sin enlace wa.me funcional; Sin redes sociales enlazadas</td><td class="small">infografia-automatizacion</td></tr><tr><td class="mono">contadores-cdmx-25</td><td><strong>Rexih Despacho de Contadores Públicos</strong> · <a href="https://rexihcontadores.com/" target="_blank">sitio</a></td><td>55 1486 7522 / 55 8848 7501 / 55 8848 7496</td><td><div class="scorebar"><div style="width:70%;background:#2E5BFF"></div></div><span class="mono">7/10</span></td><td class="small">Sin enlace de WhatsApp (wa.me) en el sitio; Sin agenda en línea ni chat/CRM</td><td class="small">contacto-telefonico</td></tr><tr><td class="mono">contadores-cdmx-26</td><td><strong>Miranda &amp; Asociados</strong> · <a href="https://mirandaef.com/" target="_blank">sitio</a></td><td>contacto@mirandaef.com</td><td><div class="scorebar"><div style="width:60%;background:#2E5BFF"></div></div><span class="mono">6/10</span></td><td class="small">Sin agenda en línea; Sin chatbot ni CRM visible</td><td class="small">infografia-automatizacion</td></tr><tr><td class="mono">contadores-cdmx-27</td><td><strong>Consultoría Empresarial MSA (Muñoz Solé y Asociados, S.C.)</strong> · <a href="https://consultoriaempresarialmsa.com/" target="_blank">sitio</a></td><td>contacto@munozsole.com</td><td><div class="scorebar"><div style="width:60%;background:#2E5BFF"></div></div><span class="mono">6/10</span></td><td class="small">Sin redes sociales encontradas; Sin agenda en línea</td><td class="small">infografia-automatizacion</td></tr><tr><td class="mono">contadores-cdmx-28</td><td><strong>ESGO Consultores</strong> · <a href="https://esgoconsul.com/" target="_blank">sitio</a></td><td>esgoconsul@gmail.com</td><td><div class="scorebar"><div style="width:60%;background:#2E5BFF"></div></div><span class="mono">6/10</span></td><td class="small">Usan correo genérico de Gmail en vez de dominio propio; Sin enlace de WhatsApp visible</td><td class="small">infografia-automatizacion</td></tr><tr><td class="mono">contadores-cdmx-29</td><td><strong>STC Contadores (Servicios Tributarios &amp; Contables, SAS de CV)</strong> · <a href="https://stccontadores.com/" target="_blank">sitio</a></td><td>asesoria_integral@stccontadores.com</td><td><div class="scorebar"><div style="width:60%;background:#2E5BFF"></div></div><span class="mono">6/10</span></td><td class="small">Sin redes sociales encontradas; Sin agenda en línea</td><td class="small">infografia-automatizacion</td></tr><tr><td class="mono">contadores-cdmx-30</td><td><strong>AZP Despacho Contable (A&amp;ZP Consultoría Contable Fiscal)</strong> · <a href="https://azp.mx/" target="_blank">sitio</a></td><td>contacto@azp.mx</td><td><div class="scorebar"><div style="width:50%;background:#2E5BFF"></div></div><span class="mono">5/10</span></td><td class="small">Sin agenda en línea; Sin chatbot ni CRM</td><td class="small">infografia-automatizacion</td></tr><tr><td class="mono">contadores-cdmx-31</td><td><strong>CC &amp; PWS Asesores</strong> · <a href="https://www.cocapws.com/" target="_blank">sitio</a></td><td>55 5099 4826</td><td><div class="scorebar"><div style="width:50%;background:#2E5BFF"></div></div><span class="mono">5/10</span></td><td class="small">Mencionan un botón de WhatsApp pero sin enlace wa.me verificable; Sin correo de contacto publicado</td><td class="small">contacto-telefonico</td></tr><tr><td class="mono">contadores-cdmx-32</td><td><strong>AS Consulting Group (ASCG)</strong> · <a href="https://www.ascg.mx/" target="_blank">sitio</a></td><td>contacto@ascg.mx</td><td><div class="scorebar"><div style="width:50%;background:#2E5BFF"></div></div><span class="mono">5/10</span></td><td class="small">Sin WhatsApp encontrado; Sin agenda en línea pese a tener el sitio más profesional del grupo</td><td class="small">infografia-automatizacion</td></tr><tr><td class="mono">contadores-cdmx-33</td><td><strong>AG Consejería Empresarial Integral</strong> · <a href="http://www.agconsejeria.com.mx/" target="_blank">sitio</a></td><td>contacto@agconsejeria.com.mx</td><td><div class="scorebar"><div style="width:30%;background:#8C95A3"></div></div><span class="mono">3/10</span></td><td class="small">El link &#x27;Agenda una consulta&#x27; solo lleva a un formulario de contacto genérico, no a un sistema real de agenda (tipo Calendly); Sin chatbot ni CRM visible</td><td class="small">infografia-automatizacion</td></tr></table></section>
+
+<section><h2>Fichas y mensajes de contacto (prospectos con correo)</h2>
+    <div class="ficha">
+      <div class="fhead"><span class="mono acc">contadores-cdmx-24</span>
+        <h3>CYTA Integración de Negocios, S.C. <span class="mono">7/10</span></h3>
+        <div class="small">Av. Eugenia 926 Int. 15 CN-4, Col. Del Valle, 03100 CDMX · Tel: 55-6587-8741 / 55-6587-8742 ext.104 / 55-3423-3672 · clientes@cyta.mx</div></div>
+      <div class="fcols">
+        <div><h4>Problemas detectados</h4><ul><li>Muestra un ícono de WhatsApp pero sin enlace wa.me funcional</li><li>Sin redes sociales enlazadas</li><li>Sin agenda en línea ni chat</li></ul></div>
+        <div><h4>Propuesta de valor</h4><ul><li>Activar WhatsApp Business con enlace real</li><li>Agenda en línea para citas</li><li>Presencia en redes sociales</li></ul></div>
+      </div>
+      <h4>Mensaje en frío (texto plano — WhatsApp/llamada)</h4>
+      <pre class="msg">Estimados señores de CYTA Integración de Negocios, S.C.:
+
+Su sitio muestra un ícono de WhatsApp, pero no tiene un enlace funcional — el visitante no puede iniciar la conversación con un clic.
+
+En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos automáticos (agenda en línea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permití preparar una infografía breve que muestra cómo lo hacemos: https://demos-prospectos.pages.dev/hiperautomatizacion
+
+Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</pre>
+      <button onclick="cp(this,'p-contadores-cdmx-24')">Copiar texto</button>
+      <button onclick="cp(this,'h-contadores-cdmx-24')">Copiar HTML del correo (con tracking)</button>
+      <textarea id="p-contadores-cdmx-24" class="hid">Estimados señores de CYTA Integración de Negocios, S.C.:
+
+Su sitio muestra un ícono de WhatsApp, pero no tiene un enlace funcional — el visitante no puede iniciar la conversación con un clic.
+
+En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos automáticos (agenda en línea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permití preparar una infografía breve que muestra cómo lo hacemos: https://demos-prospectos.pages.dev/hiperautomatizacion
+
+Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</textarea>
+      <textarea id="h-contadores-cdmx-24" class="hid">&lt;p&gt;Estimados señores de CYTA Integración de Negocios, S.C.:&lt;/p&gt;&lt;p&gt;Su sitio muestra un ícono de WhatsApp, pero no tiene un enlace funcional — el visitante no puede iniciar la conversación con un clic.&lt;/p&gt;&lt;p&gt;En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos autom&amp;aacute;ticos (agenda en l&amp;iacute;nea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permit&amp;iacute; preparar una infograf&amp;iacute;a breve que muestra c&amp;oacute;mo lo hacemos: &lt;a href=&quot;https://tracking-prospectos.estrateg-ia-hyper.workers.dev/c?id=contadores-cdmx-24-auto&amp;u=https%3A%2F%2Fdemos-prospectos.pages.dev%2Fhiperautomatizacion&quot;&gt;ver la infograf&amp;iacute;a aqu&amp;iacute;&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ning&amp;uacute;n compromiso.&lt;/p&gt;&lt;p&gt;Saludos cordiales,&lt;br&gt;Shmin · Estrategia Hyper · 56 1021 1798&lt;/p&gt;&lt;img src=&quot;https://tracking-prospectos.estrateg-ia-hyper.workers.dev/p?id=contadores-cdmx-24&quot; width=&quot;1&quot; height=&quot;1&quot; alt=&quot;&quot;&gt;</textarea>
+    </div>
+    <div class="ficha">
+      <div class="fhead"><span class="mono acc">contadores-cdmx-26</span>
+        <h3>Miranda &amp; Asociados <span class="mono">6/10</span></h3>
+        <div class="small">Torres Adalid 1906, Narvarte Oriente, Benito Juárez, 03023 CDMX · Tel: (55) 5696-3502 / (55) 5579-8563 · contacto@mirandaef.com</div></div>
+      <div class="fcols">
+        <div><h4>Problemas detectados</h4><ul><li>Sin agenda en línea</li><li>Sin chatbot ni CRM visible</li><li>Diseño con jerarquía visual limitada y pocos elementos interactivos</li></ul></div>
+        <div><h4>Propuesta de valor</h4><ul><li>Agenda en línea para primeras consultas</li><li>Automatizar seguimiento de leads desde WhatsApp</li><li>Modernizar el diseño del sitio</li></ul></div>
+      </div>
+      <h4>Mensaje en frío (texto plano — WhatsApp/llamada)</h4>
+      <pre class="msg">Estimados señores de Miranda &amp; Asociados:
+
+Ya tienen WhatsApp y redes sociales activas, pero cualquier cita o seguimiento se hace manualmente — no hay agenda en línea ni sistema que capture al prospecto automáticamente.
+
+En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos automáticos (agenda en línea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permití preparar una infografía breve que muestra cómo lo hacemos: https://demos-prospectos.pages.dev/hiperautomatizacion
+
+Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</pre>
+      <button onclick="cp(this,'p-contadores-cdmx-26')">Copiar texto</button>
+      <button onclick="cp(this,'h-contadores-cdmx-26')">Copiar HTML del correo (con tracking)</button>
+      <textarea id="p-contadores-cdmx-26" class="hid">Estimados señores de Miranda &amp; Asociados:
+
+Ya tienen WhatsApp y redes sociales activas, pero cualquier cita o seguimiento se hace manualmente — no hay agenda en línea ni sistema que capture al prospecto automáticamente.
+
+En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos automáticos (agenda en línea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permití preparar una infografía breve que muestra cómo lo hacemos: https://demos-prospectos.pages.dev/hiperautomatizacion
+
+Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</textarea>
+      <textarea id="h-contadores-cdmx-26" class="hid">&lt;p&gt;Estimados señores de Miranda &amp;amp; Asociados:&lt;/p&gt;&lt;p&gt;Ya tienen WhatsApp y redes sociales activas, pero cualquier cita o seguimiento se hace manualmente — no hay agenda en línea ni sistema que capture al prospecto automáticamente.&lt;/p&gt;&lt;p&gt;En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos autom&amp;aacute;ticos (agenda en l&amp;iacute;nea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permit&amp;iacute; preparar una infograf&amp;iacute;a breve que muestra c&amp;oacute;mo lo hacemos: &lt;a href=&quot;https://tracking-prospectos.estrateg-ia-hyper.workers.dev/c?id=contadores-cdmx-26-auto&amp;u=https%3A%2F%2Fdemos-prospectos.pages.dev%2Fhiperautomatizacion&quot;&gt;ver la infograf&amp;iacute;a aqu&amp;iacute;&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ning&amp;uacute;n compromiso.&lt;/p&gt;&lt;p&gt;Saludos cordiales,&lt;br&gt;Shmin · Estrategia Hyper · 56 1021 1798&lt;/p&gt;&lt;img src=&quot;https://tracking-prospectos.estrateg-ia-hyper.workers.dev/p?id=contadores-cdmx-26&quot; width=&quot;1&quot; height=&quot;1&quot; alt=&quot;&quot;&gt;</textarea>
+    </div>
+    <div class="ficha">
+      <div class="fhead"><span class="mono acc">contadores-cdmx-27</span>
+        <h3>Consultoría Empresarial MSA (Muñoz Solé y Asociados, S.C.) <span class="mono">6/10</span></h3>
+        <div class="small">Alcaldía Benito Juárez, CDMX (sin calle específica publicada) · Tel: 55 2575 2545 / 55 5661 3544 / 55 5661 3221 · contacto@munozsole.com</div></div>
+      <div class="fcols">
+        <div><h4>Problemas detectados</h4><ul><li>Sin redes sociales encontradas</li><li>Sin agenda en línea</li><li>Sin chat ni CRM</li></ul></div>
+        <div><h4>Propuesta de valor</h4><ul><li>Presencia en redes sociales</li><li>Agenda en línea</li><li>Automatizar respuesta inicial por WhatsApp</li></ul></div>
+      </div>
+      <h4>Mensaje en frío (texto plano — WhatsApp/llamada)</h4>
+      <pre class="msg">Estimados señores de Consultoría Empresarial MSA (Muñoz Solé y Asociados, S.C.):
+
+Publican horario de atención y WhatsApp, pero no tienen ninguna red social ni forma de agendar una cita en línea — todo el seguimiento depende de contestar el teléfono.
+
+En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos automáticos (agenda en línea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permití preparar una infografía breve que muestra cómo lo hacemos: https://demos-prospectos.pages.dev/hiperautomatizacion
+
+Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</pre>
+      <button onclick="cp(this,'p-contadores-cdmx-27')">Copiar texto</button>
+      <button onclick="cp(this,'h-contadores-cdmx-27')">Copiar HTML del correo (con tracking)</button>
+      <textarea id="p-contadores-cdmx-27" class="hid">Estimados señores de Consultoría Empresarial MSA (Muñoz Solé y Asociados, S.C.):
+
+Publican horario de atención y WhatsApp, pero no tienen ninguna red social ni forma de agendar una cita en línea — todo el seguimiento depende de contestar el teléfono.
+
+En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos automáticos (agenda en línea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permití preparar una infografía breve que muestra cómo lo hacemos: https://demos-prospectos.pages.dev/hiperautomatizacion
+
+Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</textarea>
+      <textarea id="h-contadores-cdmx-27" class="hid">&lt;p&gt;Estimados señores de Consultoría Empresarial MSA (Muñoz Solé y Asociados, S.C.):&lt;/p&gt;&lt;p&gt;Publican horario de atención y WhatsApp, pero no tienen ninguna red social ni forma de agendar una cita en línea — todo el seguimiento depende de contestar el teléfono.&lt;/p&gt;&lt;p&gt;En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos autom&amp;aacute;ticos (agenda en l&amp;iacute;nea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permit&amp;iacute; preparar una infograf&amp;iacute;a breve que muestra c&amp;oacute;mo lo hacemos: &lt;a href=&quot;https://tracking-prospectos.estrateg-ia-hyper.workers.dev/c?id=contadores-cdmx-27-auto&amp;u=https%3A%2F%2Fdemos-prospectos.pages.dev%2Fhiperautomatizacion&quot;&gt;ver la infograf&amp;iacute;a aqu&amp;iacute;&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ning&amp;uacute;n compromiso.&lt;/p&gt;&lt;p&gt;Saludos cordiales,&lt;br&gt;Shmin · Estrategia Hyper · 56 1021 1798&lt;/p&gt;&lt;img src=&quot;https://tracking-prospectos.estrateg-ia-hyper.workers.dev/p?id=contadores-cdmx-27&quot; width=&quot;1&quot; height=&quot;1&quot; alt=&quot;&quot;&gt;</textarea>
+    </div>
+    <div class="ficha">
+      <div class="fhead"><span class="mono acc">contadores-cdmx-28</span>
+        <h3>ESGO Consultores <span class="mono">6/10</span></h3>
+        <div class="small">Copal Lt 3, Mz 12, Secc 10, Col. Pedregal de Santo Domingo, Coyoacán, C.P. 04369 · Tel: 56-2763-4380 · esgoconsul@gmail.com</div></div>
+      <div class="fcols">
+        <div><h4>Problemas detectados</h4><ul><li>Usan correo genérico de Gmail en vez de dominio propio</li><li>Sin enlace de WhatsApp visible</li><li>Sin agenda en línea</li></ul></div>
+        <div><h4>Propuesta de valor</h4><ul><li>Correo corporativo con su propio dominio</li><li>WhatsApp Business</li><li>Agenda en línea</li></ul></div>
+      </div>
+      <h4>Mensaje en frío (texto plano — WhatsApp/llamada)</h4>
+      <pre class="msg">Estimados señores de ESGO Consultores:
+
+Su correo de contacto es una cuenta de Gmail genérica en vez de uno con su propio dominio — una señal rápida de que la imagen digital no está alineada con su experiencia profesional.
+
+En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos automáticos (agenda en línea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permití preparar una infografía breve que muestra cómo lo hacemos: https://demos-prospectos.pages.dev/hiperautomatizacion
+
+Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</pre>
+      <button onclick="cp(this,'p-contadores-cdmx-28')">Copiar texto</button>
+      <button onclick="cp(this,'h-contadores-cdmx-28')">Copiar HTML del correo (con tracking)</button>
+      <textarea id="p-contadores-cdmx-28" class="hid">Estimados señores de ESGO Consultores:
+
+Su correo de contacto es una cuenta de Gmail genérica en vez de uno con su propio dominio — una señal rápida de que la imagen digital no está alineada con su experiencia profesional.
+
+En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos automáticos (agenda en línea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permití preparar una infografía breve que muestra cómo lo hacemos: https://demos-prospectos.pages.dev/hiperautomatizacion
+
+Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</textarea>
+      <textarea id="h-contadores-cdmx-28" class="hid">&lt;p&gt;Estimados señores de ESGO Consultores:&lt;/p&gt;&lt;p&gt;Su correo de contacto es una cuenta de Gmail genérica en vez de uno con su propio dominio — una señal rápida de que la imagen digital no está alineada con su experiencia profesional.&lt;/p&gt;&lt;p&gt;En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos autom&amp;aacute;ticos (agenda en l&amp;iacute;nea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permit&amp;iacute; preparar una infograf&amp;iacute;a breve que muestra c&amp;oacute;mo lo hacemos: &lt;a href=&quot;https://tracking-prospectos.estrateg-ia-hyper.workers.dev/c?id=contadores-cdmx-28-auto&amp;u=https%3A%2F%2Fdemos-prospectos.pages.dev%2Fhiperautomatizacion&quot;&gt;ver la infograf&amp;iacute;a aqu&amp;iacute;&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ning&amp;uacute;n compromiso.&lt;/p&gt;&lt;p&gt;Saludos cordiales,&lt;br&gt;Shmin · Estrategia Hyper · 56 1021 1798&lt;/p&gt;&lt;img src=&quot;https://tracking-prospectos.estrateg-ia-hyper.workers.dev/p?id=contadores-cdmx-28&quot; width=&quot;1&quot; height=&quot;1&quot; alt=&quot;&quot;&gt;</textarea>
+    </div>
+    <div class="ficha">
+      <div class="fhead"><span class="mono acc">contadores-cdmx-29</span>
+        <h3>STC Contadores (Servicios Tributarios &amp; Contables, SAS de CV) <span class="mono">6/10</span></h3>
+        <div class="small">Av. Isaac Newton 186, Polanco V Secc., Miguel Hidalgo, 11560 CDMX · Tel: +52 55 6748 3468 / +52 81 3981 0620 · asesoria_integral@stccontadores.com</div></div>
+      <div class="fcols">
+        <div><h4>Problemas detectados</h4><ul><li>Sin redes sociales encontradas</li><li>Sin agenda en línea</li><li>Diseño con estructura HTML mínima</li></ul></div>
+        <div><h4>Propuesta de valor</h4><ul><li>Presencia en redes sociales</li><li>Agenda en línea</li><li>Modernizar el sitio</li></ul></div>
+      </div>
+      <h4>Mensaje en frío (texto plano — WhatsApp/llamada)</h4>
+      <pre class="msg">Estimados señores de STC Contadores (Servicios Tributarios &amp; Contables, SAS de CV):
+
+Ubicados en Polanco con WhatsApp activo, pero sin ninguna red social ni forma de agendar cita en línea — dependen 100% de que alguien llame o escriba directo.
+
+En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos automáticos (agenda en línea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permití preparar una infografía breve que muestra cómo lo hacemos: https://demos-prospectos.pages.dev/hiperautomatizacion
+
+Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</pre>
+      <button onclick="cp(this,'p-contadores-cdmx-29')">Copiar texto</button>
+      <button onclick="cp(this,'h-contadores-cdmx-29')">Copiar HTML del correo (con tracking)</button>
+      <textarea id="p-contadores-cdmx-29" class="hid">Estimados señores de STC Contadores (Servicios Tributarios &amp; Contables, SAS de CV):
+
+Ubicados en Polanco con WhatsApp activo, pero sin ninguna red social ni forma de agendar cita en línea — dependen 100% de que alguien llame o escriba directo.
+
+En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos automáticos (agenda en línea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permití preparar una infografía breve que muestra cómo lo hacemos: https://demos-prospectos.pages.dev/hiperautomatizacion
+
+Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</textarea>
+      <textarea id="h-contadores-cdmx-29" class="hid">&lt;p&gt;Estimados señores de STC Contadores (Servicios Tributarios &amp;amp; Contables, SAS de CV):&lt;/p&gt;&lt;p&gt;Ubicados en Polanco con WhatsApp activo, pero sin ninguna red social ni forma de agendar cita en línea — dependen 100% de que alguien llame o escriba directo.&lt;/p&gt;&lt;p&gt;En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos autom&amp;aacute;ticos (agenda en l&amp;iacute;nea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permit&amp;iacute; preparar una infograf&amp;iacute;a breve que muestra c&amp;oacute;mo lo hacemos: &lt;a href=&quot;https://tracking-prospectos.estrateg-ia-hyper.workers.dev/c?id=contadores-cdmx-29-auto&amp;u=https%3A%2F%2Fdemos-prospectos.pages.dev%2Fhiperautomatizacion&quot;&gt;ver la infograf&amp;iacute;a aqu&amp;iacute;&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ning&amp;uacute;n compromiso.&lt;/p&gt;&lt;p&gt;Saludos cordiales,&lt;br&gt;Shmin · Estrategia Hyper · 56 1021 1798&lt;/p&gt;&lt;img src=&quot;https://tracking-prospectos.estrateg-ia-hyper.workers.dev/p?id=contadores-cdmx-29&quot; width=&quot;1&quot; height=&quot;1&quot; alt=&quot;&quot;&gt;</textarea>
+    </div>
+    <div class="ficha">
+      <div class="fhead"><span class="mono acc">contadores-cdmx-30</span>
+        <h3>AZP Despacho Contable (A&amp;ZP Consultoría Contable Fiscal) <span class="mono">5/10</span></h3>
+        <div class="small">C. Querétaro 226-despacho 3B, Roma Nte., Cuauhtémoc, 06700 CDMX · Tel: +55 1201 1499 · contacto@azp.mx</div></div>
+      <div class="fcols">
+        <div><h4>Problemas detectados</h4><ul><li>Sin agenda en línea</li><li>Sin chatbot ni CRM</li></ul></div>
+        <div><h4>Propuesta de valor</h4><ul><li>Agenda en línea para consultas fiscales</li><li>Chatbot para calificar leads antes de pasarlos a un asesor</li></ul></div>
+      </div>
+      <h4>Mensaje en frío (texto plano — WhatsApp/llamada)</h4>
+      <pre class="msg">Estimados señores de AZP Despacho Contable (A&amp;ZP Consultoría Contable Fiscal):
+
+Tienen WhatsApp y redes sociales activas, un buen punto de partida, pero les falta el siguiente paso: agendar consultas automáticamente sin depender de ida y vuelta por chat.
+
+En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos automáticos (agenda en línea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permití preparar una infografía breve que muestra cómo lo hacemos: https://demos-prospectos.pages.dev/hiperautomatizacion
+
+Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</pre>
+      <button onclick="cp(this,'p-contadores-cdmx-30')">Copiar texto</button>
+      <button onclick="cp(this,'h-contadores-cdmx-30')">Copiar HTML del correo (con tracking)</button>
+      <textarea id="p-contadores-cdmx-30" class="hid">Estimados señores de AZP Despacho Contable (A&amp;ZP Consultoría Contable Fiscal):
+
+Tienen WhatsApp y redes sociales activas, un buen punto de partida, pero les falta el siguiente paso: agendar consultas automáticamente sin depender de ida y vuelta por chat.
+
+En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos automáticos (agenda en línea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permití preparar una infografía breve que muestra cómo lo hacemos: https://demos-prospectos.pages.dev/hiperautomatizacion
+
+Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</textarea>
+      <textarea id="h-contadores-cdmx-30" class="hid">&lt;p&gt;Estimados señores de AZP Despacho Contable (A&amp;amp;ZP Consultoría Contable Fiscal):&lt;/p&gt;&lt;p&gt;Tienen WhatsApp y redes sociales activas, un buen punto de partida, pero les falta el siguiente paso: agendar consultas automáticamente sin depender de ida y vuelta por chat.&lt;/p&gt;&lt;p&gt;En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos autom&amp;aacute;ticos (agenda en l&amp;iacute;nea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permit&amp;iacute; preparar una infograf&amp;iacute;a breve que muestra c&amp;oacute;mo lo hacemos: &lt;a href=&quot;https://tracking-prospectos.estrateg-ia-hyper.workers.dev/c?id=contadores-cdmx-30-auto&amp;u=https%3A%2F%2Fdemos-prospectos.pages.dev%2Fhiperautomatizacion&quot;&gt;ver la infograf&amp;iacute;a aqu&amp;iacute;&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ning&amp;uacute;n compromiso.&lt;/p&gt;&lt;p&gt;Saludos cordiales,&lt;br&gt;Shmin · Estrategia Hyper · 56 1021 1798&lt;/p&gt;&lt;img src=&quot;https://tracking-prospectos.estrateg-ia-hyper.workers.dev/p?id=contadores-cdmx-30&quot; width=&quot;1&quot; height=&quot;1&quot; alt=&quot;&quot;&gt;</textarea>
+    </div>
+    <div class="ficha">
+      <div class="fhead"><span class="mono acc">contadores-cdmx-32</span>
+        <h3>AS Consulting Group (ASCG) <span class="mono">5/10</span></h3>
+        <div class="small">Obrero Mundial 644, Col. Atenor Salas, CDMX, 03010 (también oficina en Monterrey) · Tel: +52 55 5859 4873 / 55 5840 4611 / 55 5859 9296 · contacto@ascg.mx</div></div>
+      <div class="fcols">
+        <div><h4>Problemas detectados</h4><ul><li>Sin WhatsApp encontrado</li><li>Sin agenda en línea pese a tener el sitio más profesional del grupo</li><li>Todo el contacto depende de llamada o formulario</li></ul></div>
+        <div><h4>Propuesta de valor</h4><ul><li>Agregar WhatsApp Business</li><li>Agenda en línea para primeras llamadas de diagnóstico</li><li>Aprovechar su ya buena base de redes sociales con automatización de leads</li></ul></div>
+      </div>
+      <h4>Mensaje en frío (texto plano — WhatsApp/llamada)</h4>
+      <pre class="msg">Estimados señores de AS Consulting Group (ASCG):
+
+Tienen 33 años de trayectoria y presencia en cinco redes sociales distintas, pero ningún canal de WhatsApp — con esa base de audiencia ya construida, la conversión se queda corta por falta de un canal de contacto instantáneo.
+
+En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos automáticos (agenda en línea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permití preparar una infografía breve que muestra cómo lo hacemos: https://demos-prospectos.pages.dev/hiperautomatizacion
+
+Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</pre>
+      <button onclick="cp(this,'p-contadores-cdmx-32')">Copiar texto</button>
+      <button onclick="cp(this,'h-contadores-cdmx-32')">Copiar HTML del correo (con tracking)</button>
+      <textarea id="p-contadores-cdmx-32" class="hid">Estimados señores de AS Consulting Group (ASCG):
+
+Tienen 33 años de trayectoria y presencia en cinco redes sociales distintas, pero ningún canal de WhatsApp — con esa base de audiencia ya construida, la conversión se queda corta por falta de un canal de contacto instantáneo.
+
+En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos automáticos (agenda en línea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permití preparar una infografía breve que muestra cómo lo hacemos: https://demos-prospectos.pages.dev/hiperautomatizacion
+
+Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</textarea>
+      <textarea id="h-contadores-cdmx-32" class="hid">&lt;p&gt;Estimados señores de AS Consulting Group (ASCG):&lt;/p&gt;&lt;p&gt;Tienen 33 años de trayectoria y presencia en cinco redes sociales distintas, pero ningún canal de WhatsApp — con esa base de audiencia ya construida, la conversión se queda corta por falta de un canal de contacto instantáneo.&lt;/p&gt;&lt;p&gt;En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos autom&amp;aacute;ticos (agenda en l&amp;iacute;nea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permit&amp;iacute; preparar una infograf&amp;iacute;a breve que muestra c&amp;oacute;mo lo hacemos: &lt;a href=&quot;https://tracking-prospectos.estrateg-ia-hyper.workers.dev/c?id=contadores-cdmx-32-auto&amp;u=https%3A%2F%2Fdemos-prospectos.pages.dev%2Fhiperautomatizacion&quot;&gt;ver la infograf&amp;iacute;a aqu&amp;iacute;&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ning&amp;uacute;n compromiso.&lt;/p&gt;&lt;p&gt;Saludos cordiales,&lt;br&gt;Shmin · Estrategia Hyper · 56 1021 1798&lt;/p&gt;&lt;img src=&quot;https://tracking-prospectos.estrateg-ia-hyper.workers.dev/p?id=contadores-cdmx-32&quot; width=&quot;1&quot; height=&quot;1&quot; alt=&quot;&quot;&gt;</textarea>
+    </div>
+    <div class="ficha">
+      <div class="fhead"><span class="mono acc">contadores-cdmx-33</span>
+        <h3>AG Consejería Empresarial Integral <span class="mono">3/10</span></h3>
+        <div class="small">Volcán Batur 18, Tlalpan, 14449 CDMX · Tel: 55 5848 0374 / 55 7141 2272 · contacto@agconsejeria.com.mx</div></div>
+      <div class="fcols">
+        <div><h4>Problemas detectados</h4><ul><li>El link &#x27;Agenda una consulta&#x27; solo lleva a un formulario de contacto genérico, no a un sistema real de agenda (tipo Calendly)</li><li>Sin chatbot ni CRM visible</li></ul></div>
+        <div><h4>Propuesta de valor</h4><ul><li>Implementar un sistema real de agenda en línea (no solo formulario)</li><li>Chatbot/CRM para calificar leads que llegan desde TikTok e Instagram</li></ul></div>
+      </div>
+      <h4>Mensaje en frío (texto plano — WhatsApp/llamada)</h4>
+      <pre class="msg">Estimados señores de AG Consejería Empresarial Integral:
+
+Tienen presencia en TikTok, Instagram, Facebook y LinkedIn más WhatsApp activo — están adelante de casi todo el sector, pero su botón de &#x27;agenda una consulta&#x27; en realidad solo abre un formulario de contacto, no una agenda real.
+
+En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos automáticos (agenda en línea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permití preparar una infografía breve que muestra cómo lo hacemos: https://demos-prospectos.pages.dev/hiperautomatizacion
+
+Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</pre>
+      <button onclick="cp(this,'p-contadores-cdmx-33')">Copiar texto</button>
+      <button onclick="cp(this,'h-contadores-cdmx-33')">Copiar HTML del correo (con tracking)</button>
+      <textarea id="p-contadores-cdmx-33" class="hid">Estimados señores de AG Consejería Empresarial Integral:
+
+Tienen presencia en TikTok, Instagram, Facebook y LinkedIn más WhatsApp activo — están adelante de casi todo el sector, pero su botón de &#x27;agenda una consulta&#x27; en realidad solo abre un formulario de contacto, no una agenda real.
+
+En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos automáticos (agenda en línea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permití preparar una infografía breve que muestra cómo lo hacemos: https://demos-prospectos.pages.dev/hiperautomatizacion
+
+Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</textarea>
+      <textarea id="h-contadores-cdmx-33" class="hid">&lt;p&gt;Estimados señores de AG Consejería Empresarial Integral:&lt;/p&gt;&lt;p&gt;Tienen presencia en TikTok, Instagram, Facebook y LinkedIn más WhatsApp activo — están adelante de casi todo el sector, pero su botón de &amp;#x27;agenda una consulta&amp;#x27; en realidad solo abre un formulario de contacto, no una agenda real.&lt;/p&gt;&lt;p&gt;En Estrategia Hyper convertimos ese tipo de trabajo manual y repetitivo en procesos autom&amp;aacute;ticos (agenda en l&amp;iacute;nea, WhatsApp con respuesta inmediata, seguimiento de clientes sin captura manual). Me permit&amp;iacute; preparar una infograf&amp;iacute;a breve que muestra c&amp;oacute;mo lo hacemos: &lt;a href=&quot;https://tracking-prospectos.estrateg-ia-hyper.workers.dev/c?id=contadores-cdmx-33-auto&amp;u=https%3A%2F%2Fdemos-prospectos.pages.dev%2Fhiperautomatizacion&quot;&gt;ver la infograf&amp;iacute;a aqu&amp;iacute;&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;Si les parece interesante, con gusto les explico los detalles en una llamada breve, sin ning&amp;uacute;n compromiso.&lt;/p&gt;&lt;p&gt;Saludos cordiales,&lt;br&gt;Shmin · Estrategia Hyper · 56 1021 1798&lt;/p&gt;&lt;img src=&quot;https://tracking-prospectos.estrateg-ia-hyper.workers.dev/p?id=contadores-cdmx-33&quot; width=&quot;1&quot; height=&quot;1&quot; alt=&quot;&quot;&gt;</textarea>
+    </div></section>
+
+<section><h2>Estadísticas del nicho (ronda 2)</h2><div class="stats"><div class="stat"><div class="n">100%</div><div class="l">sin agenda en línea</div></div><div class="stat"><div class="n">100%</div><div class="l">sin CRM / automatización</div></div><div class="stat"><div class="n">67%</div><div class="l">sin WhatsApp con un clic</div></div><div class="stat"><div class="n">33%</div><div class="l">con su web rota o insegura</div></div><div class="stat"><div class="n">47%</div><div class="l">sin correo público (contacto telefónico)</div></div></div>
+<div class="export"><strong>Correos (copiar y pegar):</strong><br>clientes@cyta.mx, contacto@mirandaef.com, contacto@munozsole.com, esgoconsul@gmail.com, asesoria_integral@stccontadores.com, contacto@azp.mx, contacto@ascg.mx, contacto@agconsejeria.com.mx</div>
+<div class="export"><strong>Teléfonos:</strong><br>Ficog Asesores: 55 7090 8408 · AFIEM Consultoría Fiscal: +52 55 2301 7071 · CYTA Integración de Negocios, S.C.: 55-6587-8741 / 55-6587-8742 ext.104 / 55-3423-3672 · Rexih Despacho de Contadores Públicos: 55 1486 7522 / 55 8848 7501 / 55 8848 7496 · Miranda &amp; Asociados: (55) 5696-3502 / (55) 5579-8563 · Consultoría Empresarial MSA (Muñoz Solé y Asociados, S.C.): 55 2575 2545 / 55 5661 3544 / 55 5661 3221 · ESGO Consultores: 56-2763-4380 · STC Contadores (Servicios Tributarios &amp; Contables, SAS de CV): +52 55 6748 3468 / +52 81 3981 0620 · AZP Despacho Contable (A&amp;ZP Consultoría Contable Fiscal): +55 1201 1499 · CC &amp; PWS Asesores: 55 5099 4826 · AS Consulting Group (ASCG): +52 55 5859 4873 / 55 5840 4611 / 55 5859 9296 · AG Consejería Empresarial Integral: 55 5848 0374 / 55 7141 2272</div></section>
+
+<footer>Generado por el kit de prospección de Estrategia Hyper · 2026-07-29 · Solo datos reales verificados con fuente.
+Los enlaces de los correos HTML pasan por el worker de tracking (https://tracking-prospectos.estrateg-ia-hyper.workers.dev); el clic en la infografía = interés fuerte.</footer>
+<script>
+function cp(btn,id){var t=document.getElementById(id);
+navigator.clipboard.writeText(t.value).then(function(){var o=btn.textContent;btn.textContent="✓ Copiado";setTimeout(function(){btn.textContent=o},1600)});}
+</script></body></html>
