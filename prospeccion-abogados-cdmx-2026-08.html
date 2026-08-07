@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prospección · Despachos de abogados · CDMX · Agosto 2026</title>
+<style>
+  :root{
+    --navy:#0A1330; --navy2:#0F1A3D; --azul:#2E5BFF; --azul-soft:#88A2FF;
+    --ink:#0B1220; --paper:#F5F7FB; --card:#fff; --line:#E4E9F2; --muted:#5A6577;
+    --ok:#12A150; --warn:#E68A00; --hot:#E5484D;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 18px}
+  header{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:38px 0 44px}
+  header .wrap{display:flex;flex-direction:column;gap:6px}
+  .kicker{color:var(--azul-soft);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:12.5px}
+  h1{font-size:30px;line-height:1.2;font-weight:800}
+  header p{color:#B9C4DA;max-width:760px;margin-top:6px}
+  .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:26px}
+  .stat{background:#ffffff10;border:1px solid #ffffff22;border-radius:12px;padding:14px}
+  .stat b{display:block;font-size:26px;font-weight:800}
+  .stat span{color:#B9C4DA;font-size:12.5px}
+  section{padding:34px 0}
+  h2{font-size:20px;margin-bottom:4px}
+  h2 + .sub{color:var(--muted);margin-bottom:18px;font-size:14px}
+  .grid2{display:grid;grid-template-columns:1.3fr 1fr;gap:22px;align-items:start}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .bar-row{display:flex;align-items:center;gap:10px;margin:9px 0;font-size:13.5px}
+  .bar-row .lbl{width:120px;color:var(--muted)}
+  .bar{flex:1;height:10px;background:#EDF1F8;border-radius:6px;overflow:hidden}
+  .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--azul),var(--azul-soft))}
+  .bar-row .num{width:26px;text-align:right;font-weight:700}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:13.5px}
+  th,td{padding:11px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+  th{background:#F0F4FB;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  tr:last-child td{border-bottom:0}
+  td.emp{font-weight:700;min-width:175px}
+  td.emp small{display:block;font-weight:500;color:var(--muted)}
+  .score{display:inline-flex;align-items:center;gap:7px;font-weight:800}
+  .score .dot{width:34px;height:8px;border-radius:5px;background:#EDF1F8;position:relative;overflow:hidden}
+  .score .dot i{position:absolute;inset:0;border-radius:5px}
+  .s-hi i{background:var(--hot)} .s-mid i{background:var(--warn)} .s-lo i{background:var(--ok)}
+  .badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11.5px;font-weight:700;white-space:nowrap}
+  .b-info{background:#E9F7EF;color:#0B7a3b} .b-tel{background:#FCEBEA;color:#B23138}
+  .b-web{background:#EEF1F6;color:#43506a} .b-noweb{background:#FFF3E0;color:#9a5b00}
+  .b-esp{background:#EDE9FE;color:#5B34C4}
+  .muted{color:var(--muted)} a{color:var(--azul);text-decoration:none} a:hover{text-decoration:underline}
+  .lead{border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:16px;background:var(--card)}
+  .lead h3{font-size:16px;margin-bottom:3px}
+  .lead .meta{font-size:12.5px;color:var(--muted);margin-bottom:10px}
+  .msg{background:#0C1533;color:#E7ECF7;border-radius:12px;padding:14px 15px;font-size:13px;white-space:pre-wrap;margin-top:10px;position:relative;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1.5}
+  .msg .tag{position:absolute;top:8px;right:10px;font-size:10.5px;color:#8AA0D6;text-transform:uppercase;letter-spacing:.05em}
+  .track{font-size:12px;color:var(--muted);margin-top:8px;word-break:break-all}
+  .track code{background:#F0F4FB;padding:1px 5px;border-radius:5px}
+  .alert{background:#FFF7E6;border:1px solid #F5D9A0;border-left:4px solid var(--warn);border-radius:10px;padding:14px 16px;margin-top:14px;font-size:13.5px}
+  .alert b{color:#8a5200}
+  .foot{background:var(--navy);color:#B9C4DA;padding:26px 0;font-size:13px}
+  .foot b{color:#fff}
+  .pill{display:inline-block;background:#ffffff14;border:1px solid #ffffff22;color:#fff;border-radius:20px;padding:3px 10px;font-size:12px;margin-right:6px}
+  @media(max-width:820px){.stats{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.tablewrap{overflow-x:auto}h1{font-size:24px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="kicker">Estrategia Hyper · Campaña de prospección · 3ª búsqueda</span>
+    <h1>Despachos de abogados · Ciudad de México</h1>
+    <p>15 prospectos reales analizados por su presencia digital, en especialidades y zonas distintas a la campaña anterior. Excluye a los 15 despachos y notarías ya contactados en julio. Solo se genera activo si hay correo verificado.</p>
+    <div class="stats">
+      <div class="stat"><b>15</b><span>Prospectos analizados</span></div>
+      <div class="stat"><b>10</b><span>Con correo (reciben activo)</span></div>
+      <div class="stat"><b>5</b><span>Solo teléfono (sin correo)</span></div>
+      <div class="stat"><b>8</b><span>Especialidades cubiertas</span></div>
+      <div class="stat"><b>0</b><span>Maquetas (todos con web)</span></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap grid2">
+    <div>
+      <h2>Resumen ejecutivo</h2>
+      <p class="sub">Nicho con brecha marcada en seguimiento y agenda. A diferencia de la campaña anterior, aquí casi todos tienen algún sitio: la venta se inclina a automatización más que a desarrollo web.</p>
+      <div class="card">
+        <strong style="font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em">Distribución por oportunidad (0–10)</strong>
+        <div style="margin-top:12px">
+          <div class="bar-row"><span class="lbl">9 · máxima</span><span class="bar"><i style="width:100%"></i></span><span class="num">3</span></div>
+          <div class="bar-row"><span class="lbl">8 · muy alta</span><span class="bar"><i style="width:67%"></i></span><span class="num">2</span></div>
+          <div class="bar-row"><span class="lbl">7 · alta</span><span class="bar"><i style="width:67%"></i></span><span class="num">2</span></div>
+          <div class="bar-row"><span class="lbl">6 · media</span><span class="bar"><i style="width:100%"></i></span><span class="num">3</span></div>
+          <div class="bar-row"><span class="lbl">5 · media-baja</span><span class="bar"><i style="width:67%"></i></span><span class="num">2</span></div>
+          <div class="bar-row"><span class="lbl">3 · baja</span><span class="bar"><i style="width:100%"></i></span><span class="num">3</span></div>
+        </div>
+      </div>
+      <div class="alert">
+        <b>Conflicto de datos por verificar.</b> CYAJE Corporativo Jurídico (Narvarte) y Zúñiga Retana y Asociados (Coyoacán) aparecen con el <b>mismo teléfono, 55 5350 4752</b>, en directorios distintos. Uno de los dos registros está equivocado. Ninguno tiene correo, así que ninguno recibe campaña; confirmar por llamada antes de usarlos.
+      </div>
+    </div>
+    <div>
+      <h2>Top 5 recomendados</h2>
+      <p class="sub">Por oportunidad y facilidad de conversión.</p>
+      <div class="card">
+        <ol style="margin-left:18px;display:flex;flex-direction:column;gap:9px;font-size:14px">
+          <li><b>L y R Soluciones Jurídicas</b> — 9/10 · penalista sin web, solo ficha de directorio. <span class="badge b-tel">llamar</span></li>
+          <li><b>Zúñiga Retana y Asociados</b> — 9/10 · corporativo en Coyoacán, sin web ni correo. <span class="badge b-tel">llamar</span></li>
+          <li><b>CYAJE Corporativo Jurídico</b> — 9/10 · laboral en Narvarte, sin web. <span class="badge b-tel">llamar</span></li>
+          <li><b>Tanús, Salazar y Azaola</b> — 8/10 · despacho de alto perfil con SSL inválido. <span class="badge b-info">correo</span></li>
+          <li><b>Abogado Inmobiliario MX</b> — 8/10 · dominio propio con "Hello world!" publicado. <span class="badge b-info">correo</span></li>
+        </ol>
+        <p class="muted" style="font-size:12.5px;margin-top:12px;border-top:1px solid var(--line);padding-top:10px">Nota: los tres de mayor score no tienen correo. El mejor prospecto <em>alcanzable por campaña de correo</em> es Tanús, Salazar y Azaola.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <h2>Tabla de prospectos</h2>
+    <p class="sub">Ordenada por oportunidad. Score alto = más necesidad del servicio.</p>
+    <div class="tablewrap">
+    <table>
+      <thead><tr>
+        <th>#</th><th>Despacho</th><th>Especialidad</th><th>Contacto</th><th>Web</th><th>Score</th><th>Activo</th><th>Problema clave</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td>01</td>
+          <td class="emp">L y R Soluciones Jurídicas<small>Iztapalapa</small></td>
+          <td><span class="badge b-esp">penal</span></td>
+          <td>55 1382 0777<br><span class="muted">— sin correo —</span></td>
+          <td><span class="badge b-noweb">Sin web</span></td>
+          <td><span class="score s-hi"><span class="dot"><i style="width:90%"></i></span>9</span></td>
+          <td><span class="badge b-tel">Solo teléfono</span></td>
+          <td>Solo existe como ficha de teléfono en un directorio</td>
+        </tr>
+        <tr>
+          <td>02</td>
+          <td class="emp">Zúñiga Retana y Asociados<small>Villa Coyoacán</small></td>
+          <td><span class="badge b-esp">corporativo</span></td>
+          <td>55 5350 4752<br><span class="muted">— sin correo —</span></td>
+          <td><span class="badge b-noweb">Sin web</span></td>
+          <td><span class="score s-hi"><span class="dot"><i style="width:90%"></i></span>9</span></td>
+          <td><span class="badge b-tel">Solo teléfono</span></td>
+          <td>Sin sitio ni correo público; teléfono en conflicto</td>
+        </tr>
+        <tr>
+          <td>03</td>
+          <td class="emp">CYAJE Corporativo Jurídico<small>Narvarte Poniente</small></td>
+          <td><span class="badge b-esp">laboral</span></td>
+          <td>55 5350 4752<br><span class="muted">— sin correo —</span></td>
+          <td><span class="badge b-noweb">Sin web</span></td>
+          <td><span class="score s-hi"><span class="dot"><i style="width:90%"></i></span>9</span></td>
+          <td><span class="badge b-tel">Solo teléfono</span></td>
+          <td>Sin sitio ni redes; teléfono en conflicto</td>
+        </tr>
+        <tr>
+          <td>04</td>
+          <td class="emp">Tanús, Salazar y Azaola<small>Del Valle</small></td>
+          <td><span class="badge b-esp">penal</span></td>
+          <td>55 1519 1644<br><span class="muted">tanus@tsalegal.mx</span></td>
+          <td><span class="badge b-web">SSL inválido</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:80%"></i></span>8</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Certificado autofirmado: "conexión no segura"</td>
+        </tr>
+        <tr>
+          <td>05</td>
+          <td class="emp">Abogado Inmobiliario MX<small>Chapultepec Morales</small></td>
+          <td><span class="badge b-esp">civil</span></td>
+          <td>55 6144 3816<br><span class="muted">info@abogadoinmobiliariomx.com</span></td>
+          <td><span class="badge b-web">WP sin terminar</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:80%"></i></span>8</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Dominio propio con "Hello world!" aún publicado</td>
+        </tr>
+        <tr>
+          <td>06</td>
+          <td class="emp">Elan Legal<small>Del Carmen, Coyoacán</small></td>
+          <td><span class="badge b-esp">prop. intelectual</span></td>
+          <td>55 9131 7642<br><span class="muted">info@elanlegal.com.mx</span></td>
+          <td><span class="badge b-web">Plantilla</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:70%"></i></span>7</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Dos dominios distintos con el mismo correo y teléfono</td>
+        </tr>
+        <tr>
+          <td>07</td>
+          <td class="emp">Maluf y Asociados<small>Lindavista, GAM</small></td>
+          <td><span class="badge b-esp">corporativo</span></td>
+          <td>55 5537 5314<br><span class="muted">maluf@live.com.mx</span></td>
+          <td><span class="badge b-web">WordPress viejo</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:70%"></i></span>7</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Correo corporativo en cuenta @live.com.mx</td>
+        </tr>
+        <tr>
+          <td>08</td>
+          <td class="emp">DIAM S.C.<small>Azcapotzalco</small></td>
+          <td><span class="badge b-esp">migratorio</span></td>
+          <td>55 1912 4567<br><span class="muted">diamscmx@gmail.com</span></td>
+          <td><span class="badge b-web">Wix</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:60%"></i></span>6</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Agenda vía Google Forms externo y correo Gmail</td>
+        </tr>
+        <tr>
+          <td>09</td>
+          <td class="emp">Ortiz &amp; Ramírez Abogados<small>Col. Florida, Á. Obregón</small></td>
+          <td><span class="badge b-esp">prop. intelectual</span></td>
+          <td>55 5524 5041<br><span class="muted">informes@gelo.com.mx</span></td>
+          <td><span class="badge b-web">Wix</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:60%"></i></span>6</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Rebranding a medias: correos y Facebook con marca vieja</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td class="emp">Gómez Zaragoza y Asociados<small>Zona Reclusorio Oriente</small></td>
+          <td><span class="badge b-esp">amparo</span></td>
+          <td>55 1134 9057<br><span class="muted">gomezzaragozayasociadosabogado@gmail.com</span></td>
+          <td><span class="badge b-web">Anticuada</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:60%"></i></span>6</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Publican tarifas pero agendan todo a mano</td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td class="emp">RB Abogados<small>Hipódromo Condesa</small></td>
+          <td><span class="badge b-esp">familiar</span></td>
+          <td>55 8778 2102<br><span class="muted">contacto@rbabogados.com.mx</span></td>
+          <td><span class="badge b-web">Funcional</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:50%"></i></span>5</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Divorcios y custodia sin agenda ni WhatsApp Business</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td class="emp">Abogados en Línea CDMX<small>Del Valle + Xochimilco</small></td>
+          <td><span class="badge b-esp">amparo</span></td>
+          <td>55 1107 0828<br><span class="muted">— sin correo —</span></td>
+          <td><span class="badge b-web">Moderna</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:50%"></i></span>5</span></td>
+          <td><span class="badge b-tel">Solo teléfono</span></td>
+          <td>No publican correo en todo el sitio</td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td class="emp">Amaya y García Abogados<small>CDMX (sin domicilio público)</small></td>
+          <td><span class="badge b-esp">civil</span></td>
+          <td>55 1231 6138<br><span class="muted">info@amayaygarciaabogados.com</span></td>
+          <td><span class="badge b-web">Moderna</span></td>
+          <td><span class="score s-lo"><span class="dot"><i style="width:30%"></i></span>3</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Ofrecen urgencias 24/7 con solo un formulario</td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td class="emp">Pérez Rangel Abogados<small>Del Valle Centro</small></td>
+          <td><span class="badge b-esp">laboral</span></td>
+          <td>55 8596 6486<br><span class="muted">atencionacliente@perezrangel.com.mx</span></td>
+          <td><span class="badge b-web">Moderna</span></td>
+          <td><span class="score s-lo"><span class="dot"><i style="width:30%"></i></span>3</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Tres sedes sin agenda ni WhatsApp centralizado</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td class="emp">Sauza &amp; Rico Abogados<small>Narvarte Poniente</small></td>
+          <td><span class="badge b-esp">migratorio</span></td>
+          <td>55 1104 5551<br><span class="muted">— sin correo —</span></td>
+          <td><span class="badge b-web">Moderna</span></td>
+          <td><span class="score s-lo"><span class="dot"><i style="width:30%"></i></span>3</span></td>
+          <td><span class="badge b-tel">Solo teléfono</span></td>
+          <td>Todo pasa por WhatsApp, sin CRM que recupere leads</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <h2>Estadísticas del nicho</h2>
+    <p class="sub">Sobre los 15 despachos analizados.</p>
+    <div class="grid2" style="grid-template-columns:repeat(4,1fr);gap:12px">
+      <div class="card"><b style="font-size:24px">20%</b><div class="muted" style="font-size:13px">sin sitio web (3 de 15)</div></div>
+      <div class="card"><b style="font-size:24px">67%</b><div class="muted" style="font-size:13px">sin agenda real con calendario (10 de 15)</div></div>
+      <div class="card"><b style="font-size:24px">33%</b><div class="muted" style="font-size:13px">de los correos usa Gmail o Live, no dominio propio</div></div>
+      <div class="card"><b style="font-size:24px">33%</b><div class="muted" style="font-size:13px">sin correo localizable (5 de 15)</div></div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <strong>Conclusión.</strong> <span class="muted">Frente a la campaña de julio, este lote está más digitalizado: casi todos tienen algún sitio, así que la venta se inclina claramente a <b>automatización</b> (agenda con calendario real, CRM y seguimiento por WhatsApp) más que a desarrollo web. Los problemas más vendibles no son de diseño sino de <b>credibilidad técnica</b>: un certificado SSL inválido, un WordPress abandonado con "Hello world!", un rebranding a medias y tres correos que aún viven en Gmail o Live. Un tercio del lote no publica correo, lo que empuja a trabajar el teléfono como canal primario para esos casos.</span>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <h2>Mensajes de contacto listos</h2>
+    <p class="sub">Español formal de México, trato de usted, firma Shmin. Cada correo lleva enlace rastreado a la infografía y píxel de apertura. <b>Los borradores quedan en Gmail; el envío lo hace usted.</b> Recomendación: 3–4 correos por día.</p>
+
+    <div class="lead">
+      <h3>04 · Tanús, Salazar y Azaola, S.C. <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">tanus@tsalegal.mx · 55 1519 1644 · penal · Del Valle</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de Tanús, Salazar y Azaola:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su despacho, noté que su sitio tsalegal.mx muestra una advertencia de "conexión no segura" por un certificado autofirmado, de modo que el navegador bloquea el acceso antes de que el cliente llegue al contenido.
+
+En un despacho penal, donde el primer contacto suele darse en una urgencia, ayudamos a cerrar esa brecha y a convertir el trabajo manual en procesos que se ejecutan solos: atención inmediata por WhatsApp, agenda de primera consulta y seguimiento de casos. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=abogados-cdmx-04-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=abogados-cdmx-04</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>05 · Abogado Inmobiliario MX <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">info@abogadoinmobiliariomx.com · 55 6144 3816 · civil/inmobiliario · Chapultepec Morales</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de Abogado Inmobiliario MX:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su despacho, noté que su dominio abogadoinmobiliariomx.com sigue mostrando la plantilla por defecto de WordPress, con la entrada de ejemplo "Hello world!" todavía publicada y los menús vacíos.
+
+Es decir, ya pagan dominio y hosting, pero quien los busca no encuentra nada que respalde su práctica. Ayudamos a despachos de la CDMX a resolver eso y a convertir el trabajo manual en procesos que se ejecutan solos: captación de consultas, agenda y seguimiento por WhatsApp. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=abogados-cdmx-05-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=abogados-cdmx-05</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>06 · Elan Legal <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">info@elanlegal.com.mx · 55 9131 7642 · propiedad intelectual · Coyoacán</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de Elan Legal:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su despacho, noté que operan dos sitios distintos que comparten el mismo correo y teléfono, y ambos usan una plantilla genérica que no comunica su especialidad real en registro de marcas.
+
+Ayudamos a despachos de la CDMX a ordenar esa presencia y, sobre todo, a convertir el trabajo manual en procesos que se ejecutan solos: agenda de consultas, atención por WhatsApp y recordatorios de los plazos de cada trámite. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=abogados-cdmx-06-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=abogados-cdmx-06</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>07 · Maluf y Asociados Abogados <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">maluf@live.com.mx · 55 5537 5314 · corporativo · Lindavista</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de Maluf y Asociados:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su despacho, noté que atienden su correo desde una cuenta @live.com.mx en lugar de un dominio propio, algo que un cliente corporativo suele notar antes de contratar.
+
+Ayudamos a despachos de la CDMX a profesionalizar ese frente y a convertir el trabajo manual en procesos que se ejecutan solos: correo corporativo, agenda de consultas y seguimiento automatizado de asuntos. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=abogados-cdmx-07-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=abogados-cdmx-07</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>08 · DIAM S.C. (Abogados Migratorios) <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">diamscmx@gmail.com · 55 1912 4567 · migratorio · Azcapotzalco</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de DIAM:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su despacho, noté que su asesoría gratuita se agenda a través de un formulario externo de Google y que el contacto llega a una cuenta de Gmail, cuando su servicio depende de proyectar solidez en trámites migratorios.
+
+Ayudamos a despachos de la CDMX a cerrar esa brecha y a convertir el trabajo manual en procesos que se ejecutan solos: correo con dominio propio, agenda integrada y recordatorios automáticos de los plazos de cada trámite. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=abogados-cdmx-08-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=abogados-cdmx-08</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>09 · Ortiz &amp; Ramírez Abogados <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">informes@gelo.com.mx · 55 5524 5041 · propiedad intelectual · Álvaro Obregón</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de Ortiz y Ramírez Abogados:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su despacho, noté que su sitio ya se presenta como Ortiz y Ramírez, pero los correos de contacto y su página de Facebook siguen con la marca anterior, Gelo Abogados PI. Para quien los investiga antes de contratar, parecen dos despachos distintos.
+
+Ayudamos a despachos de la CDMX a cerrar ese tipo de brechas y a convertir el trabajo manual en procesos que se ejecutan solos: agenda de consultas, atención por WhatsApp y recordatorios de los plazos de registro de marca. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=abogados-cdmx-09-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=abogados-cdmx-09</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>10 · Gómez Zaragoza y Asociados <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">gomezzaragozayasociadosabogado@gmail.com · 55 1134 9057 · amparo</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de Gómez Zaragoza y Asociados:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su despacho, noté que publican sus tarifas de asesoría en el sitio, lo cual es poco común y transparente, pero el agendamiento sigue siendo enteramente manual: no hay calendario ni confirmación automática.
+
+Ayudamos a despachos de la CDMX a convertir ese trabajo manual en procesos que se ejecutan solos: agenda en línea con confirmaciones, recordatorios y seguimiento de cada asunto. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=abogados-cdmx-10-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=abogados-cdmx-10</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>11 · RB Abogados <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">contacto@rbabogados.com.mx · 55 8778 2102 · familiar · Condesa</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de RB Abogados:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su despacho, noté que atienden divorcios y custodia sin una agenda en línea ni WhatsApp Business, de modo que cada primera consulta depende de que alguien conteste el teléfono o revise el formulario.
+
+En asuntos familiares, donde quien escribe suele estar en una situación urgente, ayudamos a despachos de la CDMX a convertir ese trabajo manual en procesos que se ejecutan solos: agenda con confirmación, respuesta inmediata por WhatsApp y seguimiento de cada caso. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=abogados-cdmx-11-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=abogados-cdmx-11</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>13 · Amaya y García Abogados <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">info@amayaygarciaabogados.com · 55 1231 6138 · civil · CDMX</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de Amaya y García Abogados:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su despacho, noté que anuncian atención de casos urgentes las 24 horas, pero el primer contacto depende de un formulario web: si nadie lo revisa de madrugada, la urgencia se enfría.
+
+Ayudamos a despachos de la CDMX a cerrar esa brecha y a convertir el trabajo manual en procesos que se ejecutan solos: respuesta inmediata por WhatsApp, calificación del caso y agenda con confirmación automática. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=abogados-cdmx-13-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=abogados-cdmx-13</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>14 · Pérez Rangel Abogados <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">atencionacliente@perezrangel.com.mx · 55 8596 6486 · laboral · Del Valle</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de Pérez Rangel Abogados:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su despacho, noté que operan tres sedes con teléfonos distintos, pero sin una agenda en línea ni un WhatsApp centralizado que enrute cada consulta a la oficina que corresponde.
+
+Ayudamos a despachos de la CDMX a convertir ese trabajo manual en procesos que se ejecutan solos: agenda con confirmación automática, enrutamiento de consultas entre sedes y seguimiento de cada asunto laboral por etapa. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=abogados-cdmx-14-auto</code> → /hiperautomatizacion &nbsp;·&nbsp; Píxel: <code>/p?id=abogados-cdmx-14</code></div>
+    </div>
+
+    <div class="lead" style="border-style:dashed">
+      <h3>Sin correo — contacto telefónico <span class="badge b-tel">5 prospectos</span></h3>
+      <p class="muted" style="font-size:13.5px;margin-top:6px">No entran al lote de correos por la compuerta de deliverabilidad. Si alguno comparte un correo en la llamada, se le puede generar el activo bajo demanda.</p>
+      <ul style="margin:10px 0 0 18px;font-size:13.5px;display:flex;flex-direction:column;gap:6px">
+        <li><b>01 · L y R Soluciones Jurídicas</b> — 55 1382 0777 — penal, Iztapalapa — score 9</li>
+        <li><b>02 · Zúñiga Retana y Asociados</b> — 55 5350 4752 — corporativo, Coyoacán — score 9 — <span style="color:#8a5200">teléfono en conflicto</span></li>
+        <li><b>03 · CYAJE Corporativo Jurídico</b> — 55 5350 4752 — laboral, Narvarte — score 9 — <span style="color:#8a5200">teléfono en conflicto</span></li>
+        <li><b>12 · Abogados en Línea CDMX</b> — 55 1107 0828 — amparo, Del Valle — score 5</li>
+        <li><b>15 · Sauza &amp; Rico Abogados</b> — 55 1104 5551 — migratorio, Narvarte — score 3</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<div class="foot">
+  <div class="wrap">
+    <span class="pill">Campaña abogados-cdmx-2026-08</span>
+    <span class="pill">15 prospectos</span>
+    <span class="pill">10 borradores en Gmail (sin enviar)</span>
+    <span class="pill">5 para llamada</span>
+    <br><br>
+    <b>Estrategia Hyper</b> · Hiperautomatización e infraestructura de IA · Shmin · 56 1021 1798<br>
+    <span style="opacity:.7">Datos reales verificados por WebSearch/WebFetch. El clic en un enlace es la señal fiable de interés (dispara alerta de Telegram). Enviar 3–4 correos al día para calentar el dominio.</span>
+  </div>
+</div>
+</body>
+</html>
