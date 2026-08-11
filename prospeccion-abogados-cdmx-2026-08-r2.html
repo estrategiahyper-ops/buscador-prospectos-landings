@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prospección · Abogados CDMX · Ronda 4 · Agosto 2026</title>
+<style>
+  :root{
+    --navy:#0A1330; --navy2:#0F1A3D; --azul:#2E5BFF; --azul-soft:#88A2FF;
+    --ink:#0B1220; --paper:#F5F7FB; --card:#fff; --line:#E4E9F2; --muted:#5A6577;
+    --ok:#12A150; --warn:#E68A00; --hot:#E5484D;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 18px}
+  header{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:38px 0 44px}
+  header .wrap{display:flex;flex-direction:column;gap:6px}
+  .kicker{color:var(--azul-soft);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:12.5px}
+  h1{font-size:30px;line-height:1.2;font-weight:800}
+  header p{color:#B9C4DA;max-width:780px;margin-top:6px}
+  .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:26px}
+  .stat{background:#ffffff10;border:1px solid #ffffff22;border-radius:12px;padding:14px}
+  .stat b{display:block;font-size:26px;font-weight:800}
+  .stat span{color:#B9C4DA;font-size:12.5px}
+  section{padding:34px 0}
+  h2{font-size:20px;margin-bottom:4px}
+  h2 + .sub{color:var(--muted);margin-bottom:18px;font-size:14px}
+  .grid2{display:grid;grid-template-columns:1.3fr 1fr;gap:22px;align-items:start}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .bar-row{display:flex;align-items:center;gap:10px;margin:9px 0;font-size:13.5px}
+  .bar-row .lbl{width:120px;color:var(--muted)}
+  .bar{flex:1;height:10px;background:#EDF1F8;border-radius:6px;overflow:hidden}
+  .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--azul),var(--azul-soft))}
+  .bar-row .num{width:26px;text-align:right;font-weight:700}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:13.5px}
+  th,td{padding:11px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+  th{background:#F0F4FB;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  tr:last-child td{border-bottom:0}
+  td.emp{font-weight:700;min-width:170px}
+  td.emp small{display:block;font-weight:500;color:var(--muted)}
+  .score{display:inline-flex;align-items:center;gap:7px;font-weight:800}
+  .score .dot{width:34px;height:8px;border-radius:5px;background:#EDF1F8;position:relative;overflow:hidden}
+  .score .dot i{position:absolute;inset:0;border-radius:5px}
+  .s-hi i{background:var(--hot)} .s-mid i{background:var(--warn)} .s-lo i{background:var(--ok)}
+  .badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11.5px;font-weight:700;white-space:nowrap}
+  .b-info{background:#E9F7EF;color:#0B7a3b} .b-tel{background:#FCEBEA;color:#B23138}
+  .b-esp{background:#EDE9FE;color:#5B34C4} .b-warn{background:#FFF3E0;color:#9a5b00}
+  .muted{color:var(--muted)} a{color:var(--azul);text-decoration:none} a:hover{text-decoration:underline}
+  .lead{border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:16px;background:var(--card)}
+  .lead h3{font-size:16px;margin-bottom:3px}
+  .lead .meta{font-size:12.5px;color:var(--muted);margin-bottom:10px}
+  .msg{background:#0C1533;color:#E7ECF7;border-radius:12px;padding:14px 15px;font-size:13px;white-space:pre-wrap;margin-top:10px;position:relative;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1.5}
+  .msg .tag{position:absolute;top:8px;right:10px;font-size:10.5px;color:#8AA0D6;text-transform:uppercase;letter-spacing:.05em}
+  .track{font-size:12px;color:var(--muted);margin-top:8px;word-break:break-all}
+  .track code{background:#F0F4FB;padding:1px 5px;border-radius:5px}
+  .alert{background:#FFF7E6;border:1px solid #F5D9A0;border-left:4px solid var(--warn);border-radius:10px;padding:14px 16px;margin-top:14px;font-size:13.5px}
+  .alert b{color:#8a5200}
+  .foot{background:var(--navy);color:#B9C4DA;padding:26px 0;font-size:13px}
+  .foot b{color:#fff}
+  .pill{display:inline-block;background:#ffffff14;border:1px solid #ffffff22;color:#fff;border-radius:20px;padding:3px 10px;font-size:12px;margin-right:6px}
+  @media(max-width:820px){.stats{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.tablewrap{overflow-x:auto}h1{font-size:24px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="kicker">Estrategia Hyper · Campaña de prospección · Ronda 4</span>
+    <h1>Abogados CDMX · especialidades de nicho</h1>
+    <p>15 despachos reales en nueve áreas que ninguna ronda anterior había tocado: fiscal, administrativo, comercio exterior, bancario-financiero, seguros, negligencia médica, arbitraje, derecho de autor y protección de datos. Excluye a los ~40 despachos ya contactados en las rondas previas y a todas las notarías.</p>
+    <div class="stats">
+      <div class="stat"><b>15</b><span>Prospectos analizados</span></div>
+      <div class="stat"><b>13</b><span>Borradores creados</span></div>
+      <div class="stat"><b>2</b><span>Solo teléfono (sin correo)</span></div>
+      <div class="stat"><b>9</b><span>Especialidades nuevas</span></div>
+      <div class="stat"><b>16–30</b><span>Rango de tracking_id</span></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap grid2">
+    <div>
+      <h2>Resumen ejecutivo</h2>
+      <p class="sub">Todos tienen sitio funcional, así que la venta es <b>automatización</b>, no desarrollo web. Los ganchos más fuertes son fallas de credibilidad, no de diseño.</p>
+      <div class="card">
+        <strong style="font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em">Distribución por oportunidad (0–10)</strong>
+        <div style="margin-top:12px">
+          <div class="bar-row"><span class="lbl">9 · máxima</span><span class="bar"><i style="width:25%"></i></span><span class="num">1</span></div>
+          <div class="bar-row"><span class="lbl">8 · muy alta</span><span class="bar"><i style="width:25%"></i></span><span class="num">1</span></div>
+          <div class="bar-row"><span class="lbl">7 · alta</span><span class="bar"><i style="width:75%"></i></span><span class="num">3</span></div>
+          <div class="bar-row"><span class="lbl">6 · media</span><span class="bar"><i style="width:25%"></i></span><span class="num">1</span></div>
+          <div class="bar-row"><span class="lbl">5 · media-baja</span><span class="bar"><i style="width:100%"></i></span><span class="num">4</span></div>
+          <div class="bar-row"><span class="lbl">4 · baja</span><span class="bar"><i style="width:50%"></i></span><span class="num">2</span></div>
+          <div class="bar-row"><span class="lbl">3 · muy baja</span><span class="bar"><i style="width:75%"></i></span><span class="num">3</span></div>
+        </div>
+      </div>
+      <div class="alert">
+        <b>Antes de enviar el correo de Antón Rioja (22):</b> su dirección <code>informes@antonrioja.com</code> se localizó solo en un agregador de terceros, no en su propio sitio. Conviene confirmarla por teléfono (55 9000 3966) antes de enviar, para no arriesgar un rebote que dañe la reputación del dominio que se está calentando.
+      </div>
+    </div>
+    <div>
+      <h2>Top 5 recomendados</h2>
+      <p class="sub">Por oportunidad y calidad del gancho.</p>
+      <div class="card">
+        <ol style="margin-left:18px;display:flex;flex-direction:column;gap:9px;font-size:14px">
+          <li><b>SJE Abogados</b> — 9/10 · solo un blog gratuito de WordPress.com. <span class="badge b-tel">llamar</span></li>
+          <li><b>Defensa Fiscal</b> — 8/10 · imágenes rotas y correo @yahoo. <span class="badge b-info">correo</span></li>
+          <li><b>LEX &amp; CO</b> — 7/10 · su correo oficial es un Hotmail personal. <span class="badge b-info">correo</span></li>
+          <li><b>Ortíz Linares</b> — 7/10 · sitio de 2015 en Santa Fe, sin móvil. <span class="badge b-info">correo</span></li>
+          <li><b>TRC LAW</b> — 7/10 · PI de alto valor con sitio de otra época. <span class="badge b-info">correo</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <h2>Tabla de prospectos</h2>
+    <p class="sub">Ordenada por oportunidad. Los <code>tracking_id</code> continúan la numeración de la ronda anterior (16–30) para no romper la hoja de seguimiento.</p>
+    <div class="tablewrap">
+    <table>
+      <thead><tr>
+        <th>ID</th><th>Despacho</th><th>Especialidad</th><th>Contacto</th><th>Score</th><th>Activo</th><th>Gancho</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td>16</td>
+          <td class="emp">SJE Abogados<small>Avante, Coyoacán</small></td>
+          <td><span class="badge b-esp">resp. civil</span></td>
+          <td>55 9221 6558<br><span class="muted">— sin correo —</span></td>
+          <td><span class="score s-hi"><span class="dot"><i style="width:90%"></i></span>9</span></td>
+          <td><span class="badge b-tel">Solo teléfono</span></td>
+          <td>Su única presencia es un blog gratuito de WordPress.com <span class="badge b-warn">verificación débil</span></td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td class="emp">Defensa Fiscal<small>Del Valle</small></td>
+          <td><span class="badge b-esp">fiscal</span></td>
+          <td>55 5543 5378<br><span class="muted">def_fiscal@yahoo.com.mx</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:80%"></i></span>8</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Imágenes rotas y correo genérico de Yahoo</td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td class="emp">Ortíz Linares Abogados<small>Santa Fe, Cuajimalpa</small></td>
+          <td><span class="badge b-esp">fiscal</span></td>
+          <td>55 3612 9975<br><span class="muted">contacto@ortizlinares.com</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:70%"></i></span>7</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Diseño de hace diez años, sin versión móvil</td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td class="emp">LEX &amp; CO<small>Parque San Andrés</small></td>
+          <td><span class="badge b-esp">negligencia médica</span></td>
+          <td>55 3176 9548<br><span class="muted">figueroa_zero@hotmail.com</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:70%"></i></span>7</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Su correo oficial es un Hotmail personal</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td class="emp">TRC LAW<small>Nápoles (WTC)</small></td>
+          <td><span class="badge b-esp">derecho de autor</span></td>
+          <td>55 5254 7796<br><span class="muted">info@trclaw.mx</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:70%"></i></span>7</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>PI de alto valor con sitio anticuado y sin agenda</td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td class="emp">Defensa Segura<small>Avante, Coyoacán</small></td>
+          <td><span class="badge b-esp">seguros</span></td>
+          <td>55 5679 2540<br><span class="muted">— sin correo —</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:60%"></i></span>6</span></td>
+          <td><span class="badge b-tel">Solo teléfono</span></td>
+          <td>No publican ningún correo en todo el sitio</td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td class="emp">Antón Rioja, S.C.<small>Nápoles (WTC)</small></td>
+          <td><span class="badge b-esp">comercio exterior</span></td>
+          <td>55 9000 3966<br><span class="muted">informes@antonrioja.com</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:50%"></i></span>5</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Formulario que no confirma si la consulta llegó <span class="badge b-warn">confirmar correo</span></td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td class="emp">Sandoval Abogados<small>Col. Florida, Á. Obregón</small></td>
+          <td><span class="badge b-esp">arbitraje</span></td>
+          <td>55 5661 4133<br><span class="muted">contacto@sandovalabogados.mx</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:50%"></i></span>5</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Ofrecen arbitraje sin página que lo capte</td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td class="emp">All Entertainment Abogados<small>Cuauhtémoc</small></td>
+          <td><span class="badge b-esp">entretenimiento</span></td>
+          <td>55 5683 9974<br><span class="muted">contacto@allentertainment.com.mx</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:50%"></i></span>5</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Las consultas dependen de llamar a los socios</td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td class="emp">Despacho Jurídico IK<small>Nápoles (WTC)</small></td>
+          <td><span class="badge b-esp">fiscal</span></td>
+          <td>55 9653 7328<br><span class="muted">contacto@despachojuridicoik.com</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:50%"></i></span>5</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Su evaluación gratuita no se puede agendar en línea</td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td class="emp">Aja Cadena Abogados<small>Roma Norte</small></td>
+          <td><span class="badge b-esp">bancario</span></td>
+          <td>55 2950 7437<br><span class="muted">contacto@ajacadena.com</span></td>
+          <td><span class="score s-lo"><span class="dot"><i style="width:40%"></i></span>4</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Aviso público de suplantación de su domicilio</td>
+        </tr>
+        <tr>
+          <td>27</td>
+          <td class="emp">García Barragán Abogados<small>Col. Cuauhtémoc</small></td>
+          <td><span class="badge b-esp">protección de datos</span></td>
+          <td>55 5703 3020<br><span class="muted">info@garbar.mx</span></td>
+          <td><span class="score s-lo"><span class="dot"><i style="width:40%"></i></span>4</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Protección de datos sin página propia</td>
+        </tr>
+        <tr>
+          <td>28</td>
+          <td class="emp">Legatus<small>San Pedro de los Pinos</small></td>
+          <td><span class="badge b-esp">seguros</span></td>
+          <td>800 400 0021<br><span class="muted">hola@legatus.mx</span></td>
+          <td><span class="score s-lo"><span class="dot"><i style="width:30%"></i></span>3</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Portal para casos abiertos, nada que capte los nuevos</td>
+        </tr>
+        <tr>
+          <td>29</td>
+          <td class="emp">Alegal<small>Guadalupe Inn</small></td>
+          <td><span class="badge b-esp">licitaciones</span></td>
+          <td>55 5605 5868<br><span class="muted">direccion@alegal.com.mx</span></td>
+          <td><span class="score s-lo"><span class="dot"><i style="width:30%"></i></span>3</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Plazos de licitación gestionados a mano por WhatsApp</td>
+        </tr>
+        <tr>
+          <td>30</td>
+          <td class="emp">PSIC Integral Consulting<small>Nápoles</small></td>
+          <td><span class="badge b-esp">administrativo</span></td>
+          <td>55 5919 1407<br><span class="muted">contacto@integralconsulting.com.mx</span></td>
+          <td><span class="score s-lo"><span class="dot"><i style="width:30%"></i></span>3</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Cuatro redes activas y ninguna agenda conectada</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <h2>Descartados y repuesto</h2>
+    <p class="sub">Transparencia sobre lo que quedó fuera y por qué.</p>
+    <div class="grid2">
+      <div class="card">
+        <strong>Descartados por falta de canal de contacto</strong>
+        <p class="muted" style="font-size:13.5px;margin-top:8px">Ambos habrían sido score 9 —máxima necesidad— pero no son accionables: sus dominios están caídos (NXDOMAIN confirmado por DNS el 11 de agosto) y no se pudo verificar ni teléfono ni correo en ninguna fuente primaria. No se puede ni escribirles ni llamarles.</p>
+        <ul style="margin:10px 0 0 18px;font-size:13.5px;display:flex;flex-direction:column;gap:5px">
+          <li><b>HMF Abogados</b> — fiscal/administrativo, Santa Fe — <code>hmfabogados.com</code> caído</li>
+          <li><b>Bufete de Defensa Fiscal, S.C.</b> — fiscal, Prado Coapa, Tlalpan — <code>bufetededefensafiscal.com</code> caído</li>
+        </ul>
+      </div>
+      <div class="card">
+        <strong>Repuesto verificado disponible</strong>
+        <p class="muted" style="font-size:13.5px;margin-top:8px">Encontrados en la búsqueda de reemplazo, con sitio activo y SSL válido. No entraron a los 15 pero están listos si quiere extender la campaña.</p>
+        <ul style="margin:10px 0 0 18px;font-size:13.5px;display:flex;flex-direction:column;gap:5px">
+          <li><b>DCLGM (García y Martínez)</b> — administrativo, Coyoacán — 55 4633 5346 — score 7, sin correo publicado</li>
+          <li><b>DZ Abogados</b> — fiscal, Del Valle Centro — contacto@dzabogados.com.mx — score 4</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <h2>Estadísticas del nicho</h2>
+    <p class="sub">Sobre los 15 despachos de esta ronda.</p>
+    <div class="grid2" style="grid-template-columns:repeat(4,1fr);gap:12px">
+      <div class="card"><b style="font-size:24px">100%</b><div class="muted" style="font-size:13px">sin agenda de citas en línea (15 de 15)</div></div>
+      <div class="card"><b style="font-size:24px">0%</b><div class="muted" style="font-size:13px">sin sitio web: ninguno, por eso no hubo maquetas</div></div>
+      <div class="card"><b style="font-size:24px">13%</b><div class="muted" style="font-size:13px">usa Yahoo o Hotmail como correo oficial (2 de 15)</div></div>
+      <div class="card"><b style="font-size:24px">4</b><div class="muted" style="font-size:13px">despachos en el WTC de Nápoles o Santa Fe</div></div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <strong>Conclusión.</strong> <span class="muted">Al bajar a especialidades de nicho —fiscal, aduanal, seguros, PI— aparecen despachos con más recursos y mejores sitios que en las rondas generalistas: ninguno carece de web y por eso esta ronda no produjo maquetas. Pero <b>ninguno de los quince resuelve la agenda de citas en línea</b>, lo que hace de la automatización un gancho universal y sin excepciones. Los mejores argumentos de venta ya no son estéticos sino de credibilidad concreta: un correo de Hotmail en un despacho de negligencia médica, imágenes rotas en uno de defensa fiscal, un aviso de suplantación de domicilio, un CTA de evaluación gratuita que no se puede agendar. Cada uno es verificable y difícil de refutar.</span>
+    </div>
+  </div>
+</section>
+
+<div class="foot">
+  <div class="wrap">
+    <span class="pill">Campaña abogados-cdmx-2026-08-r2</span>
+    <span class="pill">Ronda 4</span>
+    <span class="pill">15 prospectos</span>
+    <span class="pill">13 borradores en Gmail (sin enviar)</span>
+    <span class="pill">2 para llamada</span>
+    <br><br>
+    <b>Estrategia Hyper</b> · Hiperautomatización e infraestructura de IA · Shmin · 56 1021 1798<br>
+    <span style="opacity:.7">Datos reales verificados por WebSearch/WebFetch y curl. El clic en un enlace es la señal fiable de interés (dispara alerta de Telegram). Enviar 3–4 correos al día para calentar el dominio.</span>
+  </div>
+</div>
+</body>
+</html>
