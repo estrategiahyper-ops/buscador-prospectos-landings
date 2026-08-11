@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prospección · Contadores CDMX · Ronda 3 · Agosto 2026</title>
+<style>
+  :root{
+    --navy:#0A1330; --navy2:#0F1A3D; --azul:#2E5BFF; --azul-soft:#88A2FF;
+    --ink:#0B1220; --paper:#F5F7FB; --card:#fff; --line:#E4E9F2; --muted:#5A6577;
+    --ok:#12A150; --warn:#E68A00; --hot:#E5484D;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 18px}
+  header{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:38px 0 44px}
+  header .wrap{display:flex;flex-direction:column;gap:6px}
+  .kicker{color:var(--azul-soft);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:12.5px}
+  h1{font-size:30px;line-height:1.2;font-weight:800}
+  header p{color:#B9C4DA;max-width:780px;margin-top:6px}
+  .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:26px}
+  .stat{background:#ffffff10;border:1px solid #ffffff22;border-radius:12px;padding:14px}
+  .stat b{display:block;font-size:26px;font-weight:800}
+  .stat span{color:#B9C4DA;font-size:12.5px}
+  section{padding:34px 0}
+  h2{font-size:20px;margin-bottom:4px}
+  h2 + .sub{color:var(--muted);margin-bottom:18px;font-size:14px}
+  .grid2{display:grid;grid-template-columns:1.3fr 1fr;gap:22px;align-items:start}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .bar-row{display:flex;align-items:center;gap:10px;margin:9px 0;font-size:13.5px}
+  .bar-row .lbl{width:120px;color:var(--muted)}
+  .bar{flex:1;height:10px;background:#EDF1F8;border-radius:6px;overflow:hidden}
+  .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--azul),var(--azul-soft))}
+  .bar-row .num{width:26px;text-align:right;font-weight:700}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:13.5px}
+  th,td{padding:11px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+  th{background:#F0F4FB;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  tr:last-child td{border-bottom:0}
+  td.emp{font-weight:700;min-width:170px}
+  td.emp small{display:block;font-weight:500;color:var(--muted)}
+  .score{display:inline-flex;align-items:center;gap:7px;font-weight:800}
+  .score .dot{width:34px;height:8px;border-radius:5px;background:#EDF1F8;position:relative;overflow:hidden}
+  .score .dot i{position:absolute;inset:0;border-radius:5px}
+  .s-hi i{background:var(--hot)} .s-mid i{background:var(--warn)} .s-lo i{background:var(--ok)}
+  .badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11.5px;font-weight:700;white-space:nowrap}
+  .b-info{background:#E9F7EF;color:#0B7a3b} .b-tel{background:#FCEBEA;color:#B23138}
+  .b-esp{background:#EDE9FE;color:#5B34C4} .b-warn{background:#FFF3E0;color:#9a5b00}
+  .b-ssl{background:#FCEBEA;color:#B23138}
+  .muted{color:var(--muted)} a{color:var(--azul);text-decoration:none} a:hover{text-decoration:underline}
+  .lead{border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:16px;background:var(--card)}
+  .lead h3{font-size:16px;margin-bottom:3px}
+  .lead .meta{font-size:12.5px;color:var(--muted);margin-bottom:10px}
+  .msg{background:#0C1533;color:#E7ECF7;border-radius:12px;padding:14px 15px;font-size:13px;white-space:pre-wrap;margin-top:10px;position:relative;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1.5}
+  .msg .tag{position:absolute;top:8px;right:10px;font-size:10.5px;color:#8AA0D6;text-transform:uppercase;letter-spacing:.05em}
+  .track{font-size:12px;color:var(--muted);margin-top:8px;word-break:break-all}
+  .track code{background:#F0F4FB;padding:1px 5px;border-radius:5px}
+  .alert{background:#FFF7E6;border:1px solid #F5D9A0;border-left:4px solid var(--warn);border-radius:10px;padding:14px 16px;margin-top:14px;font-size:13.5px}
+  .alert b{color:#8a5200}
+  .foot{background:var(--navy);color:#B9C4DA;padding:26px 0;font-size:13px}
+  .foot b{color:#fff}
+  .pill{display:inline-block;background:#ffffff14;border:1px solid #ffffff22;color:#fff;border-radius:20px;padding:3px 10px;font-size:12px;margin-right:6px}
+  @media(max-width:820px){.stats{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.tablewrap{overflow-x:auto}h1{font-size:24px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="kicker">Estrategia Hyper · 5ª campaña · Contadores ronda 3</span>
+    <h1>Despachos contables · Ciudad de México</h1>
+    <p>14 despachos reales en ángulos que ninguna ronda anterior había trabajado: nómina y REPSE, auditoría y dictamen, precios de transferencia, seguridad social, RESICO, plataformas digitales y devoluciones de IVA. Excluye a los 34 despachos contables ya contactados y prioriza alcaldías de periferia.</p>
+    <div class="stats">
+      <div class="stat"><b>14</b><span>Prospectos analizados</span></div>
+      <div class="stat"><b>10</b><span>Borradores creados</span></div>
+      <div class="stat"><b>4</b><span>Solo teléfono (sin correo)</span></div>
+      <div class="stat"><b>3</b><span>Con HTTPS roto</span></div>
+      <div class="stat"><b>34–47</b><span>Rango de tracking_id</span></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap grid2">
+    <div>
+      <h2>Resumen ejecutivo</h2>
+      <p class="sub">La mejor cosecha de ganchos de las cinco campañas: fallas técnicas duras, verificables con una sola visita al sitio.</p>
+      <div class="card">
+        <strong style="font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em">Distribución por oportunidad (0–10)</strong>
+        <div style="margin-top:12px">
+          <div class="bar-row"><span class="lbl">10 · máxima</span><span class="bar"><i style="width:33%"></i></span><span class="num">1</span></div>
+          <div class="bar-row"><span class="lbl">9 · muy alta</span><span class="bar"><i style="width:100%"></i></span><span class="num">3</span></div>
+          <div class="bar-row"><span class="lbl">8 · alta</span><span class="bar"><i style="width:100%"></i></span><span class="num">3</span></div>
+          <div class="bar-row"><span class="lbl">7 · media-alta</span><span class="bar"><i style="width:33%"></i></span><span class="num">1</span></div>
+          <div class="bar-row"><span class="lbl">5 · media</span><span class="bar"><i style="width:100%"></i></span><span class="num">3</span></div>
+          <div class="bar-row"><span class="lbl">4 · baja</span><span class="bar"><i style="width:100%"></i></span><span class="num">3</span></div>
+        </div>
+      </div>
+      <div class="alert">
+        <b>Tres despachos con HTTPS roto.</b> DNL (certificado autofirmado), Norma Chávez y Castillo Zumaya (falla de handshake) tienen sitios que el navegador marca como <b>no seguros</b> o que directamente no cargan por HTTPS. Es el gancho más duro que ha dado este proyecto: se comprueba en cinco segundos y le cuesta clientes reales al despacho hoy mismo.
+      </div>
+    </div>
+    <div>
+      <h2>Top 5 recomendados</h2>
+      <p class="sub">Por oportunidad y fuerza del gancho.</p>
+      <div class="card">
+        <ol style="margin-left:18px;display:flex;flex-direction:column;gap:9px;font-size:14px">
+          <li><b>Despacho Fiscal Gama</b> — 10/10 · sin web ni correo, solo directorio. <span class="badge b-tel">llamar</span></li>
+          <li><b>Norma Chávez</b> — 9/10 · HTTPS roto + correo Hotmail. <span class="badge b-info">correo</span></li>
+          <li><b>Castillo Zumaya</b> — 9/10 · HTTPS roto + correo Yahoo, 30 años de trayectoria. <span class="badge b-info">correo</span></li>
+          <li><b>Brum Barrón y Asociados</b> — 9/10 · 11–30 empleados y ninguna web. <span class="badge b-tel">llamar</span></li>
+          <li><b>DNL</b> — 8/10 · certificado autofirmado, advertencia en el navegador. <span class="badge b-info">correo</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <h2>Tabla de prospectos</h2>
+    <p class="sub">Ordenada por oportunidad. Los <code>tracking_id</code> continúan la numeración de las rondas anteriores (34–47).</p>
+    <div class="tablewrap">
+    <table>
+      <thead><tr>
+        <th>ID</th><th>Despacho</th><th>Especialidad</th><th>Contacto</th><th>Web</th><th>Score</th><th>Activo</th><th>Gancho</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td>34</td>
+          <td class="emp">Despacho Contable Fiscal Gama<small>Escuadrón 201, Iztapalapa</small></td>
+          <td><span class="badge b-esp">RESICO</span></td>
+          <td>55 7864 4673<br><span class="muted">— sin correo —</span></td>
+          <td><span class="badge b-warn">Sin web</span></td>
+          <td><span class="score s-hi"><span class="dot"><i style="width:100%"></i></span>10</span></td>
+          <td><span class="badge b-tel">Solo teléfono</span></td>
+          <td>Sin web ni correo; solo una ficha de directorio <span class="badge b-warn">verificación débil</span></td>
+        </tr>
+        <tr>
+          <td>35</td>
+          <td class="emp">Norma Chávez<small>Bosque Residencial del Sur, Xochimilco</small></td>
+          <td><span class="badge b-esp">nómina/REPSE</span></td>
+          <td>55 5555 8664<br><span class="muted">carlos5910@hotmail.com</span></td>
+          <td><span class="badge b-ssl">HTTPS roto</span></td>
+          <td><span class="score s-hi"><span class="dot"><i style="width:90%"></i></span>9</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Sitio sin HTTPS funcional y correo de Hotmail</td>
+        </tr>
+        <tr>
+          <td>36</td>
+          <td class="emp">Castillo Zumaya Contadores<small>Del Valle Centro, Benito Juárez</small></td>
+          <td><span class="badge b-esp">precios de transf.</span></td>
+          <td>55 5543 0226<br><span class="muted">despcas@yahoo.com.mx</span></td>
+          <td><span class="badge b-ssl">HTTPS roto</span></td>
+          <td><span class="score s-hi"><span class="dot"><i style="width:90%"></i></span>9</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>30 años de experiencia con plantilla obsoleta y correo Yahoo</td>
+        </tr>
+        <tr>
+          <td>37</td>
+          <td class="emp">Brum Barrón y Asociados<small>Hacienda de Coyoacán</small></td>
+          <td><span class="badge b-esp">general</span></td>
+          <td>55 5671 4653<br><span class="muted">— sin correo —</span></td>
+          <td><span class="badge b-warn">Sin web</span></td>
+          <td><span class="score s-hi"><span class="dot"><i style="width:90%"></i></span>9</span></td>
+          <td><span class="badge b-tel">Solo teléfono</span></td>
+          <td>Despacho de 11–30 personas sin sitio ni correo propio</td>
+        </tr>
+        <tr>
+          <td>38</td>
+          <td class="emp">Despacho Navarro López (DNL)<small>Azcapotzalco</small></td>
+          <td><span class="badge b-esp">auditoría</span></td>
+          <td>55 5082 6748<br><span class="muted">dnl@dnl.com.mx</span></td>
+          <td><span class="badge b-ssl">SSL autofirmado</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:80%"></i></span>8</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>El navegador muestra advertencia de seguridad</td>
+        </tr>
+        <tr>
+          <td>39</td>
+          <td class="emp">Despacho Muñoz Reyes<small>Las Peñas, Iztapalapa</small></td>
+          <td><span class="badge b-esp">general</span></td>
+          <td>55 2608 8885<br><span class="muted">contacto@despachomunozreyes.com.mx</span></td>
+          <td><span class="badge b-warn">Joomla viejo</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:80%"></i></span>8</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>"Sistema de Tickets 2022" roto y relleno sin limpiar</td>
+        </tr>
+        <tr>
+          <td>40</td>
+          <td class="emp">Servicios Corporativos en Contaduría<small>Lindavista, GAM</small></td>
+          <td><span class="badge b-esp">dictamen IMSS</span></td>
+          <td>55 5753 9432<br><span class="muted">— sin correo —</span></td>
+          <td><span class="badge b-warn">Menús rotos</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:80%"></i></span>8</span></td>
+          <td><span class="badge b-tel">Solo teléfono</span></td>
+          <td>Enlaces del menú que van a "#" y ningún correo publicado</td>
+        </tr>
+        <tr>
+          <td>41</td>
+          <td class="emp">ACFMX<small>Agrícola Oriental, Iztacalco</small></td>
+          <td><span class="badge b-esp">devoluciones IVA</span></td>
+          <td>55 2235 5923<br><span class="muted">alejandra@acfmx.com</span></td>
+          <td><span class="badge b-warn">Pre-2018</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:70%"></i></span>7</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Iconos de redes que no llevan a ningún enlace</td>
+        </tr>
+        <tr>
+          <td>42</td>
+          <td class="emp">Arguet Consultoría<small>Clavería, Azcapotzalco</small></td>
+          <td><span class="badge b-esp">nómina/RESICO</span></td>
+          <td>55 2158 3379<br><span class="muted">hola@arguet.com.mx</span></td>
+          <td><span class="muted">Funcional</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:50%"></i></span>5</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Solo atienden con cita previa, sin agenda en línea</td>
+        </tr>
+        <tr>
+          <td>43</td>
+          <td class="emp">Tributalia<small>Constitución de 1917, Iztapalapa</small></td>
+          <td><span class="badge b-esp">nómina/REPSE</span></td>
+          <td>55 1310 2947<br><span class="muted">tributaliacontacto@gmail.com</span></td>
+          <td><span class="muted">Moderna</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:50%"></i></span>5</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Tienen dominio propio pero atienden desde Gmail</td>
+        </tr>
+        <tr>
+          <td>44</td>
+          <td class="emp">Despacho Fiscalita<small>Progreso Tizapán, Á. Obregón</small></td>
+          <td><span class="badge b-esp">pensiones IMSS</span></td>
+          <td>55 4037 7406<br><span class="muted">— sin correo —</span></td>
+          <td><span class="muted">Moderna</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:50%"></i></span>5</span></td>
+          <td><span class="badge b-tel">Solo teléfono</span></td>
+          <td>No publican correo en ningún canal, solo WhatsApp</td>
+        </tr>
+        <tr>
+          <td>45</td>
+          <td class="emp">GC &amp; A Contadores<small>Girasoles III, Coyoacán</small></td>
+          <td><span class="badge b-esp">precios de transf.</span></td>
+          <td>56 3987 0116<br><span class="muted">contacto@gcyacontadores.com</span></td>
+          <td><span class="muted">Moderna</span></td>
+          <td><span class="score s-lo"><span class="dot"><i style="width:40%"></i></span>4</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Sin portal donde el cliente siga su expediente</td>
+        </tr>
+        <tr>
+          <td>46</td>
+          <td class="emp">Camacho Limón Contadores<small>CDMX (sin domicilio público)</small></td>
+          <td><span class="badge b-esp">REPSE/IMSS</span></td>
+          <td>55 3275 3057<br><span class="muted">fernando@camacholimon.com</span></td>
+          <td><span class="muted">Moderna</span></td>
+          <td><span class="score s-lo"><span class="dot"><i style="width:40%"></i></span>4</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>No publican dirección física, resta confianza y SEO local</td>
+        </tr>
+        <tr>
+          <td>47</td>
+          <td class="emp">Contador RESICO<small>sin domicilio (100% en línea)</small></td>
+          <td><span class="badge b-esp">plataformas</span></td>
+          <td>56 6248 8511<br><span class="muted">ayuda@contadorresico.com.mx</span></td>
+          <td><span class="muted">Landing</span></td>
+          <td><span class="score s-lo"><span class="dot"><i style="width:40%"></i></span>4</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Conductores mandan comprobantes por WhatsApp cada mes <span class="badge b-warn">CDMX sin confirmar</span></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <h2>Notas de calidad de datos</h2>
+    <p class="sub">Lo que quedó fuera y lo que conviene confirmar antes de usar.</p>
+    <div class="grid2">
+      <div class="card">
+        <strong>Descartado</strong>
+        <p class="muted" style="font-size:13.5px;margin-top:8px">Una ficha de directorio en Tlalpan sin nombre comercial identificado, verificada en una sola fuente y cuyo único contacto era un Hotmail personal. No es defendible enviar un correo en frío a una cuenta personal de una entidad que no se pudo identificar.</p>
+        <p class="muted" style="font-size:13.5px;margin-top:10px"><b>Arguet Consultoría</b> apareció duplicado: ambos investigadores lo encontraron. Se conservó un solo registro. Le asignaron scores distintos (4 y 6) describiendo el mismo sitio de forma contradictoria; se reconcilió en 5.</p>
+      </div>
+      <div class="card">
+        <strong>Confirmar antes de usar</strong>
+        <ul style="margin:8px 0 0 18px;font-size:13.5px;display:flex;flex-direction:column;gap:6px" class="muted">
+          <li><b>Gama (34):</b> dirección y teléfono de una sola ficha de directorio. Confirmar identidad y vigencia en la llamada.</li>
+          <li><b>Brum Barrón (37):</b> verificación moderada — teléfono y domicilio cruzados en tres directorios, pero sin sitio propio.</li>
+          <li><b>Camacho Limón (46):</b> no mencionar una ubicación concreta en el mensaje; no se pudo confirmar la alcaldía.</li>
+          <li><b>Contador RESICO (47):</b> no confirma domicilio ni que opere desde CDMX (se presenta como 100% en línea, cobertura nacional).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <h2>Estadísticas del nicho</h2>
+    <p class="sub">Sobre los 14 despachos de esta ronda.</p>
+    <div class="grid2" style="grid-template-columns:repeat(4,1fr);gap:12px">
+      <div class="card"><b style="font-size:24px">100%</b><div class="muted" style="font-size:13px">sin portal de cliente ni agenda real (14 de 14)</div></div>
+      <div class="card"><b style="font-size:24px">21%</b><div class="muted" style="font-size:13px">con HTTPS roto o inválido (3 de 14)</div></div>
+      <div class="card"><b style="font-size:24px">30%</b><div class="muted" style="font-size:13px">de los correos usa Gmail, Yahoo o Hotmail (3 de 10)</div></div>
+      <div class="card"><b style="font-size:24px">29%</b><div class="muted" style="font-size:13px">sin correo localizable (4 de 14)</div></div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <strong>Conclusión.</strong> <span class="muted">Los contadores son el mejor nicho de las cinco campañas y por una razón estructural: su trabajo <em>es</em> repetitivo y con fecha límite. Cada mes persiguen los mismos documentos a los mismos clientes, y <b>ninguno de los catorce</b> tiene un portal o una agenda real que lo resuelva — la promesa de la automatización aterriza sola, sin necesidad de explicarla. Encima, la salud técnica es la peor vista hasta ahora: <b>tres sitios con HTTPS roto</b> (uno de ellos en un despacho que presume treinta años de trayectoria), un "sistema de tickets" abandonado desde 2022, menús que llevan a enlaces vacíos e iconos de redes puramente decorativos. Son fallas que se comprueban en segundos y que el prospecto no puede negar.</span>
+    </div>
+  </div>
+</section>
+
+<div class="foot">
+  <div class="wrap">
+    <span class="pill">Campaña contadores-cdmx-2026-08</span>
+    <span class="pill">5ª campaña del proyecto</span>
+    <span class="pill">14 prospectos</span>
+    <span class="pill">10 borradores en Gmail (sin enviar)</span>
+    <span class="pill">4 para llamada</span>
+    <br><br>
+    <b>Estrategia Hyper</b> · Hiperautomatización e infraestructura de IA · Shmin · 56 1021 1798<br>
+    <span style="opacity:.7">Datos reales verificados por WebSearch/WebFetch y curl. El clic en un enlace es la señal fiable de interés (dispara alerta de Telegram). Enviar 3–4 correos al día para calentar el dominio.</span>
+  </div>
+</div>
+</body>
+</html>
