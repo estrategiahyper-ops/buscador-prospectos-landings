@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prospección · Clínicas dentales CDMX · Agosto 2026</title>
+<style>
+  :root{--navy:#0A1330;--navy2:#0F1A3D;--azul:#2E5BFF;--azul-soft:#88A2FF;
+    --ink:#0B1220;--paper:#F5F7FB;--card:#fff;--line:#E4E9F2;--muted:#5A6577;
+    --ok:#12A150;--warn:#E68A00;--hot:#E5484D;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.55}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 18px}
+  header{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:38px 0 44px}
+  header .wrap{display:flex;flex-direction:column;gap:6px}
+  .kicker{color:var(--azul-soft);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:12.5px}
+  h1{font-size:30px;line-height:1.2;font-weight:800}
+  header p{color:#B9C4DA;max-width:790px;margin-top:6px}
+  .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:26px}
+  .stat{background:#ffffff10;border:1px solid #ffffff22;border-radius:12px;padding:14px}
+  .stat b{display:block;font-size:26px;font-weight:800}
+  .stat span{color:#B9C4DA;font-size:12.5px}
+  section{padding:34px 0}
+  h2{font-size:20px;margin-bottom:4px}
+  h2 + .sub{color:var(--muted);margin-bottom:18px;font-size:14px}
+  .grid2{display:grid;grid-template-columns:1.3fr 1fr;gap:22px;align-items:start}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .bar-row{display:flex;align-items:center;gap:10px;margin:9px 0;font-size:13.5px}
+  .bar-row .lbl{width:120px;color:var(--muted)}
+  .bar{flex:1;height:10px;background:#EDF1F8;border-radius:6px;overflow:hidden}
+  .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--azul),var(--azul-soft))}
+  .bar-row .num{width:26px;text-align:right;font-weight:700}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:13.5px}
+  th,td{padding:11px 12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+  th{background:#F0F4FB;font-size:11.5px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+  tr:last-child td{border-bottom:0}
+  td.emp{font-weight:700;min-width:165px}
+  td.emp small{display:block;font-weight:500;color:var(--muted)}
+  .score{display:inline-flex;align-items:center;gap:7px;font-weight:800}
+  .score .dot{width:34px;height:8px;border-radius:5px;background:#EDF1F8;position:relative;overflow:hidden}
+  .score .dot i{position:absolute;inset:0;border-radius:5px}
+  .s-hi i{background:var(--hot)} .s-mid i{background:var(--warn)} .s-lo i{background:var(--ok)}
+  .badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:11.5px;font-weight:700;white-space:nowrap}
+  .b-demo{background:#E7EDFF;color:#1F3FB0} .b-info{background:#E9F7EF;color:#0B7a3b} .b-tel{background:#FCEBEA;color:#B23138}
+  .b-esp{background:#EDE9FE;color:#5B34C4} .b-warn{background:#FFF3E0;color:#9a5b00}
+  .muted{color:var(--muted)} a{color:var(--azul);text-decoration:none} a:hover{text-decoration:underline}
+  .lead{border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:16px;background:var(--card)}
+  .lead h3{font-size:16px;margin-bottom:3px}
+  .lead .meta{font-size:12.5px;color:var(--muted);margin-bottom:10px}
+  .msg{background:#0C1533;color:#E7ECF7;border-radius:12px;padding:14px 15px;font-size:13px;white-space:pre-wrap;margin-top:10px;position:relative;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;line-height:1.5}
+  .msg .tag{position:absolute;top:8px;right:10px;font-size:10.5px;color:#8AA0D6;text-transform:uppercase;letter-spacing:.05em}
+  .track{font-size:12px;color:var(--muted);margin-top:8px;word-break:break-all}
+  .track code{background:#F0F4FB;padding:1px 5px;border-radius:5px}
+  .alert{background:#FFF7E6;border:1px solid #F5D9A0;border-left:4px solid var(--warn);border-radius:10px;padding:14px 16px;margin-top:14px;font-size:13.5px}
+  .alert b{color:#8a5200}
+  .foot{background:var(--navy);color:#B9C4DA;padding:26px 0;font-size:13px}
+  .foot b{color:#fff}
+  .pill{display:inline-block;background:#ffffff14;border:1px solid #ffffff22;color:#fff;border-radius:20px;padding:3px 10px;font-size:12px;margin-right:6px}
+  @media(max-width:820px){.stats{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.tablewrap{overflow-x:auto}h1{font-size:24px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <span class="kicker">Estrategia Hyper · 6ª campaña · Clínicas dentales</span>
+    <h1>Clínicas y consultorios dentales · CDMX</h1>
+    <p>15 clínicas reales en nueve especialidades y trece alcaldías. Primer sector nuevo del proyecto y primera campaña en cuatro rondas que vuelve a producir maquetas: cuatro clínicas sin sitio web funcional reciben propuesta de página además de la infografía.</p>
+    <div class="stats">
+      <div class="stat"><b>15</b><span>Clínicas analizadas</span></div>
+      <div class="stat"><b>12</b><span>Borradores creados</span></div>
+      <div class="stat"><b>4</b><span>Maquetas generadas</span></div>
+      <div class="stat"><b>3</b><span>Solo teléfono</span></div>
+      <div class="stat"><b>13/15</b><span>Sin agenda en línea</span></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap grid2">
+    <div>
+      <h2>Resumen ejecutivo</h2>
+      <p class="sub">El sector donde la automatización se explica sola: una cita perdida es dinero contable y los recordatorios la recuperan.</p>
+      <div class="card">
+        <strong style="font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em">Distribución por oportunidad (0–10)</strong>
+        <div style="margin-top:12px">
+          <div class="bar-row"><span class="lbl">10 · máxima</span><span class="bar"><i style="width:25%"></i></span><span class="num">1</span></div>
+          <div class="bar-row"><span class="lbl">9 · muy alta</span><span class="bar"><i style="width:75%"></i></span><span class="num">3</span></div>
+          <div class="bar-row"><span class="lbl">8 · alta</span><span class="bar"><i style="width:50%"></i></span><span class="num">2</span></div>
+          <div class="bar-row"><span class="lbl">7 · media-alta</span><span class="bar"><i style="width:25%"></i></span><span class="num">1</span></div>
+          <div class="bar-row"><span class="lbl">6 · media</span><span class="bar"><i style="width:100%"></i></span><span class="num">4</span></div>
+          <div class="bar-row"><span class="lbl">5 · media-baja</span><span class="bar"><i style="width:50%"></i></span><span class="num">2</span></div>
+          <div class="bar-row"><span class="lbl">3 · baja</span><span class="bar"><i style="width:50%"></i></span><span class="num">2</span></div>
+        </div>
+      </div>
+      <div class="alert">
+        <b>Los cuatro prospectos con maqueta necesitan confirmación telefónica del correo antes de enviar.</b> Es la advertencia más importante de esta campaña. Facebook e Instagram bloquean el acceso automatizado y muchos consultorios viven ahí, así que sus correos se obtuvieron de agregadores (Doctoralia, AgendaPro, MexicoDentistas, Waze) en vez de fuente primaria. Un rebote perjudica la reputación del dominio que está calentando. Una llamada breve confirma el correo y además abre la conversación.
+      </div>
+    </div>
+    <div>
+      <h2>Top 5 recomendados</h2>
+      <p class="sub">Por oportunidad y fuerza del gancho.</p>
+      <div class="card">
+        <ol style="margin-left:18px;display:flex;flex-direction:column;gap:9px;font-size:14px">
+          <li><b>COA Azcapotzalco</b> — 10/10 · 15 años y miles de seguidores, sin web. <span class="badge b-demo">maqueta</span></li>
+          <li><b>Iztacalco Consultorio Dental</b> — 9/10 · solo Facebook y Doctoralia. <span class="badge b-demo">maqueta</span></li>
+          <li><b>Central de Sonrisas</b> — 9/10 · sucursales sin sitio que las distinga. <span class="badge b-demo">maqueta</span></li>
+          <li><b>Clínica Dental Novadent</b> — 9/10 · Centro histórico, sin web ni correo. <span class="badge b-tel">llamar</span></li>
+          <li><b>Odontek</b> — 8/10 · dominio caído, Google manda a un enlace muerto. <span class="badge b-demo">maqueta</span></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+<section style="padding-top:6px">
+  <div class="wrap">
+    <h2>Tabla de prospectos</h2>
+    <p class="sub">Ordenada por oportunidad. Sector nuevo, así que la numeración arranca en <code>dentistas-cdmx-01</code>.</p>
+    <div class="tablewrap">
+    <table>
+      <thead><tr>
+        <th>ID</th><th>Clínica</th><th>Especialidad</th><th>Contacto</th><th>Web</th><th>Score</th><th>Activo</th><th>Gancho</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>01</td>
+          <td class="emp">COA Odontología Azcapotzalco<small>Col. del Maestro, Azcapotzalco</small></td>
+          <td><span class="badge b-esp">general</span></td>
+          <td>55 1651 2766<br><span class="muted">COAzcapotzalco@outlook.com</span></td>
+          <td><span class="badge b-warn">Sin web</span></td>
+          <td><span class="score s-hi"><span class="dot"><i style="width:100%"></i></span>10</span></td>
+          <td><span class="badge b-demo">Maqueta + infografía</span></td>
+          <td>15 años y miles de seguidores, sin sitio propio <span class="badge b-warn">confirmar correo</span></td></tr>
+        <tr><td>02</td>
+          <td class="emp">Iztacalco Consultorio Dental<small>Iztacalco</small></td>
+          <td><span class="badge b-esp">odontopediatría</span></td>
+          <td>55 3986 8432<br><span class="muted">alo_naty@hotmail.com</span></td>
+          <td><span class="badge b-warn">Sin web</span></td>
+          <td><span class="score s-hi"><span class="dot"><i style="width:90%"></i></span>9</span></td>
+          <td><span class="badge b-demo">Maqueta + infografía</span></td>
+          <td>Solo Facebook y Doctoralia, sin recordatorios <span class="badge b-warn">confirmar correo</span></td></tr>
+        <tr><td>03</td>
+          <td class="emp">Central de Sonrisas<small>Santa María Aztahuacan, Iztapalapa</small></td>
+          <td><span class="badge b-esp">ortodoncia</span></td>
+          <td>55 1641 9475<br><span class="muted">centraldesonrisas@gmail.com</span></td>
+          <td><span class="badge b-warn">Sin web</span></td>
+          <td><span class="score s-hi"><span class="dot"><i style="width:90%"></i></span>9</span></td>
+          <td><span class="badge b-demo">Maqueta + infografía</span></td>
+          <td>Sucursales homónimas sin sitio que las distinga <span class="badge b-warn">confirmar correo</span></td></tr>
+        <tr><td>04</td>
+          <td class="emp">Clínica Dental Novadent<small>Centro, Cuauhtémoc</small></td>
+          <td><span class="badge b-esp">prótesis</span></td>
+          <td>55 4165 3261<br><span class="muted">— sin correo —</span></td>
+          <td><span class="badge b-warn">Sin web</span></td>
+          <td><span class="score s-hi"><span class="dot"><i style="width:90%"></i></span>9</span></td>
+          <td><span class="badge b-tel">Solo teléfono</span></td>
+          <td>Centro histórico, sin sitio ni correo localizable</td></tr>
+        <tr><td>05</td>
+          <td class="emp">Odontek<small>Santiago Centro, Tláhuac</small></td>
+          <td><span class="badge b-esp">implantología</span></td>
+          <td>55 1232 2271<br><span class="muted">odontek.mex@gmail.com</span></td>
+          <td><span class="badge b-warn">Dominio caído</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:80%"></i></span>8</span></td>
+          <td><span class="badge b-demo">Maqueta + infografía</span></td>
+          <td>Su dominio no resuelve; Google manda a un enlace muerto <span class="badge b-warn">confirmar correo</span></td></tr>
+        <tr><td>06</td>
+          <td class="emp">Odontología Diamantada<small>Azcapotzalco</small></td>
+          <td><span class="badge b-esp">estética</span></td>
+          <td>56 1057 1492<br><span class="muted">pptonoshadows@gmail.com</span></td>
+          <td><span class="badge b-warn">Plantilla gratuita</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:80%"></i></span>8</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Ueniweb sin dominio propio, WhatsApp sin configurar</td></tr>
+        <tr><td>07</td>
+          <td class="emp">Sana Medic Dent<small>Atlántida, Coyoacán</small></td>
+          <td><span class="badge b-esp">odontopediatría</span></td>
+          <td>55 1231 4006<br><span class="muted">clinicasanamedic@gmail.com</span></td>
+          <td><span class="muted">Genérica</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:70%"></i></span>7</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Imágenes de marcador de posición en vez de fotos reales</td></tr>
+        <tr><td>08</td>
+          <td class="emp">Dentrica Coyoacán<small>La Candelaria, Coyoacán</small></td>
+          <td><span class="badge b-esp">implantología</span></td>
+          <td>55 1674 4301<br><span class="muted">atencion@dentrica.com.mx</span></td>
+          <td><span class="muted">Propia y activa</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:60%"></i></span>6</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Ya recuerdan por SMS, pero sin calendario en línea</td></tr>
+        <tr><td>09</td>
+          <td class="emp">SOYOU CLINIC<small>Del Carmen, Coyoacán</small></td>
+          <td><span class="badge b-esp">ortodoncia</span></td>
+          <td>55 2497 8519<br><span class="muted">dra.miremoon24@gmail.com</span></td>
+          <td><span class="muted">Moderna</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:60%"></i></span>6</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Sitio propio pero correo personal de Gmail y sin agenda</td></tr>
+        <tr><td>10</td>
+          <td class="emp">Dental Advance<small>Barrio Niño Jesús, Tlalpan</small></td>
+          <td><span class="badge b-esp">implantología</span></td>
+          <td>55 2663 8602<br><span class="muted">— sin correo —</span></td>
+          <td><span class="muted">Moderna</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:60%"></i></span>6</span></td>
+          <td><span class="badge b-tel">Solo teléfono</span></td>
+          <td>Sitio completo pero no publican ningún correo</td></tr>
+        <tr><td>11</td>
+          <td class="emp">AVDENTAL<small>Ignacio Zaragoza, V. Carranza</small></td>
+          <td><span class="badge b-esp">endodoncia</span></td>
+          <td>55 1337 9227<br><span class="muted">hola@avdental.com.mx</span></td>
+          <td><span class="muted">Moderna</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:60%"></i></span>6</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Atienden bajo previa cita, agendada a mano por WhatsApp</td></tr>
+        <tr><td>12</td>
+          <td class="emp">ALLDent (Narvarte)<small>Narvarte Poniente, B. Juárez</small></td>
+          <td><span class="badge b-esp">ortodoncia</span></td>
+          <td>55 4545 0281<br><span class="muted">alldentmx@gmail.com</span></td>
+          <td><span class="muted">Moderna</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:50%"></i></span>5</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Dos sucursales y todo el agendamiento por WhatsApp manual</td></tr>
+        <tr><td>13</td>
+          <td class="emp">Dental Arts (Anzures)<small>Anzures, Miguel Hidalgo</small></td>
+          <td><span class="badge b-esp">estética</span></td>
+          <td>55 5545 0001<br><span class="muted">— sin correo —</span></td>
+          <td><span class="muted">Moderna</span></td>
+          <td><span class="score s-mid"><span class="dot"><i style="width:50%"></i></span>5</span></td>
+          <td><span class="badge b-tel">Solo teléfono</span></td>
+          <td>Su "agenda en línea" es un enlace suelto a Google Calendar</td></tr>
+        <tr><td>14</td>
+          <td class="emp">La Clínica Dental (Lindavista)<small>Lindavista, GAM</small></td>
+          <td><span class="badge b-esp">general</span></td>
+          <td>55 9435 7117<br><span class="muted">contacto@laclinica.com.mx</span></td>
+          <td><span class="muted">Moderna + agenda</span></td>
+          <td><span class="score s-lo"><span class="dot"><i style="width:30%"></i></span>3</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>Tienen agenda pero sin recordatorios ni seguimiento</td></tr>
+        <tr><td>15</td>
+          <td class="emp">Sonrisas Forever (Roma)<small>Hipódromo, Cuauhtémoc</small></td>
+          <td><span class="badge b-esp">estética</span></td>
+          <td>55 8950 5382<br><span class="muted">hola@sonrisasroma.com.mx</span></td>
+          <td><span class="muted">Moderna + agenda</span></td>
+          <td><span class="score s-lo"><span class="dot"><i style="width:30%"></i></span>3</span></td>
+          <td><span class="badge b-info">Infografía</span></td>
+          <td>WhatsApp distinto al teléfono principal, sin seguimiento</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <h2>Notas de calidad de datos</h2>
+    <p class="sub">Este sector fue el más difícil de verificar de las seis campañas. Conviene saber por qué.</p>
+    <div class="grid2">
+      <div class="card">
+        <strong>Por qué la verificación es más floja aquí</strong>
+        <p class="muted" style="font-size:13.5px;margin-top:8px">Los consultorios dentales pequeños viven en <b>Facebook e Instagram</b>, y ambas plataformas bloquean activamente el acceso automatizado a sus secciones de "Información". Eso obliga a tomar los datos de agregadores (Doctoralia, AgendaPro, MexicoDentistas, Waze), que son reales pero de segunda mano.</p>
+        <p class="muted" style="font-size:13.5px;margin-top:10px">Los teléfonos están verificados en los 15 casos. Los correos con marca de advertencia son los que provienen de agregadores: <b>01, 02, 03 y 05</b> — que por mala suerte son justo los cuatro con maqueta.</p>
+      </div>
+      <div class="card">
+        <strong>Decisiones tomadas</strong>
+        <ul style="margin:8px 0 0 18px;font-size:13.5px;display:flex;flex-direction:column;gap:6px" class="muted">
+          <li><b>Odontek (05) cuenta como sin web.</b> Su dominio no resuelve (NXDOMAIN por DNS). La regla del 6 de agosto dice que un dominio que resuelve y sirve una página cuenta como con web; este no resuelve en absoluto, así que recibe maqueta.</li>
+          <li><b>Descartada La Clínica Dental Santa Fe.</b> Misma cadena que la sucursal Lindavista, ambas score 3. Dos correos casi idénticos a la misma empresa se ve descuidado.</li>
+          <li><b>Ninguna clínica de periodoncia.</b> No se localizó ninguna con esa especialidad verificada; el investigador prefirió no forzar la etiqueta.</li>
+          <li><b>Central de Sonrisas (03)</b> tiene sucursales homónimas en Iztapalapa: confirmar cuál es la de Plaza Ermita antes de hablar de ubicación.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:6px">
+  <div class="wrap">
+    <h2>Estadísticas del nicho</h2>
+    <p class="sub">Sobre las 15 clínicas analizadas.</p>
+    <div class="grid2" style="grid-template-columns:repeat(4,1fr);gap:12px">
+      <div class="card"><b style="font-size:24px">87%</b><div class="muted" style="font-size:13px">sin agenda de citas real con recordatorios (13 de 15)</div></div>
+      <div class="card"><b style="font-size:24px">33%</b><div class="muted" style="font-size:13px">sin sitio web funcional (5 de 15)</div></div>
+      <div class="card"><b style="font-size:24px">58%</b><div class="muted" style="font-size:13px">de los correos usa Gmail, Hotmail u Outlook (7 de 12)</div></div>
+      <div class="card"><b style="font-size:24px">1</b><div class="muted" style="font-size:13px">clínica que ya automatiza algo (Dentrica, por SMS)</div></div>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <strong>Conclusión.</strong> <span class="muted">Es el nicho con mejor encaje de las seis campañas, y por una razón que no hay que explicarle al prospecto: <b>una cita perdida en un consultorio dental es dinero contable</b>, y un recordatorio automático la recupera. La ortodoncia lo refuerza, porque son tratamientos de meses con citas recurrentes. De las quince clínicas, <b>trece no tienen agenda real con recordatorios</b> y una sola automatiza algo (Dentrica, y apenas por SMS). Además es el sector con más negocios sin sitio funcional que hemos visto (cinco de quince), lo que devolvió las maquetas al flujo después de tres campañas sin producir ninguna. La contra es la calidad de datos: al vivir en redes sociales cerradas, los correos son más difíciles de verificar, y eso obliga a un paso telefónico previo en los cuatro prospectos más valiosos.</span>
+    </div>
+  </div>
+</section>
+<section style="padding-top:6px">
+  <div class="wrap">
+    <h2>Mensajes de contacto listos</h2>
+    <p class="sub">Español formal de México, trato de usted, firma Shmin. Cada correo lleva enlaces rastreados y píxel de apertura. <b>Los borradores quedan en Gmail; el envío lo hace usted.</b> Los cuatro con maqueta requieren confirmar el correo por teléfono primero.</p>
+
+    <div class="lead">
+      <h3>01 · COA Clínica de Odontología Azcapotzalco <span class="badge b-demo">Maqueta + infografía</span></h3>
+      <div class="meta">COAzcapotzalco@outlook.com · 55 1651 2766 · sin web · <span style="color:#8a5200">confirmar correo por teléfono</span></div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de COA Clínica de Odontología Azcapotzalco:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su clínica, noté que después de más de quince años atendiendo en Azcapotzalco y con una comunidad considerable en Facebook, no cuentan con un sitio propio: quien los busca en Google depende de encontrarlos en directorios de terceros.
+
+Me permití preparar una maqueta de cómo podría verse la página de la clínica, con sus servicios, ubicación y contacto:
+» maqueta del sitio
+
+Y una breve infografía de cómo automatizamos el trabajo repetitivo, en particular la agenda y los recordatorios de cita, que es lo que evita que un paciente falte sin avisar:
+» infografía de automatización
+
+Ambos son una propuesta, sin ningún compromiso; con gusto se los explico en una llamada breve.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Maqueta: <code>/c?id=dentistas-cdmx-01-demo</code> → demos-prospectos.pages.dev/dentistas-cdmx-01 &nbsp;·&nbsp; Infografía: <code>/c?id=dentistas-cdmx-01-auto</code> &nbsp;·&nbsp; Píxel: <code>/p?id=dentistas-cdmx-01</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>02 · Iztacalco Consultorio Dental <span class="badge b-demo">Maqueta + infografía</span></h3>
+      <div class="meta">alo_naty@hotmail.com · 55 3986 8432 · sin web · <span style="color:#8a5200">confirmar correo por teléfono</span></div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de Iztacalco Consultorio Dental:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su consultorio, noté que su presencia se reparte entre Facebook y una ficha de Doctoralia sin fotos ni agenda, sin un sitio propio que reúna sus servicios y su ubicación.
+
+Me permití preparar una maqueta de cómo podría verse la página del consultorio:
+» maqueta del sitio
+
+Y una breve infografía de cómo automatizamos la agenda y los recordatorios de cita. En atención dental infantil, donde una cita perdida es difícil de reponer, el recordatorio automático suele ser el primer ahorro visible:
+» infografía de automatización
+
+Ambos son una propuesta, sin ningún compromiso; con gusto se los explico en una llamada breve.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Maqueta: <code>/c?id=dentistas-cdmx-02-demo</code> → demos-prospectos.pages.dev/dentistas-cdmx-02 &nbsp;·&nbsp; Infografía: <code>/c?id=dentistas-cdmx-02-auto</code> &nbsp;·&nbsp; Píxel: <code>/p?id=dentistas-cdmx-02</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>03 · Central de Sonrisas <span class="badge b-demo">Maqueta + infografía</span></h3>
+      <div class="meta">centraldesonrisas@gmail.com · 55 1641 9475 · sin web · <span style="color:#8a5200">confirmar correo por teléfono</span></div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de Central de Sonrisas:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su clínica, noté que dependen de Facebook y de un perfil de reservas de un tercero, sin un sitio propio que distinga a su clínica de otras que operan con un nombre parecido en la zona.
+
+Me permití preparar una maqueta de cómo podría verse su página, con identidad propia y agenda:
+» maqueta del sitio
+
+Y una breve infografía de cómo automatizamos la agenda y el seguimiento de tratamientos. En ortodoncia, donde el paciente vuelve cada mes durante un año o más, el recordatorio automático evita huecos en la agenda:
+» infografía de automatización
+
+Ambos son una propuesta, sin ningún compromiso; con gusto se los explico en una llamada breve.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Maqueta: <code>/c?id=dentistas-cdmx-03-demo</code> → demos-prospectos.pages.dev/dentistas-cdmx-03 &nbsp;·&nbsp; Infografía: <code>/c?id=dentistas-cdmx-03-auto</code> &nbsp;·&nbsp; Píxel: <code>/p?id=dentistas-cdmx-03</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>05 · Odontek <span class="badge b-demo">Maqueta + infografía</span></h3>
+      <div class="meta">odontek.mex@gmail.com · 55 1232 2271 · dominio caído · <span style="color:#8a5200">confirmar correo por teléfono</span></div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de Odontek:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su clínica encontré algo que quizá no hayan notado: su dominio ya no está en línea, pero Google sigue mostrando sus páginas de servicios en los resultados de búsqueda. Es decir, quien los busca hoy hace clic y llega a un enlace muerto.
+
+Me permití preparar una maqueta de cómo podría verse su sitio nuevo:
+» maqueta del sitio
+
+Y una breve infografía de cómo automatizamos la agenda y los recordatorios de cita, para que además de recuperar el sitio, dejen de coordinar cada cita a mano:
+» infografía de automatización
+
+Ambos son una propuesta, sin ningún compromiso; con gusto se los explico en una llamada breve.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Maqueta: <code>/c?id=dentistas-cdmx-05-demo</code> → demos-prospectos.pages.dev/dentistas-cdmx-05 &nbsp;·&nbsp; Infografía: <code>/c?id=dentistas-cdmx-05-auto</code> &nbsp;·&nbsp; Píxel: <code>/p?id=dentistas-cdmx-05</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>06 · Odontología Diamantada <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">pptonoshadows@gmail.com · 56 1057 1492 · plantilla gratuita</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de Odontología Diamantada:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su clínica, noté tres detalles que le cuestan pacientes: su sitio vive en una plantilla gratuita sin dominio propio, el botón de WhatsApp está sin configurar, y el correo del negocio es una cuenta personal de Gmail.
+
+Ayudamos a clínicas dentales de la CDMX a resolver eso y, sobre todo, a convertir el trabajo manual en procesos que se ejecutan solos: agenda de citas en línea, recordatorios automáticos y atención por WhatsApp. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=dentistas-cdmx-06-auto</code> &nbsp;·&nbsp; Píxel: <code>/p?id=dentistas-cdmx-06</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>07 · Sana Medic Dent <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">clinicasanamedic@gmail.com · 55 1231 4006 · sitio genérico</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de Sana Medic Dent:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su clínica, noté que su sitio usa imágenes genéricas de plantilla en lugar de fotografías reales del consultorio. En atención dental infantil, donde los padres quieren ver el lugar antes de llevar a su hijo, esas fotos son justamente lo que convence.
+
+Ayudamos a clínicas dentales de la CDMX a cerrar ese tipo de huecos y a convertir el trabajo manual en procesos que se ejecutan solos: agenda de citas en línea y recordatorios automáticos. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=dentistas-cdmx-07-auto</code> &nbsp;·&nbsp; Píxel: <code>/p?id=dentistas-cdmx-07</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>08 · Dentrica Clínica Dental Coyoacán <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">atencion@dentrica.com.mx · 55 1674 4301 · sitio propio activo</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de Dentrica:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su clínica noté algo poco común: ya envían confirmaciones y recordatorios de cita por mensaje, cuando la mayoría de las clínicas todavía no lo hace. Lo que falta es el paso anterior: no hay un calendario en línea, así que agendar sigue dependiendo de una llamada o de WhatsApp.
+
+Justo ahí ayudamos a clínicas dentales de la CDMX: cerrar el círculo con agenda en línea conectada a los recordatorios que ya usan, y seguimiento automatizado de tratamientos de varias sesiones. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=dentistas-cdmx-08-auto</code> &nbsp;·&nbsp; Píxel: <code>/p?id=dentistas-cdmx-08</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>09 · SOYOU CLINIC <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">dra.miremoon24@gmail.com · 55 2497 8519 · sitio moderno</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de SOYOU Clinic:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su clínica, noté que tienen un sitio propio bien presentado, pero el correo de contacto sigue siendo una cuenta personal de Gmail y no hay forma de agendar cita en línea: todo pasa por teléfono o WhatsApp.
+
+Ayudamos a clínicas dentales de la CDMX a cerrar esos huecos y a convertir el trabajo manual en procesos que se ejecutan solos: agenda con confirmación automática, recordatorios de cita y avisos de limpieza semestral. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=dentistas-cdmx-09-auto</code> &nbsp;·&nbsp; Píxel: <code>/p?id=dentistas-cdmx-09</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>11 · AVDENTAL <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">hola@avdental.com.mx · 55 1337 9227 · sitio moderno</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de AVDENTAL:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su clínica, noté que atienden estrictamente bajo previa cita, pero cada una de esas citas se agenda a mano por WhatsApp, sin calendario ni recordatorio automático.
+
+Cuando el modelo depende de la cita previa, ese es justo el proceso que conviene automatizar. Ayudamos a clínicas dentales de la CDMX a hacerlo: agenda en línea, confirmación y recordatorio automáticos para reducir ausencias, y seguimiento de tratamientos. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=dentistas-cdmx-11-auto</code> &nbsp;·&nbsp; Píxel: <code>/p?id=dentistas-cdmx-11</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>12 · ALLDent (Narvarte) <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">alldentmx@gmail.com · 55 4545 0281 · sitio moderno</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de ALLDent:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su clínica, noté que tienen un sitio moderno y dos sucursales, pero agendar una cita depende por completo de WhatsApp manual, y el correo de contacto es una cuenta de Gmail genérica en lugar de su propio dominio.
+
+Ayudamos a clínicas dentales de la CDMX a cerrar esos huecos y a convertir el trabajo manual en procesos que se ejecutan solos: agenda en línea para ambas sucursales, recordatorios automáticos y seguimiento de tratamientos de ortodoncia. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=dentistas-cdmx-12-auto</code> &nbsp;·&nbsp; Píxel: <code>/p?id=dentistas-cdmx-12</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>14 · La Clínica Dental (Lindavista) <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">contacto@laclinica.com.mx · 55 9435 7117 · sitio moderno con agenda</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de La Clínica Dental:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su clínica, noté que van bastante adelante del resto del sector: tienen agenda en línea funcional y un sitio muy cuidado. Lo que todavía no está resuelto es lo que ocurre después de la reserva: no hay recordatorios automáticos de cita ni seguimiento de los tratamientos que llevan varias sesiones.
+
+Justo ahí ayudamos a clínicas dentales de la CDMX: recordatorios que reducen ausencias, seguimiento automatizado de tratamientos multisesión y avisos de limpieza semestral. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=dentistas-cdmx-14-auto</code> &nbsp;·&nbsp; Píxel: <code>/p?id=dentistas-cdmx-14</code></div>
+    </div>
+
+    <div class="lead">
+      <h3>15 · Sonrisas Forever (Roma) <span class="badge b-info">Infografía</span></h3>
+      <div class="meta">hola@sonrisasroma.com.mx · 55 8950 5382 · sitio moderno con agenda</div>
+      <div class="msg"><span class="tag">Correo</span>Estimados señores de Sonrisas Forever:
+
+Mi nombre es Shmin, de Estrategia Hyper. Al revisar la presencia digital de su clínica, noté un detalle que puede estar costándoles contactos: el número de WhatsApp que usan es distinto del teléfono principal que publican, así que el paciente no sabe cuál es el bueno. Y aunque ya tienen agenda en línea, no hay seguimiento automatizado después de un tratamiento de carillas.
+
+Ayudamos a clínicas dentales de la CDMX a ordenar eso y a convertir el trabajo manual en procesos que se ejecutan solos: un solo canal de contacto, recordatorios de cita y revisiones de seguimiento automáticas. Me permití preparar una breve infografía de cómo lo hacemos:
+» infografía de automatización
+
+Si le parece de interés, con gusto le explico los detalles en una llamada breve, sin ningún compromiso.
+
+Saludos cordiales,
+Shmin · Estrategia Hyper · 56 1021 1798</div>
+      <div class="track">Infografía: <code>/c?id=dentistas-cdmx-15-auto</code> &nbsp;·&nbsp; Píxel: <code>/p?id=dentistas-cdmx-15</code></div>
+    </div>
+
+    <div class="lead" style="border-style:dashed">
+      <h3>Sin correo — contacto telefónico <span class="badge b-tel">3 prospectos</span></h3>
+      <p class="muted" style="font-size:13.5px;margin-top:6px">No entran al lote de correos por la compuerta de deliverabilidad. Si alguno comparte un correo en la llamada, se le puede generar la maqueta bajo demanda.</p>
+      <ul style="margin:10px 0 0 18px;font-size:13.5px;display:flex;flex-direction:column;gap:6px">
+        <li><b>04 · Clínica Dental Novadent</b> — 55 4165 3261 — prótesis, Centro histórico — score 9 — sin web ni correo</li>
+        <li><b>10 · Dental Advance</b> — 55 2663 8602 — implantología, Tlalpan — score 6 — sitio completo pero sin correo publicado</li>
+        <li><b>13 · Dental Arts (Anzures)</b> — 55 5545 0001 — estética, Miguel Hidalgo — score 5 — sin correo localizable</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<div class="foot">
+  <div class="wrap">
+    <span class="pill">Campaña dentistas-cdmx-2026-08</span>
+    <span class="pill">6ª campaña del proyecto</span>
+    <span class="pill">15 clínicas</span>
+    <span class="pill">12 borradores en Gmail (sin enviar)</span>
+    <span class="pill">4 maquetas</span>
+    <span class="pill">3 para llamada</span>
+    <br><br>
+    <b>Estrategia Hyper</b> · Hiperautomatización e infraestructura de IA · Shmin · 56 1021 1798<br>
+    <span style="opacity:.7">Datos reales verificados por WebSearch/WebFetch, curl y dig. El clic en un enlace es la señal fiable de interés (dispara alerta de Telegram). Enviar 3–4 correos al día para calentar el dominio.</span>
+  </div>
+</div>
+</body>
+</html>
